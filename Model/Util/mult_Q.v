@@ -1,3 +1,6 @@
+`ifndef MULT_Q_V
+`define MULT_Q_V
+
 module mult_Q #(
     parameter WIDTH = 32,
     parameter FBITS = 27
@@ -10,3 +13,5 @@ module mult_Q #(
     assign raw_y = a * b;
     assign y = raw_y[FBITS + WIDTH - 1 : FBITS];
 endmodule
+
+`endif
