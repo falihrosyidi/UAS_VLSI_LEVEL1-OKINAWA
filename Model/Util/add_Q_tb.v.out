@@ -1,0 +1,108 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000017a38efbb00 .scope module, "tb_add_Q" "tb_add_Q" 2 4;
+ .timescale -9 -12;
+P_0000017a38efa3f0 .param/l "FBITS" 0 2 7, +C4<00000000000000000000000000011011>;
+P_0000017a38efa428 .param/real "SF" 1 2 13, Cr<m4000000000000000gfa7>; value=7.45058e-09
+P_0000017a38efa460 .param/l "WIDTH" 0 2 6, +C4<00000000000000000000000000100000>;
+v0000017a38ef98f0_0 .var/s "a", 31 0;
+v0000017a38f46b10_0 .var/s "b", 31 0;
+v0000017a38f46bb0_0 .net/s "y", 31 0, L_0000017a38f39710;  1 drivers
+S_0000017a38f46980 .scope module, "uut" "mult_Q" 2 19, 3 1 0, S_0000017a38efbb00;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /OUTPUT 32 "y";
+P_0000017a38ef69f0 .param/l "FBITS" 0 3 3, +C4<00000000000000000000000000011011>;
+P_0000017a38ef6a28 .param/l "WIDTH" 0 3 2, +C4<00000000000000000000000000100000>;
+v0000017a38ef6b60_0 .net/s *"_ivl_0", 32 0, L_0000017a38f46c50;  1 drivers
+v0000017a38ef6860_0 .net/s *"_ivl_2", 32 0, L_0000017a38f46cf0;  1 drivers
+v0000017a38ef9250_0 .net/s "a", 31 0, v0000017a38ef98f0_0;  1 drivers
+v0000017a38efbe20_0 .net/s "b", 31 0, v0000017a38f46b10_0;  1 drivers
+v0000017a38efbec0_0 .net/s "raw_y", 32 0, L_0000017a38f39670;  1 drivers
+v0000017a38ef9850_0 .net/s "y", 31 0, L_0000017a38f39710;  alias, 1 drivers
+L_0000017a38f46c50 .extend/s 33, v0000017a38ef98f0_0;
+L_0000017a38f46cf0 .extend/s 33, v0000017a38f46b10_0;
+L_0000017a38f39670 .arith/sum 33, L_0000017a38f46c50, L_0000017a38f46cf0;
+L_0000017a38f39710 .part L_0000017a38f39670, 0, 32;
+    .scope S_0000017a38efbb00;
+T_0 ;
+    %vpi_call 2 26 "$display", "Fixed Point Addition Test (Q%0d.%0d)", 32'sb00000000000000000000000000000101, P_0000017a38efa3f0 {0 0 0};
+    %vpi_call 2 27 "$display", "--------------------------------------------------" {0 0 0};
+    %pushi/vec4 167772160, 0, 32;
+    %store/vec4 v0000017a38ef98f0_0, 0, 32;
+    %pushi/vec4 100663296, 0, 32;
+    %store/vec4 v0000017a38f46b10_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_func/r 2 33 "$itor", v0000017a38ef98f0_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_func/r 2 33 "$itor", v0000017a38f46b10_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_func/r 2 33 "$itor", v0000017a38f46bb0_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_call 2 33 "$display", "%f + %f = %f", W<2,r>, W<1,r>, W<0,r> {0 3 0};
+    %pushi/vec4 671088640, 0, 32;
+    %store/vec4 v0000017a38ef98f0_0, 0, 32;
+    %pushi/vec4 3959422976, 0, 32;
+    %store/vec4 v0000017a38f46b10_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_func/r 2 39 "$itor", v0000017a38ef98f0_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_func/r 2 39 "$itor", v0000017a38f46b10_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_func/r 2 39 "$itor", v0000017a38f46bb0_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_call 2 39 "$display", "%f + %f = %f", W<2,r>, W<1,r>, W<0,r> {0 3 0};
+    %pushi/vec4 4160749568, 0, 32;
+    %store/vec4 v0000017a38ef98f0_0, 0, 32;
+    %pushi/vec4 4160749568, 0, 32;
+    %store/vec4 v0000017a38f46b10_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_func/r 2 45 "$itor", v0000017a38ef98f0_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_func/r 2 45 "$itor", v0000017a38f46b10_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_func/r 2 45 "$itor", v0000017a38f46bb0_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_call 2 45 "$display", "%f + %f = %f", W<2,r>, W<1,r>, W<0,r> {0 3 0};
+    %pushi/vec4 13, 0, 32;
+    %store/vec4 v0000017a38ef98f0_0, 0, 32;
+    %pushi/vec4 27, 0, 32;
+    %store/vec4 v0000017a38f46b10_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_func/r 2 51 "$itor", v0000017a38ef98f0_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_func/r 2 51 "$itor", v0000017a38f46b10_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_func/r 2 51 "$itor", v0000017a38f46bb0_0 {0 0 0};
+    %pushi/real 1073741824, 4039; load=7.45058e-09
+    %mul/wr;
+    %vpi_call 2 51 "$display", "%f + %f = %f", W<2,r>, W<1,r>, W<0,r> {0 3 0};
+    %vpi_call 2 53 "$display", "--------------------------------------------------" {0 0 0};
+    %vpi_call 2 54 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "add_Q_tb.v";
+    "./add_Q.v";
