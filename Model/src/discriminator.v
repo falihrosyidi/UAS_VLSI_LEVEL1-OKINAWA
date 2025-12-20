@@ -33,7 +33,7 @@ module discriminator #(
     generate
         for (i=0; i<N_NEURON_L2; i=i+1) begin
             neuron_b NEURON_L2 (
-                .a_1(a_1), .a_2(a_2),
+                .a_1(a_1), .a_2(a_2), .a_3(a_3), .a_4(a_4), .a_5(a_5), .a_6(a_6), .a_7(a_7), .a_8(a_8), .a_9(a_9),
                 .w_1(w_L2[(N_INPUT*i+1)*WIDTH-1 : N_INPUT*i*WIDTH]), 
                 .w_2(w_L2[(N_INPUT*i+2)*WIDTH-1 : (N_INPUT*i+1)*WIDTH]),
                 .w_3(w_L2[(N_INPUT*i+3)*WIDTH-1 : (N_INPUT*i+2)*WIDTH]),

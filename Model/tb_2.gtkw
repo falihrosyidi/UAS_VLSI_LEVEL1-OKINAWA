@@ -1,0 +1,32 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sat Dec 20 12:43:45 2025
+[*]
+[dumpfile] "D:\Falih\VLSI\UAS_VLSI_LEVEL1-OKINAWA\Model\tb_top_level.vcd"
+[savefile] "D:\Falih\VLSI\UAS_VLSI_LEVEL1-OKINAWA\Model\tb_2.gtkw"
+[timestart] 0
+[size] 1280 666
+[pos] -87 -59
+*-13.257412 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_top_level.
+[sst_width] 197
+[signals_width] 214
+[sst_expanded] 1
+[sst_vpaned_height] 176
+@28
+tb_top_level.dut.choice
+@22
+tb_top_level.dut.in_1[31:0]
+tb_top_level.dut.in_2[31:0]
+tb_top_level.dut.out_discriminator[31:0]
+tb_top_level.dut.pixel_1x1[31:0]
+tb_top_level.dut.pixel_1x2[31:0]
+tb_top_level.dut.pixel_1x3[31:0]
+tb_top_level.dut.pixel_2x1[31:0]
+tb_top_level.dut.pixel_2x2[31:0]
+tb_top_level.dut.pixel_2x3[31:0]
+tb_top_level.dut.pixel_3x1[31:0]
+tb_top_level.dut.pixel_3x2[31:0]
+tb_top_level.dut.pixel_3x3[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
