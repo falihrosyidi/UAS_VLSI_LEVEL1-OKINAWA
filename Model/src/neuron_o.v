@@ -1,5 +1,5 @@
-`ifndef NEURON_A
-`define NEURON_A
+`ifndef NEURON_O
+`define NEURON_O
 
 `include "Util/tanh.v"
 
