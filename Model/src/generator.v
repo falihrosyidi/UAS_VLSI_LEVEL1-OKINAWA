@@ -32,7 +32,7 @@ module generator #(
 
     genvar i;
     generate
-        for (i=0; i<3; i=i+1) begin
+        for (i=0; i<N_NEURON_L2; i=i+1) begin
             neuron_o NEURON_L2 (
                 .a_1(a_1), .a_2(a_2),
                 .w_1(w_L2[(N_INPUT*i+1)*WIDTH-1 : N_INPUT*i*WIDTH]), 
@@ -49,7 +49,7 @@ module generator #(
 
     genvar j;
     generate
-        for (j=0; j<9; j=j+1) begin
+        for (j=0; j<N_NEURON_L3; j=j+1) begin
             neuron_a NEURON_L3 (
                 .a_1(out_L3[0]), .a_2(out_L3[1]), .a_3(out_L3[2]),
                 .w_1(w_L3[(N_NEURON_L2*j+1)*WIDTH-1 : N_NEURON_L2*j*WIDTH]),
