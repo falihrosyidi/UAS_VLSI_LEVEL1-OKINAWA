@@ -28,7 +28,7 @@ module generator #(
 );
 // LAYER 2
     // LOCAL SIGNAL
-    wire signed [N_NEURON_L2-1:0][WIDTH-1:0] out_L2;
+    wire signed [WIDTH-1:0] out_L2 [N_NEURON_L2-1:0];
 
     genvar i;
     generate
