@@ -1,0 +1,399 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000167565230b0 .scope module, "tanh_tb" "tanh_tb" 2 4;
+ .timescale -9 -12;
+P_00000167564d2cf0 .param/l "FL" 0 2 8, +C4<00000000000000000000000000011000>;
+P_00000167564d2d28 .param/l "WIDTH" 0 2 7, +C4<00000000000000000000000000100000>;
+v000001675657d300_0 .var/real "SCALE", 0 0;
+v000001675657d760_0 .var/s "a", 31 0;
+v000001675657c540_0 .net/s "y", 31 0, L_00000167566082c0;  1 drivers
+S_0000016756523240 .scope task, "check_val" "check_val" 2 58, 2 58 0, S_00000167565230b0;
+ .timescale -9 -12;
+v000001675651e890_0 .var/real "output_real", 0 0;
+v000001675651e610_0 .var/real "val", 0 0;
+TD_tanh_tb.check_val ;
+    %load/real v000001675651e610_0;
+    %store/real v000001675651f010_0;
+    %callf/vec4 TD_tanh_tb.real_to_fixed, S_00000167564d2760;
+    %store/vec4 v000001675657d760_0, 0, 32;
+    %delay 10000, 0;
+    %load/vec4 v000001675657c540_0;
+    %store/vec4 v000001675651ec50_0, 0, 32;
+    %callf/real TD_tanh_tb.fixed_to_real, S_00000167565238a0;
+    %store/real v000001675651e890_0;
+    %vpi_call 2 66 "$display", "Input: %8.4f (Hex: %h) | Output: %8.4f (Hex: %h)", v000001675651e610_0, v000001675657d760_0, v000001675651e890_0, v000001675657c540_0 {0 0 0};
+    %end;
+S_0000016756523710 .scope task, "check_val_with_expected" "check_val_with_expected" 2 123, 2 123 0, S_00000167565230b0;
+ .timescale -9 -12;
+v000001675651e4d0_0 .var/i "error", 31 0;
+v000001675651ebb0_0 .var/s "expected", 31 0;
+v000001675651e2f0_0 .var/real "output_real", 0 0;
+v000001675651ed90_0 .var/real "val", 0 0;
+TD_tanh_tb.check_val_with_expected ;
+    %load/real v000001675651ed90_0;
+    %store/real v000001675651f010_0;
+    %callf/vec4 TD_tanh_tb.real_to_fixed, S_00000167564d2760;
+    %store/vec4 v000001675657d760_0, 0, 32;
+    %delay 10000, 0;
+    %load/vec4 v000001675657c540_0;
+    %store/vec4 v000001675651ec50_0, 0, 32;
+    %callf/real TD_tanh_tb.fixed_to_real, S_00000167565238a0;
+    %store/real v000001675651e2f0_0;
+    %load/vec4 v000001675657c540_0;
+    %load/vec4 v000001675651ebb0_0;
+    %cmp/e;
+    %flag_mov 8, 4;
+    %jmp/0 T_1.0, 8;
+    %pushi/vec4 0, 0, 32;
+    %jmp/1 T_1.1, 8;
+T_1.0 ; End of true expr.
+    %pushi/vec4 1, 0, 32;
+    %jmp/0 T_1.1, 8;
+ ; End of false expr.
+    %blend;
+T_1.1;
+    %store/vec4 v000001675651e4d0_0, 0, 32;
+    %load/vec4 v000001675651e4d0_0;
+    %cmpi/ne 0, 0, 32;
+    %jmp/0xz  T_1.2, 4;
+    %load/vec4 v000001675657c540_0;
+    %load/vec4 v000001675651ebb0_0;
+    %sub;
+    %vpi_call 2 134 "$display", "\342\235\214 FAIL | Input: %8.4f | Output: %h | Expected: %h | Diff: %h", v000001675651ed90_0, v000001675657c540_0, v000001675651ebb0_0, S<0,vec4,s32> {1 0 0};
+    %jmp T_1.3;
+T_1.2 ;
+    %vpi_call 2 137 "$display", "\342\234\223 PASS | Input: %8.4f | Output: %h | Expected: %h", v000001675651ed90_0, v000001675657c540_0, v000001675651ebb0_0 {0 0 0};
+T_1.3 ;
+    %end;
+S_00000167565238a0 .scope function.real, "fixed_to_real" "fixed_to_real" 2 27, 2 27 0, S_00000167565230b0;
+ .timescale -9 -12;
+; Variable fixed_to_real is REAL return value of scope S_00000167565238a0
+v000001675651ec50_0 .var/s "fixed_val", 31 0;
+TD_tanh_tb.fixed_to_real ;
+    %load/vec4 v000001675651ec50_0;
+    %parti/s 1, 31, 6;
+    %cmpi/e 1, 0, 1;
+    %jmp/0xz  T_2.4, 4;
+    %load/vec4 v000001675651ec50_0;
+    %inv;
+    %addi 1, 0, 32;
+    %inv;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %cvt/rv/s;
+    %load/real v000001675657d300_0;
+    %div/wr;
+    %ret/real 0; Assign to fixed_to_real
+    %jmp T_2.5;
+T_2.4 ;
+    %load/vec4 v000001675651ec50_0;
+    %cvt/rv/s;
+    %load/real v000001675657d300_0;
+    %div/wr;
+    %ret/real 0; Assign to fixed_to_real
+T_2.5 ;
+    %end;
+S_00000167564d2760 .scope function.vec4.u32, "real_to_fixed" "real_to_fixed" 2 42, 2 42 0, S_00000167565230b0;
+ .timescale -9 -12;
+; Variable real_to_fixed is vec4 return value of scope S_00000167564d2760
+v000001675651f010_0 .var/real "real_val", 0 0;
+v000001675651e250_0 .var/s "temp", 31 0;
+TD_tanh_tb.real_to_fixed ;
+    %load/real v000001675651f010_0;
+    %pushi/vec4 0, 0, 32;
+    %cvt/rv/s;
+    %cmp/wr;
+    %jmp/0xz  T_3.6, 5;
+    %pushi/real 0, 0; load 0.0
+    %load/real v000001675651f010_0;
+    %sub/wr;
+    %load/real v000001675657d300_0;
+    %mul/wr;
+    %vpi_func 2 48 "$rtoi" 32, W<0,r> {0 1 0};
+    %store/vec4 v000001675651e250_0, 0, 32;
+    %load/vec4 v000001675651e250_0;
+    %inv;
+    %addi 1, 0, 32;
+    %ret/vec4 0, 0, 32;  Assign to real_to_fixed (store_vec4_to_lval)
+    %jmp T_3.7;
+T_3.6 ;
+    %load/real v000001675651f010_0;
+    %load/real v000001675657d300_0;
+    %mul/wr;
+    %vpi_func 2 52 "$rtoi" 32, W<0,r> {0 1 0};
+    %ret/vec4 0, 0, 32;  Assign to real_to_fixed (store_vec4_to_lval)
+T_3.7 ;
+    %end;
+S_00000167564d28f0 .scope module, "uut" "tanh" 2 21, 3 4 0, S_00000167565230b0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /OUTPUT 32 "y";
+P_0000016756510b20 .param/l "FL" 0 3 6, +C4<00000000000000000000000000011000>;
+P_0000016756510b58 .param/l "WIDTH" 0 3 5, +C4<00000000000000000000000000100000>;
+L_0000016756515bf0 .functor NOT 32, v000001675657d760_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0000016756515870 .functor NOT 32, L_0000016756608ae0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_00000167565c01f0 .functor BUFT 1, C4<11111111000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v000001675651e7f0_0 .net/s "ONE_NEG", 31 0, L_00000167565c01f0;  1 drivers
+L_00000167565c01a8 .functor BUFT 1, C4<00000001000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v000001675651ee30_0 .net/s "ONE_POS", 31 0, L_00000167565c01a8;  1 drivers
+L_00000167565c00d0 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v000001675651e9d0_0 .net/2s *"_ivl_12", 31 0, L_00000167565c00d0;  1 drivers
+v000001675651eed0_0 .net *"_ivl_14", 0 0, L_000001675657d9e0;  1 drivers
+L_00000167565c0118 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v000001675651ea70_0 .net *"_ivl_16", 31 0, L_00000167565c0118;  1 drivers
+v000001675651e430_0 .net *"_ivl_19", 31 0, L_000001675657cf40;  1 drivers
+v000001675651f0b0_0 .net/s *"_ivl_22", 63 0, L_000001675657c5e0;  1 drivers
+v000001675651e1b0_0 .net/s *"_ivl_24", 63 0, L_000001675657c680;  1 drivers
+v000001675651e390_0 .net *"_ivl_3", 0 0, L_000001675657c180;  1 drivers
+v000001675657dee0_0 .net/s *"_ivl_30", 63 0, L_000001675657cea0;  1 drivers
+v000001675657d580_0 .net/s *"_ivl_32", 63 0, L_000001675657db20;  1 drivers
+v000001675657d120_0 .net/s *"_ivl_38", 63 0, L_000001675657c9a0;  1 drivers
+v000001675657d620_0 .net *"_ivl_4", 31 0, L_0000016756515bf0;  1 drivers
+v000001675657c2c0_0 .net/s *"_ivl_40", 63 0, L_000001675657d080;  1 drivers
+v000001675657cfe0_0 .net/s *"_ivl_46", 31 0, L_0000016756608720;  1 drivers
+v000001675657c860_0 .net *"_ivl_50", 31 0, L_0000016756515870;  1 drivers
+L_00000167565c0160 .functor BUFT 1, C4<00000000000000000000000000000001>, C4<0>, C4<0>, C4<0>;
+v000001675657c360_0 .net/2u *"_ivl_52", 31 0, L_00000167565c0160;  1 drivers
+v000001675657d1c0_0 .net *"_ivl_54", 31 0, L_0000016756608680;  1 drivers
+L_00000167565c0088 .functor BUFT 1, C4<00000000000000000000000000000001>, C4<0>, C4<0>, C4<0>;
+v000001675657c4a0_0 .net/2u *"_ivl_6", 31 0, L_00000167565c0088;  1 drivers
+v000001675657dbc0_0 .net *"_ivl_62", 0 0, L_00000167566080e0;  1 drivers
+v000001675657d440_0 .net *"_ivl_64", 0 0, L_0000016756608180;  1 drivers
+v000001675657dd00_0 .net *"_ivl_66", 31 0, L_00000167566087c0;  1 drivers
+v000001675657cae0_0 .net *"_ivl_8", 31 0, L_000001675657de40;  1 drivers
+v000001675657c400_0 .net/s "a", 31 0, v000001675657d760_0;  1 drivers
+v000001675657df80_0 .net/s "a_pos", 31 0, L_000001675657d3a0;  1 drivers
+v000001675657d260_0 .net/s "ai", 31 0, L_000001675657c220;  1 drivers
+v000001675657dc60_0 .net/s "ai_sq", 31 0, L_000001675657c720;  1 drivers
+v000001675657d4e0_0 .net/s "ai_sq_full", 63 0, L_000001675657d800;  1 drivers
+v000001675657dda0_0 .var/s "p1", 31 0;
+v000001675657c0e0_0 .var/s "p2", 31 0;
+v000001675657cb80_0 .var/s "p3", 31 0;
+v000001675657ca40_0 .net "sign", 0 0, L_000001675657ce00;  1 drivers
+v000001675657cc20_0 .net/s "term1", 31 0, L_000001675657c7c0;  1 drivers
+v000001675657ccc0_0 .net/s "term1_full", 63 0, L_000001675657d8a0;  1 drivers
+v000001675657d6c0_0 .net/s "term2", 31 0, L_0000016756608fe0;  1 drivers
+v000001675657da80_0 .net/s "term2_full", 63 0, L_0000016756608400;  1 drivers
+v000001675657c900_0 .net/s "y", 31 0, L_00000167566082c0;  alias, 1 drivers
+v000001675657d940_0 .net/s "y_abs", 31 0, L_0000016756608ae0;  1 drivers
+v000001675657cd60_0 .net/s "y_signed", 31 0, L_0000016756608220;  1 drivers
+E_00000167564fe4f0 .event anyedge, v000001675657d260_0;
+L_000001675657ce00 .part v000001675657d760_0, 31, 1;
+L_000001675657c180 .part v000001675657d760_0, 31, 1;
+L_000001675657de40 .arith/sum 32, L_0000016756515bf0, L_00000167565c0088;
+L_000001675657d3a0 .functor MUXZ 32, v000001675657d760_0, L_000001675657de40, L_000001675657c180, C4<>;
+L_000001675657d9e0 .cmp/gt.s 32, L_00000167565c00d0, L_000001675657d3a0;
+L_000001675657cf40 .arith/sub 32, L_00000167565c0118, L_000001675657d3a0;
+L_000001675657c220 .functor MUXZ 32, L_000001675657d3a0, L_000001675657cf40, L_000001675657d9e0, C4<>;
+L_000001675657c5e0 .extend/s 64, L_000001675657c220;
+L_000001675657c680 .extend/s 64, L_000001675657c220;
+L_000001675657d800 .arith/mult 64, L_000001675657c5e0, L_000001675657c680;
+L_000001675657c720 .part L_000001675657d800, 24, 32;
+L_000001675657cea0 .extend/s 64, v000001675657dda0_0;
+L_000001675657db20 .extend/s 64, L_000001675657c720;
+L_000001675657d8a0 .arith/mult 64, L_000001675657cea0, L_000001675657db20;
+L_000001675657c7c0 .part L_000001675657d8a0, 24, 32;
+L_000001675657c9a0 .extend/s 64, v000001675657c0e0_0;
+L_000001675657d080 .extend/s 64, L_000001675657c220;
+L_0000016756608400 .arith/mult 64, L_000001675657c9a0, L_000001675657d080;
+L_0000016756608fe0 .part L_0000016756608400, 24, 32;
+L_0000016756608720 .arith/sum 32, L_000001675657c7c0, L_0000016756608fe0;
+L_0000016756608ae0 .arith/sum 32, L_0000016756608720, v000001675657cb80_0;
+L_0000016756608680 .arith/sum 32, L_0000016756515870, L_00000167565c0160;
+L_0000016756608220 .functor MUXZ 32, L_0000016756608ae0, L_0000016756608680, L_000001675657ce00, C4<>;
+L_00000167566080e0 .cmp/gt.s 32, L_0000016756608220, L_00000167565c01a8;
+L_0000016756608180 .cmp/gt.s 32, L_00000167565c01f0, L_0000016756608220;
+L_00000167566087c0 .functor MUXZ 32, L_0000016756608220, L_00000167565c01f0, L_0000016756608180, C4<>;
+L_00000167566082c0 .functor MUXZ 32, L_00000167566087c0, L_00000167565c01a8, L_00000167566080e0, C4<>;
+    .scope S_00000167564d28f0;
+T_4 ;
+    %wait E_00000167564fe4f0;
+    %load/vec4 v000001675657d260_0;
+    %cmpi/u 67108864, 0, 32;
+    %flag_inv 5; GE is !LT
+    %jmp/0xz  T_4.0, 5;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000001675657dda0_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000001675657c0e0_0, 0, 32;
+    %pushi/vec4 16777216, 0, 32;
+    %store/vec4 v000001675657cb80_0, 0, 32;
+    %jmp T_4.1;
+T_4.0 ;
+    %load/vec4 v000001675657d260_0;
+    %cmpi/u 33554432, 0, 32;
+    %flag_inv 5; GE is !LT
+    %jmp/0xz  T_4.2, 5;
+    %pushi/vec4 4294751560, 0, 32;
+    %store/vec4 v000001675657dda0_0, 0, 32;
+    %pushi/vec4 1533883, 0, 32;
+    %store/vec4 v000001675657c0e0_0, 0, 32;
+    %pushi/vec4 14037569, 0, 32;
+    %store/vec4 v000001675657cb80_0, 0, 32;
+    %jmp T_4.3;
+T_4.2 ;
+    %load/vec4 v000001675657d260_0;
+    %cmpi/u 16777216, 0, 32;
+    %flag_inv 5; GE is !LT
+    %jmp/0xz  T_4.4, 5;
+    %pushi/vec4 4292137817, 0, 32;
+    %store/vec4 v000001675657dda0_0, 0, 32;
+    %pushi/vec4 11741154, 0, 32;
+    %store/vec4 v000001675657c0e0_0, 0, 32;
+    %pushi/vec4 3942058, 0, 32;
+    %store/vec4 v000001675657cb80_0, 0, 32;
+    %jmp T_4.5;
+T_4.4 ;
+    %pushi/vec4 4289717991, 0, 32;
+    %store/vec4 v000001675657dda0_0, 0, 32;
+    %pushi/vec4 18102797, 0, 32;
+    %store/vec4 v000001675657c0e0_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000001675657cb80_0, 0, 32;
+T_4.5 ;
+T_4.3 ;
+T_4.1 ;
+    %jmp T_4;
+    .thread T_4, $push;
+    .scope S_00000167565230b0;
+T_5 ;
+    %pushi/real 1073741824, 4090; load=1.67772e+07
+    %store/real v000001675657d300_0;
+    %end;
+    .thread T_5;
+    .scope S_00000167565230b0;
+T_6 ;
+    %vpi_call 2 72 "$display", "==========================================================" {0 0 0};
+    %vpi_call 2 73 "$display", "   UJI COBA MODUL TANH PWQ (FIXED-POINT Q8.24)" {0 0 0};
+    %vpi_call 2 74 "$display", "==========================================================" {0 0 0};
+    %vpi_call 2 77 "$display", "\012--- Segmen 0 (Linier-ish) ---" {0 0 0};
+    %pushi/real 0, 4065; load=0.00000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %pushi/real 1073741824, 4064; load=0.250000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %pushi/real 1073741824, 4065; load=0.500000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %pushi/real 1610612736, 4065; load=0.750000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %vpi_call 2 84 "$display", "\012--- Segmen 1 (Lengkungan) ---" {0 0 0};
+    %pushi/real 1073741824, 4066; load=1.00000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %pushi/real 1610612736, 4066; load=1.50000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %vpi_call 2 89 "$display", "\012--- Segmen 2 (Mendekati Jenuh) ---" {0 0 0};
+    %pushi/real 1342177280, 4067; load=2.50000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %pushi/real 1879048192, 4067; load=3.50000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %vpi_call 2 94 "$display", "\012--- Saturasi Positif ---" {0 0 0};
+    %pushi/real 1073741824, 4068; load=4.00000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %pushi/real 1342177280, 4069; load=10.0000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %vpi_call 2 99 "$display", "\012--- Uji Simetri Negatif ---" {0 0 0};
+    %pushi/real 1073741824, 20449; load=-0.500000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %pushi/real 1610612736, 20450; load=-1.50000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %pushi/real 1342177280, 20452; load=-5.00000
+    %store/real v000001675651e610_0;
+    %fork TD_tanh_tb.check_val, S_0000016756523240;
+    %join;
+    %vpi_call 2 105 "$display", "\012--- Verifikasi dengan MATLAB Reference ---" {0 0 0};
+    %pushi/real 0, 4065; load=0.00000
+    %store/real v000001675651ed90_0;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000001675651ebb0_0, 0, 32;
+    %fork TD_tanh_tb.check_val_with_expected, S_0000016756523710;
+    %join;
+    %pushi/real 1073741824, 4065; load=0.500000
+    %store/real v000001675651ed90_0;
+    %pushi/vec4 7739175, 0, 32;
+    %store/vec4 v000001675651ebb0_0, 0, 32;
+    %fork TD_tanh_tb.check_val_with_expected, S_0000016756523710;
+    %join;
+    %pushi/real 1073741824, 4066; load=1.00000
+    %store/real v000001675651ed90_0;
+    %pushi/vec4 12853948, 0, 32;
+    %store/vec4 v000001675651ebb0_0, 0, 32;
+    %fork TD_tanh_tb.check_val_with_expected, S_0000016756523710;
+    %join;
+    %pushi/real 1610612736, 4066; load=1.50000
+    %store/real v000001675651ed90_0;
+    %pushi/vec4 15187956, 0, 32;
+    %store/vec4 v000001675651ebb0_0, 0, 32;
+    %fork TD_tanh_tb.check_val_with_expected, S_0000016756523710;
+    %join;
+    %pushi/real 1342177280, 4067; load=2.50000
+    %store/real v000001675651ed90_0;
+    %pushi/vec4 16525218, 0, 32;
+    %store/vec4 v000001675651ebb0_0, 0, 32;
+    %fork TD_tanh_tb.check_val_with_expected, S_0000016756523710;
+    %join;
+    %pushi/real 1073741824, 4068; load=4.00000
+    %store/real v000001675651ed90_0;
+    %pushi/vec4 16777216, 0, 32;
+    %store/vec4 v000001675651ebb0_0, 0, 32;
+    %fork TD_tanh_tb.check_val_with_expected, S_0000016756523710;
+    %join;
+    %pushi/real 1073741824, 20449; load=-0.500000
+    %store/real v000001675651ed90_0;
+    %pushi/vec4 4287228121, 0, 32;
+    %store/vec4 v000001675651ebb0_0, 0, 32;
+    %fork TD_tanh_tb.check_val_with_expected, S_0000016756523710;
+    %join;
+    %pushi/real 1610612736, 20450; load=-1.50000
+    %store/real v000001675651ed90_0;
+    %pushi/vec4 4279779340, 0, 32;
+    %store/vec4 v000001675651ebb0_0, 0, 32;
+    %fork TD_tanh_tb.check_val_with_expected, S_0000016756523710;
+    %join;
+    %pushi/real 1342177280, 20452; load=-5.00000
+    %store/real v000001675651ed90_0;
+    %pushi/vec4 4278190080, 0, 32;
+    %store/vec4 v000001675651ebb0_0, 0, 32;
+    %fork TD_tanh_tb.check_val_with_expected, S_0000016756523710;
+    %join;
+    %vpi_call 2 116 "$display", "\012==========================================================" {0 0 0};
+    %vpi_call 2 117 "$display", "            SIMULASI SELESAI" {0 0 0};
+    %vpi_call 2 118 "$display", "==========================================================" {0 0 0};
+    %vpi_call 2 119 "$finish" {0 0 0};
+    %end;
+    .thread T_6;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tanh_tb.v";
+    "./tanh.v";
