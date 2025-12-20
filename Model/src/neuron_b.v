@@ -2,6 +2,7 @@
 `define NEURON_B
 
 `include "Util/tanh.v"
+`include "Util/mult_Q.v"
 
 module neuron_b #(
     parameter WIDTH = 32
@@ -36,7 +37,11 @@ module neuron_b #(
     genvar i;
     generate
         for (i = 1; i <= 9 ; i = i + 1) begin
-            assign m[i] = a_arr[i] * w_arr[i] ; 
+            mult_Q #(.WIDTH(32), .FBITS(24)) multiplier (
+                .a(a_arr[i]), 
+                .b(w_arr[i]), 
+                .y(m[i])
+            );
         end
     endgenerate
     

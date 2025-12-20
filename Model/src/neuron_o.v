@@ -2,6 +2,7 @@
 `define NEURON_O
 
 `include "Util/tanh.v"
+`include "Util/mult_Q.v"
 
 module neuron_o #(
     parameter WIDTH = 32
@@ -14,12 +15,24 @@ module neuron_o #(
     output signed [WIDTH-1:0] y
 );
     // LOCAL SIGNAL
-    wire signed [WIDTH-1:0] [1:0] out_In;
+    wire signed [WIDTH-1:0] out_In [0:1];
     wire signed [WIDTH-1:0] pre_activation, out;
 
     // Out @ INPUT
-    assign out_In[0] = a_1*w_1;
-    assign out_In[1] = a_2*w_2;
+    // Out @ INPUT
+    // Perkalian 0: a_1 * w_1
+    mult_Q #(.WIDTH(32), .FBITS(24)) mult_0 (
+    .a(a_1), 
+    .b(w_1), 
+    .y(out_In[0])  
+    );
+
+    // Perkalian 1: a_2 * w_2
+    mult_Q #(.WIDTH(32), .FBITS(24)) mult_1 (
+    .a(a_2), 
+    .b(w_2), 
+    .y(out_In[1])
+    );
 
     // ADD ALL
     assign pre_activation = out_In[0] + out_In[1] + b;

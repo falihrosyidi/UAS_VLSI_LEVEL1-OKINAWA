@@ -2,6 +2,7 @@
 `define NEURON_C
 
 `include "Util/sigmoid.v"
+`include "Util/mult_Q.v"
 
 module neuron_c #(
     parameter WIDTH = 32
@@ -16,20 +17,38 @@ module neuron_c #(
     output signed [WIDTH-1:0] y
 );
     // LOCAL SIGNAL
-    wire signed [WIDTH-1:0] [2:0] out_In;
+    wire signed [WIDTH-1:0] out_In [0:2];
     wire signed [WIDTH-1:0] pre_activation, out;
 
     // Out @ INPUT
-    assign out_In[0] = a_1*w_1;
-    assign out_In[1] = a_1*w_1;
-    assign out_In[2] = a_1*w_1;
+    // Out @ INPUT
+    // Perkalian 0: a_1 * w_1
+    mult_Q #(.WIDTH(32), .FBITS(24)) mult_0 (
+    .a(a_1), 
+    .b(w_1), 
+    .y(out_In[0])  
+    );
+
+    // Perkalian 1: a_2 * w_2
+    mult_Q #(.WIDTH(32), .FBITS(24)) mult_1 (
+    .a(a_2), 
+    .b(w_2), 
+    .y(out_In[1])
+    );
+
+    // Perkalian 2: a_3 * w_3
+    mult_Q #(.WIDTH(32), .FBITS(24)) mult_2 (
+    .a(a_3), 
+    .b(w_3), 
+    .y(out_In[2])
+    );
 
     // ADD ALL
     assign pre_activation = out_In[0] + out_In[1] + out_In[2] + b;
 
     // SIGMOID <= ACTIVATE FUNCTION
     sigmoid activate_func (
-        .a(pre_activation),
+        .x(pre_activation),
         .y(out)
     );
 
