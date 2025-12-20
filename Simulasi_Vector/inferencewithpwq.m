@@ -1,5 +1,5 @@
 %% =========================================================
-%  Minimal GAN Generator Inference (CORDIC Version)x_fake
+%  Minimal GAN Generator Inference (PWQ Version)x_fake
 % =========================================================
 clear; clc;
 
@@ -9,18 +9,17 @@ load('trained_simple_gan.mat', 'Wg2', 'bg2', 'Wg3', 'bg3');
 % 2. Parameters
 img_size = 3;
 latent_dim = 2;
-num_iter = 12 % Konfigurasi jumlah iterasi CORDIC
 
 % 3. Generate image
 z = [0 1]'; % Input latent vector sesuai permintaan Anda
 
 % --- Perbedaan hanya di bagian aktivasi ini ---
 
-% Layer 1: Hidden layer menggunakan CORDIC
+% Layer 1: Hidden layer menggunakan PWQ
 z2 = Wg2 * z + bg2;
 ag2 = arrayfun(@(x) pwq_tanh_fixed(x), z2); 
 
-% Layer 2: Output layer menggunakan CORDIC
+% Layer 2: Output layer menggunakan PWQ
 z3 = Wg3 * ag2 + bg3;
 x_fake = arrayfun(@(x) pwq_tanh_fixed(x), z3);
 
@@ -48,7 +47,7 @@ function y = pwq_tanh_fixed(x)
 % Q4.12, symmetric, saturating
 
     %% Fixed-point config
-    WL = 16; FL = 12;
+    WL = 32; FL = 27;
     F  = fimath('RoundingMethod','Nearest',...
                 'OverflowAction','Saturate');
 
