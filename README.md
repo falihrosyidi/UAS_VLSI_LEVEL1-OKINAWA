@@ -1,6 +1,6 @@
 # UAS_VLSI_LEVEL1-OKINAWA
 
-FORMAT DATA => fixed point 32 bit, Q6.26
+FORMAT DATA => fixed point 32 bit, Q8.24
 
 Lampiran:
 
