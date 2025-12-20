@@ -3,7 +3,7 @@
 
 `include "Util/tanh.v"
 
-module neuron_a #(
+module neuron_o #(
     parameter WIDTH = 32
 ) (
     input signed [WIDTH-1:0] a_1,
