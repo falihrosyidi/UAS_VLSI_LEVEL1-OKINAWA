@@ -12,9 +12,7 @@ module neuron_a #(
     input signed [WIDTH-1:0] w_1,
     input signed [WIDTH-1:0] w_2,
     input signed [WIDTH-1:0] w_3,
-    input signed [WIDTH-1:0] b_1,
-    input signed [WIDTH-1:0] b_2,
-    input signed [WIDTH-1:0] b_3,
+    input signed [WIDTH-1:0] b,
     output signed [WIDTH-1:0] y
 );
     // LOCAL SIGNAL
@@ -22,12 +20,13 @@ module neuron_a #(
     wire signed [WIDTH-1:0] pre_activation, out;
 
     // Out @ INPUT
-    assign out_In[0] = a_1*w_1+b_1;
-    assign out_In[1] = a_2*w_2+b_2;
-    assign out_In[2] = a_3*w_3+b_3;
+    assign out_In[0] = a_1*w_1;
+    assign out_In[1] = a_2*w_2;
+    assign out_In[2] = a_3*w_3;
+
 
     // ADD ALL
-    assign pre_activation = out_In[0] + out_In[1] + out_In[2];
+    assign pre_activation = out_In[0] + out_In[1] + out_In[2] + b;
 
     // TANH <= ACTIVATE FUNCTION
     tanh activate_func (

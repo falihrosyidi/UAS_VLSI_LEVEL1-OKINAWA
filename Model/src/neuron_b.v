@@ -8,13 +8,12 @@ module neuron_b #(
 ) (
     input signed [WIDTH-1:0] a_1, a_2, a_3, a_4, a_5, a_6, a_7, a_8, a_9,
     input  signed [WIDTH-1:0] w_1, w_2, w_3, w_4, w_5, w_6, w_7, w_8, w_9,
-    input signed [WIDTH-1:0] b_1, b_2, b_3, b_4, b_5, b_6, b_7, b_8, b_9,
+    input signed [WIDTH-1:0] b,
     output signed [WIDTH-1:0] y
 );  
 
     wire signed [WIDTH-1:0] a_arr [1:9];
     wire signed [WIDTH-1:0] w_arr [1:9];
-    wire signed [WIDTH-1:0] b_arr [1:9];
     // Hasil Perkalian (a * w)
     wire signed [WIDTH-1:0] m  [1:9]; 
     wire signed [WIDTH-1:0]  m_1, m_2, m_3, m_4, m_5, m_6, m_7, m_8, m_9 ;
@@ -34,22 +33,17 @@ module neuron_b #(
     assign w_arr[4] = w_4; assign w_arr[5] = w_5; assign w_arr[6] = w_6;
     assign w_arr[7] = w_7; assign w_arr[8] = w_8; assign w_arr[9] = w_9;
 
-    assign b_arr[1] = b_1; assign b_arr[2] = b_2; assign b_arr[3] = b_3;
-    assign b_arr[4] = b_4; assign b_arr[5] = b_5; assign b_arr[6] = b_6;
-    assign b_arr[7] = b_7; assign b_arr[8] = b_8; assign b_arr[9] = b_9;
-
     genvar i;
     generate
         for (i = 1; i <= 9 ; i = i + 1) begin
             assign m[i] = a_arr[i] * w_arr[i] ; 
-            assign s[i] = m[i] + b_arr[i] ;
         end
     endgenerate
     
-    assign sum_123 = s[1] + s[2] + s[3] ;
-    assign sum_456 = s[4] + s[5] + s[6] ;
-    assign sum_789 = s[7] + s[8] + s[9] ;
-    assign total_sum = sum_123 + sum_456 + sum_789 ;
+    assign sum_123 = m[1] + m[2] + m[3] ;
+    assign sum_456 = m[4] + m[5] + m[6] ;
+    assign sum_789 = m[7] + m[8] + m[9] ;
+    assign total_sum = sum_123 + sum_456 + sum_789 + b ;
 
     // TANH <= ACTIVATE FUNCTION
     tanh activate_func (
