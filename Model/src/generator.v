@@ -51,7 +51,7 @@ module generator #(
     generate
         for (j=0; j<N_NEURON_L3; j=j+1) begin
             neuron_a NEURON_L3 (
-                .a_1(out_L3[0]), .a_2(out_L3[1]), .a_3(out_L3[2]),
+                .a_1(out_L2[0]), .a_2(out_L2[1]), .a_3(out_L2[2]),
                 .w_1(w_L3[(N_NEURON_L2*j+1)*WIDTH-1 : N_NEURON_L2*j*WIDTH]),
                 .w_2(w_L3[(N_NEURON_L2*j+2)*WIDTH-1 : (N_NEURON_L2*j+1)*WIDTH]),                
                 .w_3(w_L3[(N_NEURON_L2*j+3)*WIDTH-1 : (N_NEURON_L2*j+2)*WIDTH]),                
