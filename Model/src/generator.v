@@ -45,7 +45,7 @@ module generator #(
 
 // LAYER 3
     // LOCAL SIGNAL
-    wire signed [N_NEURON_L3-1:0][WIDTH-1:0] out_L3;
+    wire signed [WIDTH-1:0] out_L3 [N_NEURON_L3-1:0];
 
     genvar j;
     generate
