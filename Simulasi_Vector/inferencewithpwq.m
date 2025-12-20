@@ -47,7 +47,7 @@ function y = pwq_tanh_fixed(x)
 % Q4.12, symmetric, saturating
 
     %% Fixed-point config
-    WL = 32; FL = 27;
+    WL = 32; FL = 24;
     F  = fimath('RoundingMethod','Nearest',...
                 'OverflowAction','Saturate');
 
