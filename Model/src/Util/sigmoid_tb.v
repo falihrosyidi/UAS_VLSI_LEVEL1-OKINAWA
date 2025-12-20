@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "sigmoid.v"
 
 module sigmoid_tb();
 
