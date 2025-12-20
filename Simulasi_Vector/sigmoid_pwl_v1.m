@@ -33,16 +33,18 @@ for i = 1:length(x)
 end
 
 % --- Plotting ---
-figure('Color', 'w', 'Position', [100 100 1000 450]);
-
-subplot(2,1,1);
+% --- Window 1: Perbandingan Fungsi ---
+figure('Color', 'w', 'Name', 'Perbandingan Fungsi Sigmoid');
 plot(x, y_true, 'k', 'LineWidth', 2); hold on;
 plot(x, y_pwl, 'r--', 'LineWidth', 1.5);
-grid on; ylabel('Amplitude');
+grid on; 
+ylabel('Amplitude'); xlabel('Input x');
 legend('Sigmoid Asli', 'PWL (Curvature Based)');
 title('Perbandingan Sigmoid: Original vs PWL (Li et al.)');
 
-subplot(2,1,2);
+% --- Window 2: Analisis Error ---
+figure('Color', 'w', 'Name', 'Analisis Error Sigmoid');
 plot(x, abs(y_true - y_pwl), 'b', 'LineWidth', 1.2);
-grid on; ylabel('|Error|'); xlabel('Input x');
+grid on; 
+ylabel('|Error|'); xlabel('Input x');
 title(['Analisis Absolute Error (Max Error: ', num2str(max(abs(y_true - y_pwl))), ')']);

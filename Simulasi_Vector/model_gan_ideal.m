@@ -2,7 +2,7 @@
 %  GAN Inference: Kondisi IDEAL (Floating Point)
 % =========================================================
 clear; clc;
-load('trained_simple_gan.mat');
+load('trained_simple_gan_cross.mat');
 
 % Input latent vector (contoh: [0; 1])
 z = [0; 1]; 

@@ -2,7 +2,7 @@
 %  GAN Inference: Kondisi HARDWARE (Fixed Point Q8.24)
 % =========================================================
 clear; clc;
-load('trained_simple_gan.mat');
+load('trained_simple_gan_cross.mat');
 
 % Konfigurasi Fixed-Point Q8.24
 WL = 32; FL = 24;
