@@ -23,8 +23,8 @@ module neuron_a #(
 
     // Out @ INPUT
     assign out_In[0] = a_1*w_1+b_1;
-    assign out_In[1] = a_1*w_1+b_1;
-    assign out_In[2] = a_1*w_1+b_1;
+    assign out_In[1] = a_2*w_2+b_2;
+    assign out_In[2] = a_3*w_3+b_3;
 
     // ADD ALL
     assign pre_activation = out_In[0] + out_In[1] + out_In[2];

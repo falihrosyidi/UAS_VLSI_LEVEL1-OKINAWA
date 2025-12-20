@@ -1,0 +1,95 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000020de6fe5310 .scope module, "neuron_c" "neuron_c" 2 6;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a_1";
+    .port_info 1 /INPUT 32 "a_2";
+    .port_info 2 /INPUT 32 "a_3";
+    .port_info 3 /INPUT 32 "w_1";
+    .port_info 4 /INPUT 32 "w_2";
+    .port_info 5 /INPUT 32 "w_3";
+    .port_info 6 /INPUT 32 "b_1";
+    .port_info 7 /INPUT 32 "b_2";
+    .port_info 8 /INPUT 32 "b_3";
+    .port_info 9 /OUTPUT 32 "y";
+P_0000020de70cac20 .param/l "WIDTH" 0 2 7, +C4<00000000000000000000000000100000>;
+o0000020de6fe9008 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+L_0000020de6fd6360 .functor BUFZ 32, o0000020de6fe9008, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v0000020de6fd6a40_0 .net/s *"_ivl_11", 31 0, L_0000020de703eaf0;  1 drivers
+v0000020de6fe5630_0 .net/s *"_ivl_12", 31 0, L_0000020de703ce30;  1 drivers
+v0000020de7033850_0 .net *"_ivl_15", 2 0, L_0000020de703ccf0;  1 drivers
+v0000020de70338f0_0 .net/s *"_ivl_19", 31 0, L_0000020de703ced0;  1 drivers
+v0000020de7033990_0 .net/s *"_ivl_20", 31 0, L_0000020de703e5f0;  1 drivers
+v0000020de7033a30_0 .net *"_ivl_23", 2 0, L_0000020de703db50;  1 drivers
+v0000020de7033bc0_0 .net *"_ivl_25", 2 0, L_0000020de703d3d0;  1 drivers
+v0000020de7034020_0 .net/s *"_ivl_26", 31 0, L_0000020de703d6f0;  1 drivers
+v0000020de70347a0_0 .net *"_ivl_29", 2 0, L_0000020de703e370;  1 drivers
+v0000020de70340c0_0 .net/s *"_ivl_3", 31 0, L_0000020de7033ee0;  1 drivers
+v0000020de7034160_0 .net/s *"_ivl_30", 31 0, L_0000020de703d830;  1 drivers
+v0000020de7033f80_0 .net/s *"_ivl_32", 31 0, L_0000020de703e050;  1 drivers
+v0000020de7033d00_0 .net *"_ivl_35", 2 0, L_0000020de703cf70;  1 drivers
+v0000020de70342a0_0 .net/s *"_ivl_36", 31 0, L_0000020de703df10;  1 drivers
+v0000020de7034200_0 .net/s *"_ivl_4", 31 0, L_0000020de703d010;  1 drivers
+o0000020de6fe9368 .functor BUFZ 87, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+; Elide local net with no drivers, v0000020de7034340_0 name=_ivl_44
+v0000020de70343e0_0 .net *"_ivl_7", 2 0, L_0000020de703e190;  1 drivers
+o0000020de6fe93c8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000020de7033b20_0 .net/s "a_1", 31 0, o0000020de6fe93c8;  0 drivers
+o0000020de6fe93f8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000020de7034a20_0 .net/s "a_2", 31 0, o0000020de6fe93f8;  0 drivers
+o0000020de6fe9428 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000020de7034480_0 .net/s "a_3", 31 0, o0000020de6fe9428;  0 drivers
+o0000020de6fe9458 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000020de7033c60_0 .net/s "b_1", 31 0, o0000020de6fe9458;  0 drivers
+o0000020de6fe9488 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000020de7034520_0 .net/s "b_2", 31 0, o0000020de6fe9488;  0 drivers
+o0000020de6fe94b8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000020de7033e40_0 .net/s "b_3", 31 0, o0000020de6fe94b8;  0 drivers
+v0000020de7034660_0 .net/s "out", 31 0, o0000020de6fe9008;  0 drivers
+v0000020de7034980_0 .net/s "out_In", 95 0, L_0000020de703e690;  1 drivers
+v0000020de70345c0_0 .net/s "pre_activation", 31 0, L_0000020de703e0f0;  1 drivers
+o0000020de6fe9518 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000020de7033da0_0 .net/s "w_1", 31 0, o0000020de6fe9518;  0 drivers
+o0000020de6fe9548 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000020de7034700_0 .net/s "w_2", 31 0, o0000020de6fe9548;  0 drivers
+o0000020de6fe9578 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000020de7034840_0 .net/s "w_3", 31 0, o0000020de6fe9578;  0 drivers
+v0000020de70348e0_0 .net/s "y", 31 0, L_0000020de6fd6360;  1 drivers
+L_0000020de7033ee0 .arith/mult 32, o0000020de6fe93c8, o0000020de6fe9518;
+L_0000020de703d010 .arith/sum 32, L_0000020de7033ee0, o0000020de6fe9458;
+L_0000020de703e190 .part L_0000020de703d010, 0, 3;
+L_0000020de703eaf0 .arith/mult 32, o0000020de6fe93c8, o0000020de6fe9518;
+L_0000020de703ce30 .arith/sum 32, L_0000020de703eaf0, o0000020de6fe9458;
+L_0000020de703ccf0 .part L_0000020de703ce30, 0, 3;
+L_0000020de703ced0 .arith/mult 32, o0000020de6fe93c8, o0000020de6fe9518;
+L_0000020de703e5f0 .arith/sum 32, L_0000020de703ced0, o0000020de6fe9458;
+L_0000020de703db50 .part L_0000020de703e5f0, 0, 3;
+L_0000020de703d3d0 .part L_0000020de703e690, 0, 3;
+L_0000020de703d6f0 .extend/s 32, L_0000020de703d3d0;
+L_0000020de703e370 .part L_0000020de703e690, 3, 3;
+L_0000020de703d830 .extend/s 32, L_0000020de703e370;
+L_0000020de703e050 .arith/sum 32, L_0000020de703d6f0, L_0000020de703d830;
+L_0000020de703cf70 .part L_0000020de703e690, 6, 3;
+L_0000020de703df10 .extend/s 32, L_0000020de703cf70;
+L_0000020de703e0f0 .arith/sum 32, L_0000020de703e050, L_0000020de703df10;
+L_0000020de703e690 .concat [ 3 3 3 87], L_0000020de703e190, L_0000020de703ccf0, L_0000020de703db50, o0000020de6fe9368;
+S_0000020de6fe54a0 .scope module, "activate_func" "sigmoid" 2 33, 3 4 0, S_0000020de6fe5310;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /OUTPUT 32 "y";
+P_0000020de70cb160 .param/l "WIDTH" 0 3 5, +C4<00000000000000000000000000100000>;
+v0000020de70c69d0_0 .net "a", 31 0, L_0000020de703e0f0;  alias, 1 drivers
+v0000020de70c6840_0 .net "y", 31 0, o0000020de6fe9008;  alias, 0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "neuron_c.v";
+    "./Util/sigmoid.v";

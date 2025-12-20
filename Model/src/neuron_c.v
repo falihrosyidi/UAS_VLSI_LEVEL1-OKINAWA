@@ -1,7 +1,7 @@
 `ifndef NEURON_C
 `define NEURON_C
 
-`include "Util/tanh.v"
+`include "Util/sigmoid.v"
 
 module neuron_c #(
     parameter WIDTH = 32
