@@ -13,7 +13,7 @@ module generator #(
     input signed [WIDTH-1:0] a_1,
     input signed [WIDTH-1:0] a_2,
     input signed [N_INPUT*N_NEURON_L2*WIDTH-1:0] w_L2,
-    input signed [N_INPUT*N_NEURON_L3*WIDTH-1:0] w_L3,
+    input signed [N_NEURON_L2*N_NEURON_L3*WIDTH-1:0] w_L3,
     input signed [N_NEURON_L2*WIDTH-1:0] b_L2,
     input signed [N_NEURON_L3*WIDTH-1:0] b_L3,
     output signed [WIDTH-1:0] y_1x1,
