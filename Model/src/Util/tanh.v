@@ -1,7 +1,8 @@
 `ifndef TANH
 `define TANH
 
-`include "register.v"
+// `include "register.v" // Use when only run this module
+`include "Util/register.v" // Use to able run the neuron module
 
 module tanh #(
     parameter WIDTH = 32,
