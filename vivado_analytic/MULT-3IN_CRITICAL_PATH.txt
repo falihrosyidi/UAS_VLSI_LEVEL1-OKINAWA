@@ -1,0 +1,927 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date              : Thu Jan  8 18:20:57 2026
+| Host              : DESKTOP-D5AIFNJ running 64-bit major release  (build 9200)
+| Command           : report_timing -from [all_inputs] -to [all_outputs] -max_paths 10 -sort_by group -delay_type max
+| Design            : mult_Q
+| Device            : xczu7ev-ffvc1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Synthesized
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 b[11]
+                            (input port)
+  Destination:            y[30]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.900ns  (logic 6.747ns (75.809%)  route 2.153ns (24.191%))
+  Logic Levels:           27  (CARRY8=5 DSP_A_B_DATA=2 DSP_ALU=4 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=4 DSP_PREADD_DATA=2 IBUFCTRL=1 INBUF=1 LUT2=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  b[11] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[11]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 f  b_IBUF[11]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[11]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 f  b_IBUF[11]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.691     1.273    raw_y0__1/B[11]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[11]_B2_DATA[11])
+                                                      0.151     1.424 r  raw_y0__1/DSP_A_B_DATA_INST/B2_DATA[11]
+                         net (fo=1, unplaced)         0.000     1.424    raw_y0__1/DSP_A_B_DATA.B2_DATA<11>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[11]_B2B1[11])
+                                                      0.073     1.497 r  raw_y0__1/DSP_PREADD_DATA_INST/B2B1[11]
+                         net (fo=1, unplaced)         0.000     1.497    raw_y0__1/DSP_PREADD_DATA.B2B1<11>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[11]_V[40])
+                                                      0.609     2.106 f  raw_y0__1/DSP_MULTIPLIER_INST/V[40]
+                         net (fo=1, unplaced)         0.000     2.106    raw_y0__1/DSP_MULTIPLIER.V<40>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[40]_V_DATA[40])
+                                                      0.046     2.152 r  raw_y0__1/DSP_M_DATA_INST/V_DATA[40]
+                         net (fo=1, unplaced)         0.000     2.152    raw_y0__1/DSP_M_DATA.V_DATA<40>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[40]_ALU_OUT[47])
+                                                      0.571     2.723 f  raw_y0__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.723    raw_y0__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.845 r  raw_y0__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.859    raw_y0__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.405 f  raw_y0__2/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.405    raw_y0__2/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.514 r  raw_y0__2/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.720    raw_y0__2_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.772 r  raw_y__1_i_17/O
+                         net (fo=1, unplaced)         0.023     3.795    raw_y__1_i_17_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.992 r  raw_y__1_i_2/CO[7]
+                         net (fo=1, unplaced)         0.005     3.997    raw_y__1_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     4.113 f  raw_y__1_i_1/O[5]
+                         net (fo=1, unplaced)         0.194     4.307    raw_y__1/A[12]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[12]_A2_DATA[12])
+                                                      0.192     4.499 r  raw_y__1/DSP_A_B_DATA_INST/A2_DATA[12]
+                         net (fo=1, unplaced)         0.000     4.499    raw_y__1/DSP_A_B_DATA.A2_DATA<12>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[12]_A2A1[12])
+                                                      0.076     4.575 r  raw_y__1/DSP_PREADD_DATA_INST/A2A1[12]
+                         net (fo=1, unplaced)         0.000     4.575    raw_y__1/DSP_PREADD_DATA.A2A1<12>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[12]_U[33])
+                                                      0.505     5.080 f  raw_y__1/DSP_MULTIPLIER_INST/U[33]
+                         net (fo=1, unplaced)         0.000     5.080    raw_y__1/DSP_MULTIPLIER.U<33>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[33]_U_DATA[33])
+                                                      0.047     5.127 r  raw_y__1/DSP_M_DATA_INST/U_DATA[33]
+                         net (fo=1, unplaced)         0.000     5.127    raw_y__1/DSP_M_DATA.U_DATA<33>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[33]_ALU_OUT[47])
+                                                      0.585     5.712 f  raw_y__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     5.712    raw_y__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.834 r  raw_y__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     5.848    raw_y__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.546     6.394 f  raw_y__2/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     6.394    raw_y__2/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.109     6.503 r  raw_y__2/DSP_OUTPUT_INST/P[6]
+                         net (fo=2, unplaced)         0.203     6.706    raw_y__2_n_99
+                         LUT3 (Prop_LUT3_I1_O)        0.100     6.806 r  y_OBUF[20]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     7.025    y_OBUF[20]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     7.062 r  y_OBUF[20]_inst_i_16/O
+                         net (fo=1, unplaced)         0.023     7.085    y_OBUF[20]_inst_i_16_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     7.282 r  y_OBUF[20]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.287    y_OBUF[20]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     7.309 r  y_OBUF[28]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.314    y_OBUF[28]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[1])
+                                                      0.076     7.390 r  y_OBUF[31]_inst_i_1/O[1]
+                         net (fo=1, unplaced)         0.551     7.941    y_OBUF[30]
+                         OBUF (Prop_OBUF_I_O)         0.959     8.900 r  y_OBUF[30]_inst/O
+                         net (fo=0)                   0.000     8.900    y[30]
+                                                                      r  y[30] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[11]
+                            (input port)
+  Destination:            y[29]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.882ns  (logic 6.727ns (75.737%)  route 2.155ns (24.263%))
+  Logic Levels:           27  (CARRY8=5 DSP_A_B_DATA=2 DSP_ALU=4 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=4 DSP_PREADD_DATA=2 IBUFCTRL=1 INBUF=1 LUT2=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  b[11] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[11]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 f  b_IBUF[11]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[11]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 f  b_IBUF[11]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.691     1.273    raw_y0__1/B[11]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[11]_B2_DATA[11])
+                                                      0.151     1.424 r  raw_y0__1/DSP_A_B_DATA_INST/B2_DATA[11]
+                         net (fo=1, unplaced)         0.000     1.424    raw_y0__1/DSP_A_B_DATA.B2_DATA<11>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[11]_B2B1[11])
+                                                      0.073     1.497 r  raw_y0__1/DSP_PREADD_DATA_INST/B2B1[11]
+                         net (fo=1, unplaced)         0.000     1.497    raw_y0__1/DSP_PREADD_DATA.B2B1<11>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[11]_V[40])
+                                                      0.609     2.106 f  raw_y0__1/DSP_MULTIPLIER_INST/V[40]
+                         net (fo=1, unplaced)         0.000     2.106    raw_y0__1/DSP_MULTIPLIER.V<40>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[40]_V_DATA[40])
+                                                      0.046     2.152 r  raw_y0__1/DSP_M_DATA_INST/V_DATA[40]
+                         net (fo=1, unplaced)         0.000     2.152    raw_y0__1/DSP_M_DATA.V_DATA<40>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[40]_ALU_OUT[47])
+                                                      0.571     2.723 f  raw_y0__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.723    raw_y0__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.845 r  raw_y0__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.859    raw_y0__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.405 f  raw_y0__2/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.405    raw_y0__2/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.514 r  raw_y0__2/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.720    raw_y0__2_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.772 r  raw_y__1_i_17/O
+                         net (fo=1, unplaced)         0.023     3.795    raw_y__1_i_17_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.992 r  raw_y__1_i_2/CO[7]
+                         net (fo=1, unplaced)         0.005     3.997    raw_y__1_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     4.113 f  raw_y__1_i_1/O[5]
+                         net (fo=1, unplaced)         0.194     4.307    raw_y__1/A[12]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[12]_A2_DATA[12])
+                                                      0.192     4.499 r  raw_y__1/DSP_A_B_DATA_INST/A2_DATA[12]
+                         net (fo=1, unplaced)         0.000     4.499    raw_y__1/DSP_A_B_DATA.A2_DATA<12>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[12]_A2A1[12])
+                                                      0.076     4.575 r  raw_y__1/DSP_PREADD_DATA_INST/A2A1[12]
+                         net (fo=1, unplaced)         0.000     4.575    raw_y__1/DSP_PREADD_DATA.A2A1<12>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[12]_U[33])
+                                                      0.505     5.080 f  raw_y__1/DSP_MULTIPLIER_INST/U[33]
+                         net (fo=1, unplaced)         0.000     5.080    raw_y__1/DSP_MULTIPLIER.U<33>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[33]_U_DATA[33])
+                                                      0.047     5.127 r  raw_y__1/DSP_M_DATA_INST/U_DATA[33]
+                         net (fo=1, unplaced)         0.000     5.127    raw_y__1/DSP_M_DATA.U_DATA<33>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[33]_ALU_OUT[47])
+                                                      0.585     5.712 f  raw_y__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     5.712    raw_y__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.834 r  raw_y__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     5.848    raw_y__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.546     6.394 f  raw_y__2/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     6.394    raw_y__2/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.109     6.503 r  raw_y__2/DSP_OUTPUT_INST/P[6]
+                         net (fo=2, unplaced)         0.203     6.706    raw_y__2_n_99
+                         LUT3 (Prop_LUT3_I1_O)        0.100     6.806 r  y_OBUF[20]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     7.025    y_OBUF[20]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     7.062 r  y_OBUF[20]_inst_i_16/O
+                         net (fo=1, unplaced)         0.023     7.085    y_OBUF[20]_inst_i_16_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     7.282 r  y_OBUF[20]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.287    y_OBUF[20]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     7.309 r  y_OBUF[28]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.314    y_OBUF[28]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.056     7.370 r  y_OBUF[31]_inst_i_1/O[0]
+                         net (fo=1, unplaced)         0.553     7.923    y_OBUF[29]
+                         OBUF (Prop_OBUF_I_O)         0.959     8.882 r  y_OBUF[29]_inst/O
+                         net (fo=0)                   0.000     8.882    y[29]
+                                                                      r  y[29] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[11]
+                            (input port)
+  Destination:            y[22]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.873ns  (logic 6.725ns (75.791%)  route 2.148ns (24.209%))
+  Logic Levels:           26  (CARRY8=4 DSP_A_B_DATA=2 DSP_ALU=4 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=4 DSP_PREADD_DATA=2 IBUFCTRL=1 INBUF=1 LUT2=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  b[11] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[11]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 f  b_IBUF[11]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[11]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 f  b_IBUF[11]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.691     1.273    raw_y0__1/B[11]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[11]_B2_DATA[11])
+                                                      0.151     1.424 r  raw_y0__1/DSP_A_B_DATA_INST/B2_DATA[11]
+                         net (fo=1, unplaced)         0.000     1.424    raw_y0__1/DSP_A_B_DATA.B2_DATA<11>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[11]_B2B1[11])
+                                                      0.073     1.497 r  raw_y0__1/DSP_PREADD_DATA_INST/B2B1[11]
+                         net (fo=1, unplaced)         0.000     1.497    raw_y0__1/DSP_PREADD_DATA.B2B1<11>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[11]_V[40])
+                                                      0.609     2.106 f  raw_y0__1/DSP_MULTIPLIER_INST/V[40]
+                         net (fo=1, unplaced)         0.000     2.106    raw_y0__1/DSP_MULTIPLIER.V<40>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[40]_V_DATA[40])
+                                                      0.046     2.152 r  raw_y0__1/DSP_M_DATA_INST/V_DATA[40]
+                         net (fo=1, unplaced)         0.000     2.152    raw_y0__1/DSP_M_DATA.V_DATA<40>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[40]_ALU_OUT[47])
+                                                      0.571     2.723 f  raw_y0__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.723    raw_y0__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.845 r  raw_y0__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.859    raw_y0__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.405 f  raw_y0__2/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.405    raw_y0__2/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.514 r  raw_y0__2/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.720    raw_y0__2_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.772 r  raw_y__1_i_17/O
+                         net (fo=1, unplaced)         0.023     3.795    raw_y__1_i_17_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.992 r  raw_y__1_i_2/CO[7]
+                         net (fo=1, unplaced)         0.005     3.997    raw_y__1_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     4.113 f  raw_y__1_i_1/O[5]
+                         net (fo=1, unplaced)         0.194     4.307    raw_y__1/A[12]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[12]_A2_DATA[12])
+                                                      0.192     4.499 r  raw_y__1/DSP_A_B_DATA_INST/A2_DATA[12]
+                         net (fo=1, unplaced)         0.000     4.499    raw_y__1/DSP_A_B_DATA.A2_DATA<12>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[12]_A2A1[12])
+                                                      0.076     4.575 r  raw_y__1/DSP_PREADD_DATA_INST/A2A1[12]
+                         net (fo=1, unplaced)         0.000     4.575    raw_y__1/DSP_PREADD_DATA.A2A1<12>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[12]_U[33])
+                                                      0.505     5.080 f  raw_y__1/DSP_MULTIPLIER_INST/U[33]
+                         net (fo=1, unplaced)         0.000     5.080    raw_y__1/DSP_MULTIPLIER.U<33>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[33]_U_DATA[33])
+                                                      0.047     5.127 r  raw_y__1/DSP_M_DATA_INST/U_DATA[33]
+                         net (fo=1, unplaced)         0.000     5.127    raw_y__1/DSP_M_DATA.U_DATA<33>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[33]_ALU_OUT[47])
+                                                      0.585     5.712 f  raw_y__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     5.712    raw_y__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.834 r  raw_y__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     5.848    raw_y__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.546     6.394 f  raw_y__2/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     6.394    raw_y__2/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.109     6.503 r  raw_y__2/DSP_OUTPUT_INST/P[6]
+                         net (fo=2, unplaced)         0.203     6.706    raw_y__2_n_99
+                         LUT3 (Prop_LUT3_I1_O)        0.100     6.806 r  y_OBUF[20]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     7.025    y_OBUF[20]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     7.062 r  y_OBUF[20]_inst_i_16/O
+                         net (fo=1, unplaced)         0.023     7.085    y_OBUF[20]_inst_i_16_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     7.282 r  y_OBUF[20]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.287    y_OBUF[20]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[1])
+                                                      0.076     7.363 r  y_OBUF[28]_inst_i_1/O[1]
+                         net (fo=1, unplaced)         0.551     7.914    y_OBUF[22]
+                         OBUF (Prop_OBUF_I_O)         0.959     8.873 r  y_OBUF[22]_inst/O
+                         net (fo=0)                   0.000     8.873    y[22]
+                                                                      r  y[22] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[11]
+                            (input port)
+  Destination:            y[28]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.869ns  (logic 6.765ns (76.277%)  route 2.104ns (23.723%))
+  Logic Levels:           26  (CARRY8=4 DSP_A_B_DATA=2 DSP_ALU=4 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=4 DSP_PREADD_DATA=2 IBUFCTRL=1 INBUF=1 LUT2=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  b[11] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[11]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 f  b_IBUF[11]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[11]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 f  b_IBUF[11]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.691     1.273    raw_y0__1/B[11]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[11]_B2_DATA[11])
+                                                      0.151     1.424 r  raw_y0__1/DSP_A_B_DATA_INST/B2_DATA[11]
+                         net (fo=1, unplaced)         0.000     1.424    raw_y0__1/DSP_A_B_DATA.B2_DATA<11>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[11]_B2B1[11])
+                                                      0.073     1.497 r  raw_y0__1/DSP_PREADD_DATA_INST/B2B1[11]
+                         net (fo=1, unplaced)         0.000     1.497    raw_y0__1/DSP_PREADD_DATA.B2B1<11>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[11]_V[40])
+                                                      0.609     2.106 f  raw_y0__1/DSP_MULTIPLIER_INST/V[40]
+                         net (fo=1, unplaced)         0.000     2.106    raw_y0__1/DSP_MULTIPLIER.V<40>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[40]_V_DATA[40])
+                                                      0.046     2.152 r  raw_y0__1/DSP_M_DATA_INST/V_DATA[40]
+                         net (fo=1, unplaced)         0.000     2.152    raw_y0__1/DSP_M_DATA.V_DATA<40>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[40]_ALU_OUT[47])
+                                                      0.571     2.723 f  raw_y0__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.723    raw_y0__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.845 r  raw_y0__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.859    raw_y0__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.405 f  raw_y0__2/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.405    raw_y0__2/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.514 r  raw_y0__2/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.720    raw_y0__2_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.772 r  raw_y__1_i_17/O
+                         net (fo=1, unplaced)         0.023     3.795    raw_y__1_i_17_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.992 r  raw_y__1_i_2/CO[7]
+                         net (fo=1, unplaced)         0.005     3.997    raw_y__1_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     4.113 f  raw_y__1_i_1/O[5]
+                         net (fo=1, unplaced)         0.194     4.307    raw_y__1/A[12]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[12]_A2_DATA[12])
+                                                      0.192     4.499 r  raw_y__1/DSP_A_B_DATA_INST/A2_DATA[12]
+                         net (fo=1, unplaced)         0.000     4.499    raw_y__1/DSP_A_B_DATA.A2_DATA<12>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[12]_A2A1[12])
+                                                      0.076     4.575 r  raw_y__1/DSP_PREADD_DATA_INST/A2A1[12]
+                         net (fo=1, unplaced)         0.000     4.575    raw_y__1/DSP_PREADD_DATA.A2A1<12>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[12]_U[33])
+                                                      0.505     5.080 f  raw_y__1/DSP_MULTIPLIER_INST/U[33]
+                         net (fo=1, unplaced)         0.000     5.080    raw_y__1/DSP_MULTIPLIER.U<33>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[33]_U_DATA[33])
+                                                      0.047     5.127 r  raw_y__1/DSP_M_DATA_INST/U_DATA[33]
+                         net (fo=1, unplaced)         0.000     5.127    raw_y__1/DSP_M_DATA.U_DATA<33>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[33]_ALU_OUT[47])
+                                                      0.585     5.712 f  raw_y__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     5.712    raw_y__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.834 r  raw_y__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     5.848    raw_y__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.546     6.394 f  raw_y__2/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     6.394    raw_y__2/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.109     6.503 r  raw_y__2/DSP_OUTPUT_INST/P[6]
+                         net (fo=2, unplaced)         0.203     6.706    raw_y__2_n_99
+                         LUT3 (Prop_LUT3_I1_O)        0.100     6.806 r  y_OBUF[20]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     7.025    y_OBUF[20]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     7.062 r  y_OBUF[20]_inst_i_16/O
+                         net (fo=1, unplaced)         0.023     7.085    y_OBUF[20]_inst_i_16_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     7.282 r  y_OBUF[20]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.287    y_OBUF[20]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[7])
+                                                      0.116     7.403 r  y_OBUF[28]_inst_i_1/O[7]
+                         net (fo=1, unplaced)         0.507     7.910    y_OBUF[28]
+                         OBUF (Prop_OBUF_I_O)         0.959     8.869 r  y_OBUF[28]_inst/O
+                         net (fo=0)                   0.000     8.869    y[28]
+                                                                      r  y[28] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[11]
+                            (input port)
+  Destination:            y[27]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.856ns  (logic 6.752ns (76.242%)  route 2.104ns (23.758%))
+  Logic Levels:           26  (CARRY8=4 DSP_A_B_DATA=2 DSP_ALU=4 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=4 DSP_PREADD_DATA=2 IBUFCTRL=1 INBUF=1 LUT2=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  b[11] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[11]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 f  b_IBUF[11]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[11]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 f  b_IBUF[11]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.691     1.273    raw_y0__1/B[11]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[11]_B2_DATA[11])
+                                                      0.151     1.424 r  raw_y0__1/DSP_A_B_DATA_INST/B2_DATA[11]
+                         net (fo=1, unplaced)         0.000     1.424    raw_y0__1/DSP_A_B_DATA.B2_DATA<11>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[11]_B2B1[11])
+                                                      0.073     1.497 r  raw_y0__1/DSP_PREADD_DATA_INST/B2B1[11]
+                         net (fo=1, unplaced)         0.000     1.497    raw_y0__1/DSP_PREADD_DATA.B2B1<11>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[11]_V[40])
+                                                      0.609     2.106 f  raw_y0__1/DSP_MULTIPLIER_INST/V[40]
+                         net (fo=1, unplaced)         0.000     2.106    raw_y0__1/DSP_MULTIPLIER.V<40>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[40]_V_DATA[40])
+                                                      0.046     2.152 r  raw_y0__1/DSP_M_DATA_INST/V_DATA[40]
+                         net (fo=1, unplaced)         0.000     2.152    raw_y0__1/DSP_M_DATA.V_DATA<40>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[40]_ALU_OUT[47])
+                                                      0.571     2.723 f  raw_y0__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.723    raw_y0__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.845 r  raw_y0__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.859    raw_y0__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.405 f  raw_y0__2/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.405    raw_y0__2/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.514 r  raw_y0__2/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.720    raw_y0__2_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.772 r  raw_y__1_i_17/O
+                         net (fo=1, unplaced)         0.023     3.795    raw_y__1_i_17_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.992 r  raw_y__1_i_2/CO[7]
+                         net (fo=1, unplaced)         0.005     3.997    raw_y__1_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     4.113 f  raw_y__1_i_1/O[5]
+                         net (fo=1, unplaced)         0.194     4.307    raw_y__1/A[12]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[12]_A2_DATA[12])
+                                                      0.192     4.499 r  raw_y__1/DSP_A_B_DATA_INST/A2_DATA[12]
+                         net (fo=1, unplaced)         0.000     4.499    raw_y__1/DSP_A_B_DATA.A2_DATA<12>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[12]_A2A1[12])
+                                                      0.076     4.575 r  raw_y__1/DSP_PREADD_DATA_INST/A2A1[12]
+                         net (fo=1, unplaced)         0.000     4.575    raw_y__1/DSP_PREADD_DATA.A2A1<12>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[12]_U[33])
+                                                      0.505     5.080 f  raw_y__1/DSP_MULTIPLIER_INST/U[33]
+                         net (fo=1, unplaced)         0.000     5.080    raw_y__1/DSP_MULTIPLIER.U<33>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[33]_U_DATA[33])
+                                                      0.047     5.127 r  raw_y__1/DSP_M_DATA_INST/U_DATA[33]
+                         net (fo=1, unplaced)         0.000     5.127    raw_y__1/DSP_M_DATA.U_DATA<33>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[33]_ALU_OUT[47])
+                                                      0.585     5.712 f  raw_y__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     5.712    raw_y__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.834 r  raw_y__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     5.848    raw_y__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.546     6.394 f  raw_y__2/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     6.394    raw_y__2/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.109     6.503 r  raw_y__2/DSP_OUTPUT_INST/P[6]
+                         net (fo=2, unplaced)         0.203     6.706    raw_y__2_n_99
+                         LUT3 (Prop_LUT3_I1_O)        0.100     6.806 r  y_OBUF[20]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     7.025    y_OBUF[20]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     7.062 r  y_OBUF[20]_inst_i_16/O
+                         net (fo=1, unplaced)         0.023     7.085    y_OBUF[20]_inst_i_16_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     7.282 r  y_OBUF[20]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.287    y_OBUF[20]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[6])
+                                                      0.103     7.390 r  y_OBUF[28]_inst_i_1/O[6]
+                         net (fo=1, unplaced)         0.507     7.897    y_OBUF[27]
+                         OBUF (Prop_OBUF_I_O)         0.959     8.856 r  y_OBUF[27]_inst/O
+                         net (fo=0)                   0.000     8.856    y[27]
+                                                                      r  y[27] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[11]
+                            (input port)
+  Destination:            y[21]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.855ns  (logic 6.705ns (75.720%)  route 2.150ns (24.280%))
+  Logic Levels:           26  (CARRY8=4 DSP_A_B_DATA=2 DSP_ALU=4 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=4 DSP_PREADD_DATA=2 IBUFCTRL=1 INBUF=1 LUT2=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  b[11] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[11]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 f  b_IBUF[11]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[11]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 f  b_IBUF[11]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.691     1.273    raw_y0__1/B[11]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[11]_B2_DATA[11])
+                                                      0.151     1.424 r  raw_y0__1/DSP_A_B_DATA_INST/B2_DATA[11]
+                         net (fo=1, unplaced)         0.000     1.424    raw_y0__1/DSP_A_B_DATA.B2_DATA<11>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[11]_B2B1[11])
+                                                      0.073     1.497 r  raw_y0__1/DSP_PREADD_DATA_INST/B2B1[11]
+                         net (fo=1, unplaced)         0.000     1.497    raw_y0__1/DSP_PREADD_DATA.B2B1<11>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[11]_V[40])
+                                                      0.609     2.106 f  raw_y0__1/DSP_MULTIPLIER_INST/V[40]
+                         net (fo=1, unplaced)         0.000     2.106    raw_y0__1/DSP_MULTIPLIER.V<40>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[40]_V_DATA[40])
+                                                      0.046     2.152 r  raw_y0__1/DSP_M_DATA_INST/V_DATA[40]
+                         net (fo=1, unplaced)         0.000     2.152    raw_y0__1/DSP_M_DATA.V_DATA<40>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[40]_ALU_OUT[47])
+                                                      0.571     2.723 f  raw_y0__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.723    raw_y0__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.845 r  raw_y0__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.859    raw_y0__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.405 f  raw_y0__2/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.405    raw_y0__2/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.514 r  raw_y0__2/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.720    raw_y0__2_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.772 r  raw_y__1_i_17/O
+                         net (fo=1, unplaced)         0.023     3.795    raw_y__1_i_17_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.992 r  raw_y__1_i_2/CO[7]
+                         net (fo=1, unplaced)         0.005     3.997    raw_y__1_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     4.113 f  raw_y__1_i_1/O[5]
+                         net (fo=1, unplaced)         0.194     4.307    raw_y__1/A[12]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[12]_A2_DATA[12])
+                                                      0.192     4.499 r  raw_y__1/DSP_A_B_DATA_INST/A2_DATA[12]
+                         net (fo=1, unplaced)         0.000     4.499    raw_y__1/DSP_A_B_DATA.A2_DATA<12>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[12]_A2A1[12])
+                                                      0.076     4.575 r  raw_y__1/DSP_PREADD_DATA_INST/A2A1[12]
+                         net (fo=1, unplaced)         0.000     4.575    raw_y__1/DSP_PREADD_DATA.A2A1<12>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[12]_U[33])
+                                                      0.505     5.080 f  raw_y__1/DSP_MULTIPLIER_INST/U[33]
+                         net (fo=1, unplaced)         0.000     5.080    raw_y__1/DSP_MULTIPLIER.U<33>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[33]_U_DATA[33])
+                                                      0.047     5.127 r  raw_y__1/DSP_M_DATA_INST/U_DATA[33]
+                         net (fo=1, unplaced)         0.000     5.127    raw_y__1/DSP_M_DATA.U_DATA<33>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[33]_ALU_OUT[47])
+                                                      0.585     5.712 f  raw_y__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     5.712    raw_y__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.834 r  raw_y__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     5.848    raw_y__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.546     6.394 f  raw_y__2/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     6.394    raw_y__2/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.109     6.503 r  raw_y__2/DSP_OUTPUT_INST/P[6]
+                         net (fo=2, unplaced)         0.203     6.706    raw_y__2_n_99
+                         LUT3 (Prop_LUT3_I1_O)        0.100     6.806 r  y_OBUF[20]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     7.025    y_OBUF[20]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     7.062 r  y_OBUF[20]_inst_i_16/O
+                         net (fo=1, unplaced)         0.023     7.085    y_OBUF[20]_inst_i_16_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     7.282 r  y_OBUF[20]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.287    y_OBUF[20]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.056     7.343 r  y_OBUF[28]_inst_i_1/O[0]
+                         net (fo=1, unplaced)         0.553     7.896    y_OBUF[21]
+                         OBUF (Prop_OBUF_I_O)         0.959     8.855 r  y_OBUF[21]_inst/O
+                         net (fo=0)                   0.000     8.855    y[21]
+                                                                      r  y[21] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[11]
+                            (input port)
+  Destination:            y[31]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.847ns  (logic 6.738ns (76.161%)  route 2.109ns (23.839%))
+  Logic Levels:           27  (CARRY8=5 DSP_A_B_DATA=2 DSP_ALU=4 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=4 DSP_PREADD_DATA=2 IBUFCTRL=1 INBUF=1 LUT2=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  b[11] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[11]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 f  b_IBUF[11]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[11]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 f  b_IBUF[11]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.691     1.273    raw_y0__1/B[11]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[11]_B2_DATA[11])
+                                                      0.151     1.424 r  raw_y0__1/DSP_A_B_DATA_INST/B2_DATA[11]
+                         net (fo=1, unplaced)         0.000     1.424    raw_y0__1/DSP_A_B_DATA.B2_DATA<11>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[11]_B2B1[11])
+                                                      0.073     1.497 r  raw_y0__1/DSP_PREADD_DATA_INST/B2B1[11]
+                         net (fo=1, unplaced)         0.000     1.497    raw_y0__1/DSP_PREADD_DATA.B2B1<11>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[11]_V[40])
+                                                      0.609     2.106 f  raw_y0__1/DSP_MULTIPLIER_INST/V[40]
+                         net (fo=1, unplaced)         0.000     2.106    raw_y0__1/DSP_MULTIPLIER.V<40>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[40]_V_DATA[40])
+                                                      0.046     2.152 r  raw_y0__1/DSP_M_DATA_INST/V_DATA[40]
+                         net (fo=1, unplaced)         0.000     2.152    raw_y0__1/DSP_M_DATA.V_DATA<40>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[40]_ALU_OUT[47])
+                                                      0.571     2.723 f  raw_y0__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.723    raw_y0__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.845 r  raw_y0__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.859    raw_y0__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.405 f  raw_y0__2/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.405    raw_y0__2/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.514 r  raw_y0__2/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.720    raw_y0__2_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.772 r  raw_y__1_i_17/O
+                         net (fo=1, unplaced)         0.023     3.795    raw_y__1_i_17_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.992 r  raw_y__1_i_2/CO[7]
+                         net (fo=1, unplaced)         0.005     3.997    raw_y__1_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     4.113 f  raw_y__1_i_1/O[5]
+                         net (fo=1, unplaced)         0.194     4.307    raw_y__1/A[12]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[12]_A2_DATA[12])
+                                                      0.192     4.499 r  raw_y__1/DSP_A_B_DATA_INST/A2_DATA[12]
+                         net (fo=1, unplaced)         0.000     4.499    raw_y__1/DSP_A_B_DATA.A2_DATA<12>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[12]_A2A1[12])
+                                                      0.076     4.575 r  raw_y__1/DSP_PREADD_DATA_INST/A2A1[12]
+                         net (fo=1, unplaced)         0.000     4.575    raw_y__1/DSP_PREADD_DATA.A2A1<12>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[12]_U[33])
+                                                      0.505     5.080 f  raw_y__1/DSP_MULTIPLIER_INST/U[33]
+                         net (fo=1, unplaced)         0.000     5.080    raw_y__1/DSP_MULTIPLIER.U<33>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[33]_U_DATA[33])
+                                                      0.047     5.127 r  raw_y__1/DSP_M_DATA_INST/U_DATA[33]
+                         net (fo=1, unplaced)         0.000     5.127    raw_y__1/DSP_M_DATA.U_DATA<33>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[33]_ALU_OUT[47])
+                                                      0.585     5.712 f  raw_y__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     5.712    raw_y__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.834 r  raw_y__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     5.848    raw_y__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.546     6.394 f  raw_y__2/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     6.394    raw_y__2/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.109     6.503 r  raw_y__2/DSP_OUTPUT_INST/P[6]
+                         net (fo=2, unplaced)         0.203     6.706    raw_y__2_n_99
+                         LUT3 (Prop_LUT3_I1_O)        0.100     6.806 r  y_OBUF[20]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     7.025    y_OBUF[20]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     7.062 r  y_OBUF[20]_inst_i_16/O
+                         net (fo=1, unplaced)         0.023     7.085    y_OBUF[20]_inst_i_16_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     7.282 r  y_OBUF[20]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.287    y_OBUF[20]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     7.309 r  y_OBUF[28]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.314    y_OBUF[28]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[2])
+                                                      0.067     7.381 r  y_OBUF[31]_inst_i_1/O[2]
+                         net (fo=1, unplaced)         0.507     7.888    y_OBUF[31]
+                         OBUF (Prop_OBUF_I_O)         0.959     8.847 r  y_OBUF[31]_inst/O
+                         net (fo=0)                   0.000     8.847    y[31]
+                                                                      r  y[31] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[11]
+                            (input port)
+  Destination:            y[25]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.837ns  (logic 6.735ns (76.213%)  route 2.102ns (23.787%))
+  Logic Levels:           26  (CARRY8=4 DSP_A_B_DATA=2 DSP_ALU=4 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=4 DSP_PREADD_DATA=2 IBUFCTRL=1 INBUF=1 LUT2=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  b[11] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[11]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 f  b_IBUF[11]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[11]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 f  b_IBUF[11]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.691     1.273    raw_y0__1/B[11]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[11]_B2_DATA[11])
+                                                      0.151     1.424 r  raw_y0__1/DSP_A_B_DATA_INST/B2_DATA[11]
+                         net (fo=1, unplaced)         0.000     1.424    raw_y0__1/DSP_A_B_DATA.B2_DATA<11>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[11]_B2B1[11])
+                                                      0.073     1.497 r  raw_y0__1/DSP_PREADD_DATA_INST/B2B1[11]
+                         net (fo=1, unplaced)         0.000     1.497    raw_y0__1/DSP_PREADD_DATA.B2B1<11>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[11]_V[40])
+                                                      0.609     2.106 f  raw_y0__1/DSP_MULTIPLIER_INST/V[40]
+                         net (fo=1, unplaced)         0.000     2.106    raw_y0__1/DSP_MULTIPLIER.V<40>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[40]_V_DATA[40])
+                                                      0.046     2.152 r  raw_y0__1/DSP_M_DATA_INST/V_DATA[40]
+                         net (fo=1, unplaced)         0.000     2.152    raw_y0__1/DSP_M_DATA.V_DATA<40>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[40]_ALU_OUT[47])
+                                                      0.571     2.723 f  raw_y0__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.723    raw_y0__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.845 r  raw_y0__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.859    raw_y0__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.405 f  raw_y0__2/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.405    raw_y0__2/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.514 r  raw_y0__2/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.720    raw_y0__2_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.772 r  raw_y__1_i_17/O
+                         net (fo=1, unplaced)         0.023     3.795    raw_y__1_i_17_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.992 r  raw_y__1_i_2/CO[7]
+                         net (fo=1, unplaced)         0.005     3.997    raw_y__1_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     4.113 f  raw_y__1_i_1/O[5]
+                         net (fo=1, unplaced)         0.194     4.307    raw_y__1/A[12]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[12]_A2_DATA[12])
+                                                      0.192     4.499 r  raw_y__1/DSP_A_B_DATA_INST/A2_DATA[12]
+                         net (fo=1, unplaced)         0.000     4.499    raw_y__1/DSP_A_B_DATA.A2_DATA<12>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[12]_A2A1[12])
+                                                      0.076     4.575 r  raw_y__1/DSP_PREADD_DATA_INST/A2A1[12]
+                         net (fo=1, unplaced)         0.000     4.575    raw_y__1/DSP_PREADD_DATA.A2A1<12>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[12]_U[33])
+                                                      0.505     5.080 f  raw_y__1/DSP_MULTIPLIER_INST/U[33]
+                         net (fo=1, unplaced)         0.000     5.080    raw_y__1/DSP_MULTIPLIER.U<33>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[33]_U_DATA[33])
+                                                      0.047     5.127 r  raw_y__1/DSP_M_DATA_INST/U_DATA[33]
+                         net (fo=1, unplaced)         0.000     5.127    raw_y__1/DSP_M_DATA.U_DATA<33>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[33]_ALU_OUT[47])
+                                                      0.585     5.712 f  raw_y__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     5.712    raw_y__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.834 r  raw_y__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     5.848    raw_y__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.546     6.394 f  raw_y__2/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     6.394    raw_y__2/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.109     6.503 r  raw_y__2/DSP_OUTPUT_INST/P[6]
+                         net (fo=2, unplaced)         0.203     6.706    raw_y__2_n_99
+                         LUT3 (Prop_LUT3_I1_O)        0.100     6.806 r  y_OBUF[20]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     7.025    y_OBUF[20]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     7.062 r  y_OBUF[20]_inst_i_16/O
+                         net (fo=1, unplaced)         0.023     7.085    y_OBUF[20]_inst_i_16_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     7.282 r  y_OBUF[20]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.287    y_OBUF[20]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[4])
+                                                      0.086     7.373 r  y_OBUF[28]_inst_i_1/O[4]
+                         net (fo=1, unplaced)         0.505     7.878    y_OBUF[25]
+                         OBUF (Prop_OBUF_I_O)         0.959     8.837 r  y_OBUF[25]_inst/O
+                         net (fo=0)                   0.000     8.837    y[25]
+                                                                      r  y[25] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[11]
+                            (input port)
+  Destination:            y[26]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.825ns  (logic 6.765ns (76.657%)  route 2.060ns (23.343%))
+  Logic Levels:           26  (CARRY8=4 DSP_A_B_DATA=2 DSP_ALU=4 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=4 DSP_PREADD_DATA=2 IBUFCTRL=1 INBUF=1 LUT2=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  b[11] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[11]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 f  b_IBUF[11]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[11]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 f  b_IBUF[11]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.691     1.273    raw_y0__1/B[11]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[11]_B2_DATA[11])
+                                                      0.151     1.424 r  raw_y0__1/DSP_A_B_DATA_INST/B2_DATA[11]
+                         net (fo=1, unplaced)         0.000     1.424    raw_y0__1/DSP_A_B_DATA.B2_DATA<11>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[11]_B2B1[11])
+                                                      0.073     1.497 r  raw_y0__1/DSP_PREADD_DATA_INST/B2B1[11]
+                         net (fo=1, unplaced)         0.000     1.497    raw_y0__1/DSP_PREADD_DATA.B2B1<11>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[11]_V[40])
+                                                      0.609     2.106 f  raw_y0__1/DSP_MULTIPLIER_INST/V[40]
+                         net (fo=1, unplaced)         0.000     2.106    raw_y0__1/DSP_MULTIPLIER.V<40>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[40]_V_DATA[40])
+                                                      0.046     2.152 r  raw_y0__1/DSP_M_DATA_INST/V_DATA[40]
+                         net (fo=1, unplaced)         0.000     2.152    raw_y0__1/DSP_M_DATA.V_DATA<40>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[40]_ALU_OUT[47])
+                                                      0.571     2.723 f  raw_y0__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.723    raw_y0__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.845 r  raw_y0__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.859    raw_y0__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.405 f  raw_y0__2/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.405    raw_y0__2/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.514 r  raw_y0__2/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.720    raw_y0__2_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.772 r  raw_y__1_i_17/O
+                         net (fo=1, unplaced)         0.023     3.795    raw_y__1_i_17_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.992 r  raw_y__1_i_2/CO[7]
+                         net (fo=1, unplaced)         0.005     3.997    raw_y__1_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     4.113 f  raw_y__1_i_1/O[5]
+                         net (fo=1, unplaced)         0.194     4.307    raw_y__1/A[12]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[12]_A2_DATA[12])
+                                                      0.192     4.499 r  raw_y__1/DSP_A_B_DATA_INST/A2_DATA[12]
+                         net (fo=1, unplaced)         0.000     4.499    raw_y__1/DSP_A_B_DATA.A2_DATA<12>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[12]_A2A1[12])
+                                                      0.076     4.575 r  raw_y__1/DSP_PREADD_DATA_INST/A2A1[12]
+                         net (fo=1, unplaced)         0.000     4.575    raw_y__1/DSP_PREADD_DATA.A2A1<12>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[12]_U[33])
+                                                      0.505     5.080 f  raw_y__1/DSP_MULTIPLIER_INST/U[33]
+                         net (fo=1, unplaced)         0.000     5.080    raw_y__1/DSP_MULTIPLIER.U<33>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[33]_U_DATA[33])
+                                                      0.047     5.127 r  raw_y__1/DSP_M_DATA_INST/U_DATA[33]
+                         net (fo=1, unplaced)         0.000     5.127    raw_y__1/DSP_M_DATA.U_DATA<33>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[33]_ALU_OUT[47])
+                                                      0.585     5.712 f  raw_y__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     5.712    raw_y__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.834 r  raw_y__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     5.848    raw_y__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.546     6.394 f  raw_y__2/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     6.394    raw_y__2/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.109     6.503 r  raw_y__2/DSP_OUTPUT_INST/P[6]
+                         net (fo=2, unplaced)         0.203     6.706    raw_y__2_n_99
+                         LUT3 (Prop_LUT3_I1_O)        0.100     6.806 r  y_OBUF[20]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     7.025    y_OBUF[20]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     7.062 r  y_OBUF[20]_inst_i_16/O
+                         net (fo=1, unplaced)         0.023     7.085    y_OBUF[20]_inst_i_16_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     7.282 r  y_OBUF[20]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.287    y_OBUF[20]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     7.403 r  y_OBUF[28]_inst_i_1/O[5]
+                         net (fo=1, unplaced)         0.463     7.866    y_OBUF[26]
+                         OBUF (Prop_OBUF_I_O)         0.959     8.825 r  y_OBUF[26]_inst/O
+                         net (fo=0)                   0.000     8.825    y[26]
+                                                                      r  y[26] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[11]
+                            (input port)
+  Destination:            y[23]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.820ns  (logic 6.716ns (76.145%)  route 2.104ns (23.855%))
+  Logic Levels:           26  (CARRY8=4 DSP_A_B_DATA=2 DSP_ALU=4 DSP_M_DATA=2 DSP_MULTIPLIER=2 DSP_OUTPUT=4 DSP_PREADD_DATA=2 IBUFCTRL=1 INBUF=1 LUT2=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  b[11] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[11]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 f  b_IBUF[11]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[11]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 f  b_IBUF[11]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.691     1.273    raw_y0__1/B[11]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_B[11]_B2_DATA[11])
+                                                      0.151     1.424 r  raw_y0__1/DSP_A_B_DATA_INST/B2_DATA[11]
+                         net (fo=1, unplaced)         0.000     1.424    raw_y0__1/DSP_A_B_DATA.B2_DATA<11>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_B2_DATA[11]_B2B1[11])
+                                                      0.073     1.497 r  raw_y0__1/DSP_PREADD_DATA_INST/B2B1[11]
+                         net (fo=1, unplaced)         0.000     1.497    raw_y0__1/DSP_PREADD_DATA.B2B1<11>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_B2B1[11]_V[40])
+                                                      0.609     2.106 f  raw_y0__1/DSP_MULTIPLIER_INST/V[40]
+                         net (fo=1, unplaced)         0.000     2.106    raw_y0__1/DSP_MULTIPLIER.V<40>
+                         DSP_M_DATA (Prop_DSP_M_DATA_V[40]_V_DATA[40])
+                                                      0.046     2.152 r  raw_y0__1/DSP_M_DATA_INST/V_DATA[40]
+                         net (fo=1, unplaced)         0.000     2.152    raw_y0__1/DSP_M_DATA.V_DATA<40>
+                         DSP_ALU (Prop_DSP_ALU_V_DATA[40]_ALU_OUT[47])
+                                                      0.571     2.723 f  raw_y0__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     2.723    raw_y0__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     2.845 r  raw_y0__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     2.859    raw_y0__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[0])
+                                                      0.546     3.405 f  raw_y0__2/DSP_ALU_INST/ALU_OUT[0]
+                         net (fo=1, unplaced)         0.000     3.405    raw_y0__2/DSP_ALU.ALU_OUT<0>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[0]_P[0])
+                                                      0.109     3.514 r  raw_y0__2/DSP_OUTPUT_INST/P[0]
+                         net (fo=2, unplaced)         0.206     3.720    raw_y0__2_n_105
+                         LUT2 (Prop_LUT2_I0_O)        0.052     3.772 r  raw_y__1_i_17/O
+                         net (fo=1, unplaced)         0.023     3.795    raw_y__1_i_17_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     3.992 r  raw_y__1_i_2/CO[7]
+                         net (fo=1, unplaced)         0.005     3.997    raw_y__1_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     4.113 f  raw_y__1_i_1/O[5]
+                         net (fo=1, unplaced)         0.194     4.307    raw_y__1/A[12]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[12]_A2_DATA[12])
+                                                      0.192     4.499 r  raw_y__1/DSP_A_B_DATA_INST/A2_DATA[12]
+                         net (fo=1, unplaced)         0.000     4.499    raw_y__1/DSP_A_B_DATA.A2_DATA<12>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[12]_A2A1[12])
+                                                      0.076     4.575 r  raw_y__1/DSP_PREADD_DATA_INST/A2A1[12]
+                         net (fo=1, unplaced)         0.000     4.575    raw_y__1/DSP_PREADD_DATA.A2A1<12>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[12]_U[33])
+                                                      0.505     5.080 f  raw_y__1/DSP_MULTIPLIER_INST/U[33]
+                         net (fo=1, unplaced)         0.000     5.080    raw_y__1/DSP_MULTIPLIER.U<33>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[33]_U_DATA[33])
+                                                      0.047     5.127 r  raw_y__1/DSP_M_DATA_INST/U_DATA[33]
+                         net (fo=1, unplaced)         0.000     5.127    raw_y__1/DSP_M_DATA.U_DATA<33>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[33]_ALU_OUT[47])
+                                                      0.585     5.712 f  raw_y__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     5.712    raw_y__1/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     5.834 r  raw_y__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     5.848    raw_y__2/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.546     6.394 f  raw_y__2/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     6.394    raw_y__2/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.109     6.503 r  raw_y__2/DSP_OUTPUT_INST/P[6]
+                         net (fo=2, unplaced)         0.203     6.706    raw_y__2_n_99
+                         LUT3 (Prop_LUT3_I1_O)        0.100     6.806 r  y_OBUF[20]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     7.025    y_OBUF[20]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     7.062 r  y_OBUF[20]_inst_i_16/O
+                         net (fo=1, unplaced)         0.023     7.085    y_OBUF[20]_inst_i_16_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     7.282 r  y_OBUF[20]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     7.287    y_OBUF[20]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[2])
+                                                      0.067     7.354 r  y_OBUF[28]_inst_i_1/O[2]
+                         net (fo=1, unplaced)         0.507     7.861    y_OBUF[23]
+                         OBUF (Prop_OBUF_I_O)         0.959     8.820 r  y_OBUF[23]_inst/O
+                         net (fo=0)                   0.000     8.820    y[23]
+                                                                      r  y[23] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+report_timing: Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 6758.637 ; gain = 395.230

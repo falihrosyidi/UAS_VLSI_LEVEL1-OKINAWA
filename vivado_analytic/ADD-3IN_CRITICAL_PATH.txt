@@ -1,0 +1,406 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date              : Thu Jan  8 17:45:06 2026
+| Host              : DESKTOP-D5AIFNJ running 64-bit major release  (build 9200)
+| Command           : report_timing -from [all_inputs] -to [all_outputs] -max_paths 10 -sort_by group -delay_type max
+| Design            : add_Q
+| Device            : xczu7ev-ffvc1156
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Synthesized
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 b[0]
+                            (input port)
+  Destination:            y[25]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.267ns  (logic 2.007ns (61.431%)  route 1.260ns (38.569%))
+  Logic Levels:           9  (CARRY8=4 IBUFCTRL=1 INBUF=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[0] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.452     1.034    b_IBUF[0]
+                         LUT3 (Prop_LUT3_I0_O)        0.112     1.146 r  y_OBUF[7]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     1.365    y_OBUF[7]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     1.402 r  y_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.023     1.425    y_OBUF[7]_inst_i_15_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     1.622 r  y_OBUF[7]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.627    y_OBUF[7]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.649 r  y_OBUF[15]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.654    y_OBUF[15]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.676 r  y_OBUF[23]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.681    y_OBUF[23]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[1])
+                                                      0.076     1.757 r  y_OBUF[31]_inst_i_1/O[1]
+                         net (fo=1, unplaced)         0.551     2.308    y_OBUF[25]
+                         OBUF (Prop_OBUF_I_O)         0.959     3.267 r  y_OBUF[25]_inst/O
+                         net (fo=0)                   0.000     3.267    y[25]
+                                                                      r  y[25] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[0]
+                            (input port)
+  Destination:            y[31]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.263ns  (logic 2.047ns (62.733%)  route 1.216ns (37.267%))
+  Logic Levels:           9  (CARRY8=4 IBUFCTRL=1 INBUF=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[0] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.452     1.034    b_IBUF[0]
+                         LUT3 (Prop_LUT3_I0_O)        0.112     1.146 r  y_OBUF[7]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     1.365    y_OBUF[7]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     1.402 r  y_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.023     1.425    y_OBUF[7]_inst_i_15_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     1.622 r  y_OBUF[7]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.627    y_OBUF[7]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.649 r  y_OBUF[15]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.654    y_OBUF[15]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.676 r  y_OBUF[23]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.681    y_OBUF[23]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[7])
+                                                      0.116     1.797 r  y_OBUF[31]_inst_i_1/O[7]
+                         net (fo=1, unplaced)         0.507     2.304    y_OBUF[31]
+                         OBUF (Prop_OBUF_I_O)         0.959     3.263 r  y_OBUF[31]_inst/O
+                         net (fo=0)                   0.000     3.263    y[31]
+                                                                      r  y[31] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[0]
+                            (input port)
+  Destination:            y[30]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.250ns  (logic 2.034ns (62.583%)  route 1.216ns (37.417%))
+  Logic Levels:           9  (CARRY8=4 IBUFCTRL=1 INBUF=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[0] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.452     1.034    b_IBUF[0]
+                         LUT3 (Prop_LUT3_I0_O)        0.112     1.146 r  y_OBUF[7]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     1.365    y_OBUF[7]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     1.402 r  y_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.023     1.425    y_OBUF[7]_inst_i_15_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     1.622 r  y_OBUF[7]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.627    y_OBUF[7]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.649 r  y_OBUF[15]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.654    y_OBUF[15]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.676 r  y_OBUF[23]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.681    y_OBUF[23]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[6])
+                                                      0.103     1.784 r  y_OBUF[31]_inst_i_1/O[6]
+                         net (fo=1, unplaced)         0.507     2.291    y_OBUF[30]
+                         OBUF (Prop_OBUF_I_O)         0.959     3.250 r  y_OBUF[30]_inst/O
+                         net (fo=0)                   0.000     3.250    y[30]
+                                                                      r  y[30] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[0]
+                            (input port)
+  Destination:            y[24]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.249ns  (logic 1.987ns (61.156%)  route 1.262ns (38.844%))
+  Logic Levels:           9  (CARRY8=4 IBUFCTRL=1 INBUF=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[0] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.452     1.034    b_IBUF[0]
+                         LUT3 (Prop_LUT3_I0_O)        0.112     1.146 r  y_OBUF[7]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     1.365    y_OBUF[7]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     1.402 r  y_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.023     1.425    y_OBUF[7]_inst_i_15_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     1.622 r  y_OBUF[7]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.627    y_OBUF[7]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.649 r  y_OBUF[15]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.654    y_OBUF[15]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.676 r  y_OBUF[23]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.681    y_OBUF[23]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.056     1.737 r  y_OBUF[31]_inst_i_1/O[0]
+                         net (fo=1, unplaced)         0.553     2.290    y_OBUF[24]
+                         OBUF (Prop_OBUF_I_O)         0.959     3.249 r  y_OBUF[24]_inst/O
+                         net (fo=0)                   0.000     3.249    y[24]
+                                                                      r  y[24] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[0]
+                            (input port)
+  Destination:            y[17]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.240ns  (logic 1.985ns (61.264%)  route 1.255ns (38.736%))
+  Logic Levels:           8  (CARRY8=3 IBUFCTRL=1 INBUF=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[0] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.452     1.034    b_IBUF[0]
+                         LUT3 (Prop_LUT3_I0_O)        0.112     1.146 r  y_OBUF[7]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     1.365    y_OBUF[7]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     1.402 r  y_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.023     1.425    y_OBUF[7]_inst_i_15_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     1.622 r  y_OBUF[7]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.627    y_OBUF[7]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.649 r  y_OBUF[15]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.654    y_OBUF[15]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[1])
+                                                      0.076     1.730 r  y_OBUF[23]_inst_i_1/O[1]
+                         net (fo=1, unplaced)         0.551     2.281    y_OBUF[17]
+                         OBUF (Prop_OBUF_I_O)         0.959     3.240 r  y_OBUF[17]_inst/O
+                         net (fo=0)                   0.000     3.240    y[17]
+                                                                      r  y[17] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[0]
+                            (input port)
+  Destination:            y[23]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.236ns  (logic 2.025ns (62.576%)  route 1.211ns (37.424%))
+  Logic Levels:           8  (CARRY8=3 IBUFCTRL=1 INBUF=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[0] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.452     1.034    b_IBUF[0]
+                         LUT3 (Prop_LUT3_I0_O)        0.112     1.146 r  y_OBUF[7]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     1.365    y_OBUF[7]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     1.402 r  y_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.023     1.425    y_OBUF[7]_inst_i_15_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     1.622 r  y_OBUF[7]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.627    y_OBUF[7]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.649 r  y_OBUF[15]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.654    y_OBUF[15]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[7])
+                                                      0.116     1.770 r  y_OBUF[23]_inst_i_1/O[7]
+                         net (fo=1, unplaced)         0.507     2.277    y_OBUF[23]
+                         OBUF (Prop_OBUF_I_O)         0.959     3.236 r  y_OBUF[23]_inst/O
+                         net (fo=0)                   0.000     3.236    y[23]
+                                                                      r  y[23] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[0]
+                            (input port)
+  Destination:            y[28]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.231ns  (logic 2.017ns (62.425%)  route 1.214ns (37.575%))
+  Logic Levels:           9  (CARRY8=4 IBUFCTRL=1 INBUF=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[0] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.452     1.034    b_IBUF[0]
+                         LUT3 (Prop_LUT3_I0_O)        0.112     1.146 r  y_OBUF[7]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     1.365    y_OBUF[7]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     1.402 r  y_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.023     1.425    y_OBUF[7]_inst_i_15_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     1.622 r  y_OBUF[7]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.627    y_OBUF[7]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.649 r  y_OBUF[15]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.654    y_OBUF[15]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.676 r  y_OBUF[23]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.681    y_OBUF[23]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[4])
+                                                      0.086     1.767 r  y_OBUF[31]_inst_i_1/O[4]
+                         net (fo=1, unplaced)         0.505     2.272    y_OBUF[28]
+                         OBUF (Prop_OBUF_I_O)         0.959     3.231 r  y_OBUF[28]_inst/O
+                         net (fo=0)                   0.000     3.231    y[28]
+                                                                      r  y[28] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[0]
+                            (input port)
+  Destination:            y[22]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.223ns  (logic 2.012ns (62.425%)  route 1.211ns (37.575%))
+  Logic Levels:           8  (CARRY8=3 IBUFCTRL=1 INBUF=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[0] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.452     1.034    b_IBUF[0]
+                         LUT3 (Prop_LUT3_I0_O)        0.112     1.146 r  y_OBUF[7]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     1.365    y_OBUF[7]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     1.402 r  y_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.023     1.425    y_OBUF[7]_inst_i_15_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     1.622 r  y_OBUF[7]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.627    y_OBUF[7]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.649 r  y_OBUF[15]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.654    y_OBUF[15]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[6])
+                                                      0.103     1.757 r  y_OBUF[23]_inst_i_1/O[6]
+                         net (fo=1, unplaced)         0.507     2.264    y_OBUF[22]
+                         OBUF (Prop_OBUF_I_O)         0.959     3.223 r  y_OBUF[22]_inst/O
+                         net (fo=0)                   0.000     3.223    y[22]
+                                                                      r  y[22] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[0]
+                            (input port)
+  Destination:            y[16]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.222ns  (logic 1.965ns (60.986%)  route 1.257ns (39.014%))
+  Logic Levels:           8  (CARRY8=3 IBUFCTRL=1 INBUF=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[0] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.452     1.034    b_IBUF[0]
+                         LUT3 (Prop_LUT3_I0_O)        0.112     1.146 r  y_OBUF[7]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     1.365    y_OBUF[7]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     1.402 r  y_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.023     1.425    y_OBUF[7]_inst_i_15_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     1.622 r  y_OBUF[7]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.627    y_OBUF[7]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.649 r  y_OBUF[15]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.654    y_OBUF[15]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.056     1.710 r  y_OBUF[23]_inst_i_1/O[0]
+                         net (fo=1, unplaced)         0.553     2.263    y_OBUF[16]
+                         OBUF (Prop_OBUF_I_O)         0.959     3.222 r  y_OBUF[16]_inst/O
+                         net (fo=0)                   0.000     3.222    y[16]
+                                                                      r  y[16] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 b[0]
+                            (input port)
+  Destination:            y[29]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.219ns  (logic 2.047ns (63.590%)  route 1.172ns (36.410%))
+  Logic Levels:           9  (CARRY8=4 IBUFCTRL=1 INBUF=1 LUT3=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[0] (IN)
+                         net (fo=0)                   0.000     0.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     0.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     0.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     0.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=2, unplaced)         0.452     1.034    b_IBUF[0]
+                         LUT3 (Prop_LUT3_I0_O)        0.112     1.146 r  y_OBUF[7]_inst_i_8/O
+                         net (fo=2, unplaced)         0.219     1.365    y_OBUF[7]_inst_i_8_n_0
+                         LUT4 (Prop_LUT4_I3_O)        0.037     1.402 r  y_OBUF[7]_inst_i_15/O
+                         net (fo=1, unplaced)         0.023     1.425    y_OBUF[7]_inst_i_15_n_0
+                         CARRY8 (Prop_CARRY8_S[1]_CO[7])
+                                                      0.197     1.622 r  y_OBUF[7]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.627    y_OBUF[7]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.649 r  y_OBUF[15]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.654    y_OBUF[15]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.022     1.676 r  y_OBUF[23]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     1.681    y_OBUF[23]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.116     1.797 r  y_OBUF[31]_inst_i_1/O[5]
+                         net (fo=1, unplaced)         0.463     2.260    y_OBUF[29]
+                         OBUF (Prop_OBUF_I_O)         0.959     3.219 r  y_OBUF[29]_inst/O
+                         net (fo=0)                   0.000     3.219    y[29]
+                                                                      r  y[29] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+report_timing: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 6363.406 ; gain = 504.984

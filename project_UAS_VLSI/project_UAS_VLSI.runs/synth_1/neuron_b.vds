@@ -1,0 +1,542 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Jan  8 18:45:06 2026
+# Process ID         : 18164
+# Current directory  : D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.runs/synth_1
+# Command line       : vivado.exe -log neuron_b.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuron_b.tcl
+# Log file           : D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.runs/synth_1/neuron_b.vds
+# Journal file       : D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-D5AIFNJ
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i7-8665U CPU @ 1.90GHz
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 34165 MB
+# Swap memory        : 5100 MB
+# Total Virtual      : 39265 MB
+# Available Virtual  : 18156 MB
+#-----------------------------------------------------------
+source neuron_b.tcl -notrace
+create_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 531.180 ; gain = 219.375
+Command: read_checkpoint -auto_incremental -incremental D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.srcs/utils_1/imports/synth_1/top_level.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.srcs/utils_1/imports/synth_1/top_level.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top neuron_b -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34520
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1074.945 ; gain = 528.570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'out', assumed default net type 'wire' [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v:56]
+WARNING: [Synth 8-8895] 'out' is already implicitly declared on line 56 [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v:58]
+INFO: [Synth 8-6157] synthesizing module 'neuron_b' [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v:7]
+INFO: [Synth 8-6157] synthesizing module 'mult_Q' [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v:4]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter FBITS bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mult_Q' (0#1) [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v:4]
+INFO: [Synth 8-6157] synthesizing module 'tanh' [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'tanh' (0#1) [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'neuron_b' (0#1) [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v:7]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1194.066 ; gain = 647.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1194.066 ; gain = 647.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1194.066 ; gain = 647.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.srcs/utils_1/imports/synth_1/top_level.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1194.066 ; gain = 647.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1194.066 ; gain = 647.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1194.066 ; gain = 647.691
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 1     
+	  10 Input   32 Bit       Adders := 1     
++---Multipliers : 
+	              32x32  Multipliers := 10    
+	              28x32  Multipliers := 1     
+	              26x32  Multipliers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 5     
+	   2 Input   28 Bit        Muxes := 1     
+	   2 Input   27 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 3     
+	   2 Input   25 Bit        Muxes := 2     
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input   23 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP genblk1[8].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[8].multiplier/raw_y is absorbed into DSP genblk1[8].multiplier/raw_y.
+DSP Report: operator genblk1[8].multiplier/raw_y is absorbed into DSP genblk1[8].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[8].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[8].multiplier/raw_y is absorbed into DSP genblk1[8].multiplier/raw_y.
+DSP Report: operator genblk1[8].multiplier/raw_y is absorbed into DSP genblk1[8].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[8].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[8].multiplier/raw_y is absorbed into DSP genblk1[8].multiplier/raw_y.
+DSP Report: operator genblk1[8].multiplier/raw_y is absorbed into DSP genblk1[8].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[8].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[8].multiplier/raw_y is absorbed into DSP genblk1[8].multiplier/raw_y.
+DSP Report: operator genblk1[8].multiplier/raw_y is absorbed into DSP genblk1[8].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[9].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[9].multiplier/raw_y is absorbed into DSP genblk1[9].multiplier/raw_y.
+DSP Report: operator genblk1[9].multiplier/raw_y is absorbed into DSP genblk1[9].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[9].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[9].multiplier/raw_y is absorbed into DSP genblk1[9].multiplier/raw_y.
+DSP Report: operator genblk1[9].multiplier/raw_y is absorbed into DSP genblk1[9].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[9].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[9].multiplier/raw_y is absorbed into DSP genblk1[9].multiplier/raw_y.
+DSP Report: operator genblk1[9].multiplier/raw_y is absorbed into DSP genblk1[9].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[9].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[9].multiplier/raw_y is absorbed into DSP genblk1[9].multiplier/raw_y.
+DSP Report: operator genblk1[9].multiplier/raw_y is absorbed into DSP genblk1[9].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[5].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[5].multiplier/raw_y is absorbed into DSP genblk1[5].multiplier/raw_y.
+DSP Report: operator genblk1[5].multiplier/raw_y is absorbed into DSP genblk1[5].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[5].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[5].multiplier/raw_y is absorbed into DSP genblk1[5].multiplier/raw_y.
+DSP Report: operator genblk1[5].multiplier/raw_y is absorbed into DSP genblk1[5].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[5].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[5].multiplier/raw_y is absorbed into DSP genblk1[5].multiplier/raw_y.
+DSP Report: operator genblk1[5].multiplier/raw_y is absorbed into DSP genblk1[5].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[5].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[5].multiplier/raw_y is absorbed into DSP genblk1[5].multiplier/raw_y.
+DSP Report: operator genblk1[5].multiplier/raw_y is absorbed into DSP genblk1[5].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[6].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[6].multiplier/raw_y is absorbed into DSP genblk1[6].multiplier/raw_y.
+DSP Report: operator genblk1[6].multiplier/raw_y is absorbed into DSP genblk1[6].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[6].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[6].multiplier/raw_y is absorbed into DSP genblk1[6].multiplier/raw_y.
+DSP Report: operator genblk1[6].multiplier/raw_y is absorbed into DSP genblk1[6].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[6].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[6].multiplier/raw_y is absorbed into DSP genblk1[6].multiplier/raw_y.
+DSP Report: operator genblk1[6].multiplier/raw_y is absorbed into DSP genblk1[6].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[6].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[6].multiplier/raw_y is absorbed into DSP genblk1[6].multiplier/raw_y.
+DSP Report: operator genblk1[6].multiplier/raw_y is absorbed into DSP genblk1[6].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[2].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[2].multiplier/raw_y is absorbed into DSP genblk1[2].multiplier/raw_y.
+DSP Report: operator genblk1[2].multiplier/raw_y is absorbed into DSP genblk1[2].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[2].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[2].multiplier/raw_y is absorbed into DSP genblk1[2].multiplier/raw_y.
+DSP Report: operator genblk1[2].multiplier/raw_y is absorbed into DSP genblk1[2].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[2].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[2].multiplier/raw_y is absorbed into DSP genblk1[2].multiplier/raw_y.
+DSP Report: operator genblk1[2].multiplier/raw_y is absorbed into DSP genblk1[2].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[2].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[2].multiplier/raw_y is absorbed into DSP genblk1[2].multiplier/raw_y.
+DSP Report: operator genblk1[2].multiplier/raw_y is absorbed into DSP genblk1[2].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[3].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[3].multiplier/raw_y is absorbed into DSP genblk1[3].multiplier/raw_y.
+DSP Report: operator genblk1[3].multiplier/raw_y is absorbed into DSP genblk1[3].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[3].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[3].multiplier/raw_y is absorbed into DSP genblk1[3].multiplier/raw_y.
+DSP Report: operator genblk1[3].multiplier/raw_y is absorbed into DSP genblk1[3].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[3].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[3].multiplier/raw_y is absorbed into DSP genblk1[3].multiplier/raw_y.
+DSP Report: operator genblk1[3].multiplier/raw_y is absorbed into DSP genblk1[3].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[3].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[3].multiplier/raw_y is absorbed into DSP genblk1[3].multiplier/raw_y.
+DSP Report: operator genblk1[3].multiplier/raw_y is absorbed into DSP genblk1[3].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[4].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[4].multiplier/raw_y is absorbed into DSP genblk1[4].multiplier/raw_y.
+DSP Report: operator genblk1[4].multiplier/raw_y is absorbed into DSP genblk1[4].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[4].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[4].multiplier/raw_y is absorbed into DSP genblk1[4].multiplier/raw_y.
+DSP Report: operator genblk1[4].multiplier/raw_y is absorbed into DSP genblk1[4].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[4].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[4].multiplier/raw_y is absorbed into DSP genblk1[4].multiplier/raw_y.
+DSP Report: operator genblk1[4].multiplier/raw_y is absorbed into DSP genblk1[4].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[4].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[4].multiplier/raw_y is absorbed into DSP genblk1[4].multiplier/raw_y.
+DSP Report: operator genblk1[4].multiplier/raw_y is absorbed into DSP genblk1[4].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[7].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[7].multiplier/raw_y is absorbed into DSP genblk1[7].multiplier/raw_y.
+DSP Report: operator genblk1[7].multiplier/raw_y is absorbed into DSP genblk1[7].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[7].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[7].multiplier/raw_y is absorbed into DSP genblk1[7].multiplier/raw_y.
+DSP Report: operator genblk1[7].multiplier/raw_y is absorbed into DSP genblk1[7].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[7].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[7].multiplier/raw_y is absorbed into DSP genblk1[7].multiplier/raw_y.
+DSP Report: operator genblk1[7].multiplier/raw_y is absorbed into DSP genblk1[7].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[7].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[7].multiplier/raw_y is absorbed into DSP genblk1[7].multiplier/raw_y.
+DSP Report: operator genblk1[7].multiplier/raw_y is absorbed into DSP genblk1[7].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[1].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[1].multiplier/raw_y is absorbed into DSP genblk1[1].multiplier/raw_y.
+DSP Report: operator genblk1[1].multiplier/raw_y is absorbed into DSP genblk1[1].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[1].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[1].multiplier/raw_y is absorbed into DSP genblk1[1].multiplier/raw_y.
+DSP Report: operator genblk1[1].multiplier/raw_y is absorbed into DSP genblk1[1].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[1].multiplier/raw_y, operation Mode is: A*B.
+DSP Report: operator genblk1[1].multiplier/raw_y is absorbed into DSP genblk1[1].multiplier/raw_y.
+DSP Report: operator genblk1[1].multiplier/raw_y is absorbed into DSP genblk1[1].multiplier/raw_y.
+DSP Report: Generating DSP genblk1[1].multiplier/raw_y, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[1].multiplier/raw_y is absorbed into DSP genblk1[1].multiplier/raw_y.
+DSP Report: operator genblk1[1].multiplier/raw_y is absorbed into DSP genblk1[1].multiplier/raw_y.
+DSP Report: Generating DSP activate_func/term2_full, operation Mode is: A*B.
+DSP Report: operator activate_func/term2_full is absorbed into DSP activate_func/term2_full.
+DSP Report: operator activate_func/term2_full is absorbed into DSP activate_func/term2_full.
+DSP Report: Generating DSP activate_func/term2_full, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator activate_func/term2_full is absorbed into DSP activate_func/term2_full.
+DSP Report: operator activate_func/term2_full is absorbed into DSP activate_func/term2_full.
+DSP Report: Generating DSP activate_func/ai_sq_full, operation Mode is: A*B.
+DSP Report: operator activate_func/ai_sq_full is absorbed into DSP activate_func/ai_sq_full.
+DSP Report: operator activate_func/ai_sq_full is absorbed into DSP activate_func/ai_sq_full.
+DSP Report: Generating DSP activate_func/ai_sq_full, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator activate_func/ai_sq_full is absorbed into DSP activate_func/ai_sq_full.
+DSP Report: operator activate_func/ai_sq_full is absorbed into DSP activate_func/ai_sq_full.
+DSP Report: Generating DSP activate_func/ai_sq_full, operation Mode is: A*B.
+DSP Report: operator activate_func/ai_sq_full is absorbed into DSP activate_func/ai_sq_full.
+DSP Report: operator activate_func/ai_sq_full is absorbed into DSP activate_func/ai_sq_full.
+DSP Report: Generating DSP activate_func/ai_sq_full, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator activate_func/ai_sq_full is absorbed into DSP activate_func/ai_sq_full.
+DSP Report: operator activate_func/ai_sq_full is absorbed into DSP activate_func/ai_sq_full.
+DSP Report: Generating DSP activate_func/term1_full, operation Mode is: A*B.
+DSP Report: operator activate_func/term1_full is absorbed into DSP activate_func/term1_full.
+DSP Report: operator activate_func/term1_full is absorbed into DSP activate_func/term1_full.
+DSP Report: Generating DSP activate_func/term1_full, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator activate_func/term1_full is absorbed into DSP activate_func/term1_full.
+DSP Report: operator activate_func/term1_full is absorbed into DSP activate_func/term1_full.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2151.738 ; gain = 1605.363
+---------------------------------------------------------------------------------
+ Sort Area is  activate_func/term2_full_1b : 0 0 : 3632 6725 : Used 1 time 0
+ Sort Area is  activate_func/term2_full_1b : 0 1 : 3093 6725 : Used 1 time 0
+ Sort Area is  activate_func/term1_full_18 : 0 0 : 3500 6483 : Used 1 time 0
+ Sort Area is  activate_func/term1_full_18 : 0 1 : 2983 6483 : Used 1 time 0
+ Sort Area is  activate_func/ai_sq_full_16 : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is  activate_func/ai_sq_full_16 : 0 1 : 2653 5754 : Used 1 time 0
+ Sort Area is  genblk1[1].multiplier/raw_y_0 : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is  genblk1[1].multiplier/raw_y_0 : 0 1 : 2653 5754 : Used 1 time 0
+ Sort Area is  genblk1[2].multiplier/raw_y_c : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is  genblk1[2].multiplier/raw_y_c : 0 1 : 2653 5754 : Used 1 time 0
+ Sort Area is  genblk1[3].multiplier/raw_y_a : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is  genblk1[3].multiplier/raw_y_a : 0 1 : 2653 5754 : Used 1 time 0
+ Sort Area is  genblk1[4].multiplier/raw_y_8 : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is  genblk1[4].multiplier/raw_y_8 : 0 1 : 2653 5754 : Used 1 time 0
+ Sort Area is  genblk1[5].multiplier/raw_y_10 : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is  genblk1[5].multiplier/raw_y_10 : 0 1 : 2653 5754 : Used 1 time 0
+ Sort Area is  genblk1[6].multiplier/raw_y_e : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is  genblk1[6].multiplier/raw_y_e : 0 1 : 2653 5754 : Used 1 time 0
+ Sort Area is  genblk1[7].multiplier/raw_y_6 : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is  genblk1[7].multiplier/raw_y_6 : 0 1 : 2653 5754 : Used 1 time 0
+ Sort Area is  genblk1[8].multiplier/raw_y_14 : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is  genblk1[8].multiplier/raw_y_14 : 0 1 : 2653 5754 : Used 1 time 0
+ Sort Area is  genblk1[9].multiplier/raw_y_12 : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is  genblk1[9].multiplier/raw_y_12 : 0 1 : 2653 5754 : Used 1 time 0
+ Sort Area is  activate_func/ai_sq_full_17 : 0 0 : 2634 5119 : Used 1 time 0
+ Sort Area is  activate_func/ai_sq_full_17 : 0 1 : 2485 5119 : Used 1 time 0
+ Sort Area is  genblk1[1].multiplier/raw_y_3 : 0 0 : 2634 5119 : Used 1 time 0
+ Sort Area is  genblk1[1].multiplier/raw_y_3 : 0 1 : 2485 5119 : Used 1 time 0
+ Sort Area is  genblk1[2].multiplier/raw_y_d : 0 0 : 2634 5119 : Used 1 time 0
+ Sort Area is  genblk1[2].multiplier/raw_y_d : 0 1 : 2485 5119 : Used 1 time 0
+ Sort Area is  genblk1[3].multiplier/raw_y_b : 0 0 : 2634 5119 : Used 1 time 0
+ Sort Area is  genblk1[3].multiplier/raw_y_b : 0 1 : 2485 5119 : Used 1 time 0
+ Sort Area is  genblk1[4].multiplier/raw_y_9 : 0 0 : 2634 5119 : Used 1 time 0
+ Sort Area is  genblk1[4].multiplier/raw_y_9 : 0 1 : 2485 5119 : Used 1 time 0
+ Sort Area is  genblk1[5].multiplier/raw_y_11 : 0 0 : 2634 5119 : Used 1 time 0
+ Sort Area is  genblk1[5].multiplier/raw_y_11 : 0 1 : 2485 5119 : Used 1 time 0
+ Sort Area is  genblk1[6].multiplier/raw_y_f : 0 0 : 2634 5119 : Used 1 time 0
+ Sort Area is  genblk1[6].multiplier/raw_y_f : 0 1 : 2485 5119 : Used 1 time 0
+ Sort Area is  genblk1[7].multiplier/raw_y_7 : 0 0 : 2634 5119 : Used 1 time 0
+ Sort Area is  genblk1[7].multiplier/raw_y_7 : 0 1 : 2485 5119 : Used 1 time 0
+ Sort Area is  genblk1[8].multiplier/raw_y_15 : 0 0 : 2634 5119 : Used 1 time 0
+ Sort Area is  genblk1[8].multiplier/raw_y_15 : 0 1 : 2485 5119 : Used 1 time 0
+ Sort Area is  genblk1[9].multiplier/raw_y_13 : 0 0 : 2634 5119 : Used 1 time 0
+ Sort Area is  genblk1[9].multiplier/raw_y_13 : 0 1 : 2485 5119 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|neuron_b    | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 26     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 26     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B            | 24     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | (PCIN>>17)+A*B | 24     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2151.738 ; gain = 1605.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2151.738 ; gain = 1605.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2344.855 ; gain = 1798.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2344.855 ; gain = 1798.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2344.855 ; gain = 1798.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2344.855 ; gain = 1798.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2344.855 ; gain = 1798.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2344.855 ; gain = 1798.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|neuron_b    | A*B          | 25     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|neuron_b    | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY8  |    85|
+|2     |DSP48E2 |    44|
+|3     |LUT1    |    65|
+|4     |LUT2    |   406|
+|5     |LUT3    |   170|
+|6     |LUT4    |   107|
+|7     |LUT5    |   143|
+|8     |LUT6    |    53|
+|9     |IBUF    |   608|
+|10    |OBUF    |    32|
++------+--------+------+
+
+Report Instance Areas: 
++------+--------------------------+---------+------+
+|      |Instance                  |Module   |Cells |
++------+--------------------------+---------+------+
+|1     |top                       |         |  1713|
+|2     |  activate_func           |tanh     |   209|
+|3     |  \genblk1[1].multiplier  |mult_Q   |   343|
+|4     |  \genblk1[2].multiplier  |mult_Q_0 |    48|
+|5     |  \genblk1[3].multiplier  |mult_Q_1 |    49|
+|6     |  \genblk1[4].multiplier  |mult_Q_2 |   117|
+|7     |  \genblk1[5].multiplier  |mult_Q_3 |    49|
+|8     |  \genblk1[6].multiplier  |mult_Q_4 |   113|
+|9     |  \genblk1[7].multiplier  |mult_Q_5 |    49|
+|10    |  \genblk1[8].multiplier  |mult_Q_6 |    48|
+|11    |  \genblk1[9].multiplier  |mult_Q_7 |    48|
++------+--------------------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2344.855 ; gain = 1798.480
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2344.855 ; gain = 1798.480
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2344.855 ; gain = 1798.480
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 2359.398 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 737 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2483.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 652 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 44 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 608 instances
+
+Synth Design complete | Checksum: 47e1f2f2
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 2483.574 ; gain = 1944.027
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2483.574 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.runs/synth_1/neuron_b.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file neuron_b_utilization_synth.rpt -pb neuron_b_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan  8 18:46:17 2026...
