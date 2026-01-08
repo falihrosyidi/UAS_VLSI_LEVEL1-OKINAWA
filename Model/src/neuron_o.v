@@ -8,12 +8,15 @@
 module neuron_o #(
     parameter WIDTH = 32
 ) (
+    // Control Signal
+    input  clk, en, rst,
+
+    // Data Signal
     input signed [WIDTH-1:0] a_1,
     input signed [WIDTH-1:0] a_2,
     input signed [WIDTH-1:0] w_1,
     input signed [WIDTH-1:0] w_2,
     input signed [WIDTH-1:0] b,
-    input clock, enable , reset , 
     output signed [WIDTH-1:0] y
 );
     // LOCAL SIGNAL
@@ -39,27 +42,27 @@ module neuron_o #(
 
     //Register Perkalian 0 
     register #(.WIDTH(32))reg_1(
-     .clk(clock),
-     .en(enable),
-     .rst(reset),
+     .clk(clk),
+     .en(en),
+     .rst(rst),
      .in(out_In[0]),
      .out(out_Reg[0])
     );
 
     //Register Perkalian 1 
     register #(.WIDTH(32))reg_2(
-     .clk(clock),
-     .en(enable),
-     .rst(reset),
+     .clk(clk),
+     .en(en),
+     .rst(rst),
      .in(out_In[1]),
      .out(out_Reg[1])
     );
 
     //Register Bias 
     register #(.WIDTH(32))reg_3(
-     .clk(clock),
-     .en(enable),
-     .rst(reset),
+     .clk(clk),
+     .en(en),
+     .rst(rst),
      .in(b),
      .out(out_Reg[2])
     );
@@ -69,18 +72,18 @@ module neuron_o #(
 
     //Register Hasil Total Penjumlahan 
     register #(.WIDTH(32))reg_4(
-     .clk(clock),
-     .en(enable),
-     .rst(reset),
+     .clk(clk),
+     .en(en),
+     .rst(rst),
      .in(pre_activation),
      .out(out_Reg[3])
     );
 
     // TANH <= ACTIVATE FUNCTION
     tanh activate_func (
-        .clk(clock),
-        .en(enable),
-        .rst(reset),
+        .clk(clk),
+        .en(en),
+        .rst(rst),
         .a(out_Reg[3]),
         .y(out)
     );
