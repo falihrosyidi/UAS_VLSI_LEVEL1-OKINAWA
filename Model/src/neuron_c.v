@@ -60,13 +60,20 @@ module neuron_c #(
     endgenerate
 
     // ADD ALL
-    assign pre_activation = out_mult_reg[1] + out_mult_reg[2] + 
-                            out_mult_reg[3] + b;
+    assign pre_activation = out_mult_reg[1] + out_mult_reg[2] + out_mult_reg[3] + b_reg;
+
+    // PIPELINE
+    wire signed [WIDTH-1:0] pre_activation_reg;
+
+    register #(.WIDTH(WIDTH)) reg_pre_activation (
+        .clk(clk), .en(en), .rst(rst),
+        .in(pre_activation), .out(pre_activation_reg)
+    );
 
     // SIGMOID <= ACTIVATE FUNCTION
     sigmoid activate_func (
         .clk(clk), .en(en), .rst(rst),
-        .a(pre_activation), .y(out)
+        .a(pre_activation_reg), .y(out)
     );
 
     assign y = out;

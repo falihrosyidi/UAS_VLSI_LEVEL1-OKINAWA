@@ -57,7 +57,7 @@ module tb_top_level;
 
         // INITIAL VALUE
         @(posedge clk);
-        rst <= 0;
+        // rst <= 0;
 
         // --- Skenario 1: in_1 = 0, in_2 = 1 ---
         $display("--- CASE 1: 0 and 1 : CIRCLE-CROSS ---");
@@ -83,8 +83,10 @@ module tb_top_level;
 
         repeat (20) @(posedge clk);
         repeat (2) @(posedge clk);
-        rst <= 1;
+        rst <= 0; 
         repeat (2) @(posedge clk);
+        rst <= 1;
+        repeat (20) @(posedge clk);
 
         $display("Simulasi Selesai.");
         $finish;
