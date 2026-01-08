@@ -1,7 +1,7 @@
 `ifndef ADD_Q_V
 `define ADD_Q_V
 
-module mult_Q #(
+module add_Q #(
     parameter WIDTH = 32,
     parameter FBITS = 27
 ) (
