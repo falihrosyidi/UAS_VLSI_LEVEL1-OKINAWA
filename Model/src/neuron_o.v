@@ -3,6 +3,7 @@
 
 `include "Util/tanh.v"
 `include "Util/mult_Q.v"
+`include "Util/register.v"
 
 module neuron_o #(
     parameter WIDTH = 32
@@ -12,10 +13,12 @@ module neuron_o #(
     input signed [WIDTH-1:0] w_1,
     input signed [WIDTH-1:0] w_2,
     input signed [WIDTH-1:0] b,
+    input clock, enable , reset , 
     output signed [WIDTH-1:0] y
 );
     // LOCAL SIGNAL
     wire signed [WIDTH-1:0] out_In [0:1];
+    wire signed [WIDTH-1:0] out_Reg[0:3];
     wire signed [WIDTH-1:0] pre_activation, out;
 
     // Out @ INPUT
@@ -34,12 +37,48 @@ module neuron_o #(
     .y(out_In[1])
     );
 
+    //Register Perkalian 0 
+    register #(.WIDTH(32))reg_1(
+     .clk(clock),
+     .en(enable),
+     .rst(reset),
+     .in(out_In[0]),
+     .out(out_Reg[0])
+    );
+
+    //Register Perkalian 1 
+    register #(.WIDTH(32))reg_2(
+     .clk(clock),
+     .en(enable),
+     .rst(reset),
+     .in(out_In[1]),
+     .out(out_Reg[1])
+    );
+
+    //Register Bias 
+    register #(.WIDTH(32))reg_3(
+     .clk(clock),
+     .en(enable),
+     .rst(reset),
+     .in(b),
+     .out(out_Reg[2])
+    );
+
     // ADD ALL
-    assign pre_activation = out_In[0] + out_In[1] + b;
+    assign pre_activation = out_Reg[0] + out_Reg[1] + out_Reg[2];
+
+    //Register Hasil Total Penjumlahan 
+    register #(.WIDTH(32))reg_4(
+     .clk(clock),
+     .en(enable),
+     .rst(reset),
+     .in(pre_activation),
+     .out(out_Reg[3])
+    );
 
     // TANH <= ACTIVATE FUNCTION
     tanh activate_func (
-        .a(pre_activation),
+        .a(out_Reg[3]),
         .y(out)
     );
 
