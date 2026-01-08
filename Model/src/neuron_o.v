@@ -78,6 +78,9 @@ module neuron_o #(
 
     // TANH <= ACTIVATE FUNCTION
     tanh activate_func (
+        .clk(clock),
+        .en(enable),
+        .rst(reset),
         .a(out_Reg[3]),
         .y(out)
     );
