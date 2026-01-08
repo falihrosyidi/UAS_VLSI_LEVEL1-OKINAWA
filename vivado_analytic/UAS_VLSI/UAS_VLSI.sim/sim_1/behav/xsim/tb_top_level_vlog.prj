@@ -1,0 +1,21 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../Apps/Vivado/2025.2/Vivado/data/rsb/busdef" \
+"../../../../../../Model/src/b_mem.v" \
+"../../../../../../Model/src/discriminator.v" \
+"../../../../../../Model/src/generator.v" \
+"../../../../../../Model/src/Util/mult_Q.v" \
+"../../../../../../Model/src/neuron_a.v" \
+"../../../../../../Model/src/neuron_b.v" \
+"../../../../../../Model/src/neuron_c.v" \
+"../../../../../../Model/src/neuron_o.v" \
+"../../../../../../Model/src/Util/sigmoid.v" \
+"../../../../../../Model/src/Util/tanh.v" \
+"../../../../../../Model/src/top_level.v" \
+"../../../../../../Model/src/w_mem.v" \
+"../../../../../../Model/src/top_level_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

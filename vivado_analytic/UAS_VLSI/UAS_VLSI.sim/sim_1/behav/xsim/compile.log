@@ -1,0 +1,28 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/b_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/discriminator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tanh
+INFO: [VRFC 10-311] analyzing module mult_Q
+INFO: [VRFC 10-311] analyzing module neuron_b
+WARNING: [VRFC 10-2938] 'out' is already implicitly declared on line 56 [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v:58]
+INFO: [VRFC 10-311] analyzing module sigmoid
+INFO: [VRFC 10-311] analyzing module neuron_c
+INFO: [VRFC 10-311] analyzing module discriminator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_o
+INFO: [VRFC 10-311] analyzing module neuron_a
+INFO: [VRFC 10-311] analyzing module generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_a.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_c.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_o.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/top_level.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module w_mem
+INFO: [VRFC 10-311] analyzing module top_level
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/w_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/top_level_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'top_level' [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/top_level.v:6]
+INFO: [VRFC 10-311] analyzing module tb_top_level

@@ -1,0 +1,3301 @@
+$date
+   Thu Jan  8 11:53:25 2026
+$end
+
+$version
+  2025.2
+  $dumpfile ("tb_top_level.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_top_level $end
+$var reg 1 ! choice $end
+$var reg 32 " in_1 [31:0] $end
+$var reg 32 # in_2 [31:0] $end
+$var wire 32 $ out_discriminator [31:0] $end
+$var wire 32 % pixel_1x1 [31:0] $end
+$var wire 32 & pixel_1x2 [31:0] $end
+$var wire 32 ' pixel_1x3 [31:0] $end
+$var wire 32 ( pixel_2x1 [31:0] $end
+$var wire 32 ) pixel_2x2 [31:0] $end
+$var wire 32 * pixel_2x3 [31:0] $end
+$var wire 32 + pixel_3x1 [31:0] $end
+$var wire 32 , pixel_3x2 [31:0] $end
+$var wire 32 - pixel_3x3 [31:0] $end
+$scope module dut $end
+$var wire 1 . choice $end
+$var wire 32 / in_1 [31:0] $end
+$var wire 32 0 in_2 [31:0] $end
+$var wire 32 $ out_discriminator [31:0] $end
+$var wire 32 % pixel_1x1 [31:0] $end
+$var wire 32 & pixel_1x2 [31:0] $end
+$var wire 32 ' pixel_1x3 [31:0] $end
+$var wire 32 ( pixel_2x1 [31:0] $end
+$var wire 32 ) pixel_2x2 [31:0] $end
+$var wire 32 * pixel_2x3 [31:0] $end
+$var wire 32 + pixel_3x1 [31:0] $end
+$var wire 32 , pixel_3x2 [31:0] $end
+$var wire 32 - pixel_3x3 [31:0] $end
+$var wire 192 1 wg2 [191:0] $end
+$var wire 864 2 wg3 [863:0] $end
+$var wire 864 3 wd2 [863:0] $end
+$var wire 96 4 wd3 [95:0] $end
+$var wire 96 5 bg2 [95:0] $end
+$var wire 288 6 bg3 [287:0] $end
+$var wire 96 7 bd2 [95:0] $end
+$var wire 32 8 bd3 [31:0] $end
+$var wire 32 9 y_1x1 [31:0] $end
+$var wire 32 : y_1x2 [31:0] $end
+$var wire 32 ; y_1x3 [31:0] $end
+$var wire 32 < y_2x1 [31:0] $end
+$var wire 32 = y_2x2 [31:0] $end
+$var wire 32 > y_2x3 [31:0] $end
+$var wire 32 ? y_3x1 [31:0] $end
+$var wire 32 @ y_3x2 [31:0] $end
+$var wire 32 A y_3x3 [31:0] $end
+$var wire 32 B out_disc [31:0] $end
+$scope module WEIGH_MEMORY $end
+$var wire 1 . choice $end
+$var wire 192 1 wg2 [191:0] $end
+$var wire 864 2 wg3 [863:0] $end
+$var wire 864 3 wd2 [863:0] $end
+$var wire 96 4 wd3 [95:0] $end
+$var wire 192 C wg2_0 [191:0] $end
+$var wire 192 D wg2_1 [191:0] $end
+$var wire 864 E wg3_0 [863:0] $end
+$var wire 864 F wg3_1 [863:0] $end
+$var wire 864 G wd2_0 [863:0] $end
+$var wire 864 H wd2_1 [863:0] $end
+$var wire 96 I wd3_0 [95:0] $end
+$var wire 96 J wd3_1 [95:0] $end
+$upscope $end
+$scope module BIAS_MEMORY $end
+$var wire 1 . choice $end
+$var wire 96 5 bg2 [95:0] $end
+$var wire 288 6 bg3 [287:0] $end
+$var wire 96 7 bd2 [95:0] $end
+$var wire 32 8 bd3 [31:0] $end
+$var wire 96 K bg2_0 [95:0] $end
+$var wire 96 L bg2_1 [95:0] $end
+$var wire 288 M bg3_0 [287:0] $end
+$var wire 288 N bg3_1 [287:0] $end
+$var wire 96 O bd2_0 [95:0] $end
+$var wire 96 P bd2_1 [95:0] $end
+$var wire 32 Q bd3_0 [31:0] $end
+$var wire 32 R bd3_1 [31:0] $end
+$upscope $end
+$scope module GENERATOR $end
+$var wire 32 / a_1 [31:0] $end
+$var wire 32 0 a_2 [31:0] $end
+$var wire 192 1 w_L2 [191:0] $end
+$var wire 864 2 w_L3 [863:0] $end
+$var wire 96 5 b_L2 [95:0] $end
+$var wire 288 6 b_L3 [287:0] $end
+$var wire 32 9 y_1x1 [31:0] $end
+$var wire 32 : y_1x2 [31:0] $end
+$var wire 32 ; y_1x3 [31:0] $end
+$var wire 32 < y_2x1 [31:0] $end
+$var wire 32 = y_2x2 [31:0] $end
+$var wire 32 > y_2x3 [31:0] $end
+$var wire 32 ? y_3x1 [31:0] $end
+$var wire 32 @ y_3x2 [31:0] $end
+$var wire 32 A y_3x3 [31:0] $end
+$scope module genblk1[0].NEURON_L2 $end
+$var wire 32 / a_1 [31:0] $end
+$var wire 32 0 a_2 [31:0] $end
+$var wire 32 S w_1 [31:0] $end
+$var wire 32 T w_2 [63:32] $end
+$var wire 32 U b [31:0] $end
+$var wire 32 V y [31:0] $end
+$var wire 32 W pre_activation [31:0] $end
+$var wire 32 X out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 / a [31:0] $end
+$var wire 32 S b [31:0] $end
+$var wire 32 Y y [63:32] $end
+$var wire 64 Z raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 0 a [31:0] $end
+$var wire 32 T b [63:32] $end
+$var wire 32 [ y [31:0] $end
+$var wire 64 \ raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 W a [31:0] $end
+$var wire 32 X y [31:0] $end
+$var wire 1 ] sign $end
+$var wire 32 ^ a_pos [31:0] $end
+$var wire 32 _ ai [31:0] $end
+$var reg 32 ` p1 [31:0] $end
+$var reg 32 a p2 [31:0] $end
+$var reg 32 b p3 [31:0] $end
+$var wire 64 c ai_sq_full [63:0] $end
+$var wire 32 d ai_sq [31:0] $end
+$var wire 64 e term1_full [63:0] $end
+$var wire 32 f term1 [31:0] $end
+$var wire 64 g term2_full [63:0] $end
+$var wire 32 h term2 [31:0] $end
+$var wire 32 i y_abs [31:0] $end
+$var wire 32 j y_signed [31:0] $end
+$var wire 32 k ONE_POS [31:0] $end
+$var wire 32 l ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk1[1].NEURON_L2 $end
+$var wire 32 / a_1 [31:0] $end
+$var wire 32 0 a_2 [31:0] $end
+$var wire 32 m w_1 [95:64] $end
+$var wire 32 n w_2 [127:96] $end
+$var wire 32 o b [63:32] $end
+$var wire 32 p y [63:32] $end
+$var wire 32 q pre_activation [31:0] $end
+$var wire 32 r out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 / a [31:0] $end
+$var wire 32 m b [95:64] $end
+$var wire 32 s y [63:32] $end
+$var wire 64 t raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 0 a [31:0] $end
+$var wire 32 n b [127:96] $end
+$var wire 32 u y [31:0] $end
+$var wire 64 v raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 q a [31:0] $end
+$var wire 32 r y [31:0] $end
+$var wire 1 w sign $end
+$var wire 32 x a_pos [31:0] $end
+$var wire 32 y ai [31:0] $end
+$var reg 32 z p1 [31:0] $end
+$var reg 32 { p2 [31:0] $end
+$var reg 32 | p3 [31:0] $end
+$var wire 64 } ai_sq_full [63:0] $end
+$var wire 32 ~ ai_sq [31:0] $end
+$var wire 64 !! term1_full [63:0] $end
+$var wire 32 "! term1 [31:0] $end
+$var wire 64 #! term2_full [63:0] $end
+$var wire 32 $! term2 [31:0] $end
+$var wire 32 %! y_abs [31:0] $end
+$var wire 32 &! y_signed [31:0] $end
+$var wire 32 '! ONE_POS [31:0] $end
+$var wire 32 (! ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk1[2].NEURON_L2 $end
+$var wire 32 / a_1 [31:0] $end
+$var wire 32 0 a_2 [31:0] $end
+$var wire 32 )! w_1 [159:128] $end
+$var wire 32 *! w_2 [191:160] $end
+$var wire 32 +! b [95:64] $end
+$var wire 32 ,! y [95:64] $end
+$var wire 32 -! pre_activation [31:0] $end
+$var wire 32 .! out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 / a [31:0] $end
+$var wire 32 )! b [159:128] $end
+$var wire 32 /! y [63:32] $end
+$var wire 64 0! raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 0 a [31:0] $end
+$var wire 32 *! b [191:160] $end
+$var wire 32 1! y [31:0] $end
+$var wire 64 2! raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 -! a [31:0] $end
+$var wire 32 .! y [31:0] $end
+$var wire 1 3! sign $end
+$var wire 32 4! a_pos [31:0] $end
+$var wire 32 5! ai [31:0] $end
+$var reg 32 6! p1 [31:0] $end
+$var reg 32 7! p2 [31:0] $end
+$var reg 32 8! p3 [31:0] $end
+$var wire 64 9! ai_sq_full [63:0] $end
+$var wire 32 :! ai_sq [31:0] $end
+$var wire 64 ;! term1_full [63:0] $end
+$var wire 32 <! term1 [31:0] $end
+$var wire 64 =! term2_full [63:0] $end
+$var wire 32 >! term2 [31:0] $end
+$var wire 32 ?! y_abs [31:0] $end
+$var wire 32 @! y_signed [31:0] $end
+$var wire 32 A! ONE_POS [31:0] $end
+$var wire 32 B! ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk2[0].NEURON_L3 $end
+$var wire 32 V a_1 [31:0] $end
+$var wire 32 p a_2 [63:32] $end
+$var wire 32 ,! a_3 [95:64] $end
+$var wire 32 C! w_1 [31:0] $end
+$var wire 32 D! w_2 [63:32] $end
+$var wire 32 E! w_3 [95:64] $end
+$var wire 32 F! b [31:0] $end
+$var wire 32 G! y [31:0] $end
+$var wire 32 H! pre_activation [31:0] $end
+$var wire 32 I! out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 V a [31:0] $end
+$var wire 32 C! b [31:0] $end
+$var wire 32 J! y [95:64] $end
+$var wire 64 K! raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 p a [63:32] $end
+$var wire 32 D! b [63:32] $end
+$var wire 32 L! y [63:32] $end
+$var wire 64 M! raw_y [63:0] $end
+$upscope $end
+$scope module mult_2 $end
+$var wire 32 ,! a [95:64] $end
+$var wire 32 E! b [95:64] $end
+$var wire 32 N! y [31:0] $end
+$var wire 64 O! raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 H! a [31:0] $end
+$var wire 32 I! y [31:0] $end
+$var wire 1 P! sign $end
+$var wire 32 Q! a_pos [31:0] $end
+$var wire 32 R! ai [31:0] $end
+$var reg 32 S! p1 [31:0] $end
+$var reg 32 T! p2 [31:0] $end
+$var reg 32 U! p3 [31:0] $end
+$var wire 64 V! ai_sq_full [63:0] $end
+$var wire 32 W! ai_sq [31:0] $end
+$var wire 64 X! term1_full [63:0] $end
+$var wire 32 Y! term1 [31:0] $end
+$var wire 64 Z! term2_full [63:0] $end
+$var wire 32 [! term2 [31:0] $end
+$var wire 32 \! y_abs [31:0] $end
+$var wire 32 ]! y_signed [31:0] $end
+$var wire 32 ^! ONE_POS [31:0] $end
+$var wire 32 _! ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk2[1].NEURON_L3 $end
+$var wire 32 V a_1 [31:0] $end
+$var wire 32 p a_2 [63:32] $end
+$var wire 32 ,! a_3 [95:64] $end
+$var wire 32 `! w_1 [127:96] $end
+$var wire 32 a! w_2 [159:128] $end
+$var wire 32 b! w_3 [191:160] $end
+$var wire 32 c! b [63:32] $end
+$var wire 32 d! y [63:32] $end
+$var wire 32 e! pre_activation [31:0] $end
+$var wire 32 f! out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 V a [31:0] $end
+$var wire 32 `! b [127:96] $end
+$var wire 32 g! y [95:64] $end
+$var wire 64 h! raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 p a [63:32] $end
+$var wire 32 a! b [159:128] $end
+$var wire 32 i! y [63:32] $end
+$var wire 64 j! raw_y [63:0] $end
+$upscope $end
+$scope module mult_2 $end
+$var wire 32 ,! a [95:64] $end
+$var wire 32 b! b [191:160] $end
+$var wire 32 k! y [31:0] $end
+$var wire 64 l! raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 e! a [31:0] $end
+$var wire 32 f! y [31:0] $end
+$var wire 1 m! sign $end
+$var wire 32 n! a_pos [31:0] $end
+$var wire 32 o! ai [31:0] $end
+$var reg 32 p! p1 [31:0] $end
+$var reg 32 q! p2 [31:0] $end
+$var reg 32 r! p3 [31:0] $end
+$var wire 64 s! ai_sq_full [63:0] $end
+$var wire 32 t! ai_sq [31:0] $end
+$var wire 64 u! term1_full [63:0] $end
+$var wire 32 v! term1 [31:0] $end
+$var wire 64 w! term2_full [63:0] $end
+$var wire 32 x! term2 [31:0] $end
+$var wire 32 y! y_abs [31:0] $end
+$var wire 32 z! y_signed [31:0] $end
+$var wire 32 {! ONE_POS [31:0] $end
+$var wire 32 |! ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk2[2].NEURON_L3 $end
+$var wire 32 V a_1 [31:0] $end
+$var wire 32 p a_2 [63:32] $end
+$var wire 32 ,! a_3 [95:64] $end
+$var wire 32 }! w_1 [223:192] $end
+$var wire 32 ~! w_2 [255:224] $end
+$var wire 32 !" w_3 [287:256] $end
+$var wire 32 "" b [95:64] $end
+$var wire 32 #" y [95:64] $end
+$var wire 32 $" pre_activation [31:0] $end
+$var wire 32 %" out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 V a [31:0] $end
+$var wire 32 }! b [223:192] $end
+$var wire 32 &" y [95:64] $end
+$var wire 64 '" raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 p a [63:32] $end
+$var wire 32 ~! b [255:224] $end
+$var wire 32 (" y [63:32] $end
+$var wire 64 )" raw_y [63:0] $end
+$upscope $end
+$scope module mult_2 $end
+$var wire 32 ,! a [95:64] $end
+$var wire 32 !" b [287:256] $end
+$var wire 32 *" y [31:0] $end
+$var wire 64 +" raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 $" a [31:0] $end
+$var wire 32 %" y [31:0] $end
+$var wire 1 ," sign $end
+$var wire 32 -" a_pos [31:0] $end
+$var wire 32 ." ai [31:0] $end
+$var reg 32 /" p1 [31:0] $end
+$var reg 32 0" p2 [31:0] $end
+$var reg 32 1" p3 [31:0] $end
+$var wire 64 2" ai_sq_full [63:0] $end
+$var wire 32 3" ai_sq [31:0] $end
+$var wire 64 4" term1_full [63:0] $end
+$var wire 32 5" term1 [31:0] $end
+$var wire 64 6" term2_full [63:0] $end
+$var wire 32 7" term2 [31:0] $end
+$var wire 32 8" y_abs [31:0] $end
+$var wire 32 9" y_signed [31:0] $end
+$var wire 32 :" ONE_POS [31:0] $end
+$var wire 32 ;" ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk2[3].NEURON_L3 $end
+$var wire 32 V a_1 [31:0] $end
+$var wire 32 p a_2 [63:32] $end
+$var wire 32 ,! a_3 [95:64] $end
+$var wire 32 <" w_1 [319:288] $end
+$var wire 32 =" w_2 [351:320] $end
+$var wire 32 >" w_3 [383:352] $end
+$var wire 32 ?" b [127:96] $end
+$var wire 32 @" y [127:96] $end
+$var wire 32 A" pre_activation [31:0] $end
+$var wire 32 B" out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 V a [31:0] $end
+$var wire 32 <" b [319:288] $end
+$var wire 32 C" y [95:64] $end
+$var wire 64 D" raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 p a [63:32] $end
+$var wire 32 =" b [351:320] $end
+$var wire 32 E" y [63:32] $end
+$var wire 64 F" raw_y [63:0] $end
+$upscope $end
+$scope module mult_2 $end
+$var wire 32 ,! a [95:64] $end
+$var wire 32 >" b [383:352] $end
+$var wire 32 G" y [31:0] $end
+$var wire 64 H" raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 A" a [31:0] $end
+$var wire 32 B" y [31:0] $end
+$var wire 1 I" sign $end
+$var wire 32 J" a_pos [31:0] $end
+$var wire 32 K" ai [31:0] $end
+$var reg 32 L" p1 [31:0] $end
+$var reg 32 M" p2 [31:0] $end
+$var reg 32 N" p3 [31:0] $end
+$var wire 64 O" ai_sq_full [63:0] $end
+$var wire 32 P" ai_sq [31:0] $end
+$var wire 64 Q" term1_full [63:0] $end
+$var wire 32 R" term1 [31:0] $end
+$var wire 64 S" term2_full [63:0] $end
+$var wire 32 T" term2 [31:0] $end
+$var wire 32 U" y_abs [31:0] $end
+$var wire 32 V" y_signed [31:0] $end
+$var wire 32 W" ONE_POS [31:0] $end
+$var wire 32 X" ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk2[4].NEURON_L3 $end
+$var wire 32 V a_1 [31:0] $end
+$var wire 32 p a_2 [63:32] $end
+$var wire 32 ,! a_3 [95:64] $end
+$var wire 32 Y" w_1 [415:384] $end
+$var wire 32 Z" w_2 [447:416] $end
+$var wire 32 [" w_3 [479:448] $end
+$var wire 32 \" b [159:128] $end
+$var wire 32 ]" y [159:128] $end
+$var wire 32 ^" pre_activation [31:0] $end
+$var wire 32 _" out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 V a [31:0] $end
+$var wire 32 Y" b [415:384] $end
+$var wire 32 `" y [95:64] $end
+$var wire 64 a" raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 p a [63:32] $end
+$var wire 32 Z" b [447:416] $end
+$var wire 32 b" y [63:32] $end
+$var wire 64 c" raw_y [63:0] $end
+$upscope $end
+$scope module mult_2 $end
+$var wire 32 ,! a [95:64] $end
+$var wire 32 [" b [479:448] $end
+$var wire 32 d" y [31:0] $end
+$var wire 64 e" raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 ^" a [31:0] $end
+$var wire 32 _" y [31:0] $end
+$var wire 1 f" sign $end
+$var wire 32 g" a_pos [31:0] $end
+$var wire 32 h" ai [31:0] $end
+$var reg 32 i" p1 [31:0] $end
+$var reg 32 j" p2 [31:0] $end
+$var reg 32 k" p3 [31:0] $end
+$var wire 64 l" ai_sq_full [63:0] $end
+$var wire 32 m" ai_sq [31:0] $end
+$var wire 64 n" term1_full [63:0] $end
+$var wire 32 o" term1 [31:0] $end
+$var wire 64 p" term2_full [63:0] $end
+$var wire 32 q" term2 [31:0] $end
+$var wire 32 r" y_abs [31:0] $end
+$var wire 32 s" y_signed [31:0] $end
+$var wire 32 t" ONE_POS [31:0] $end
+$var wire 32 u" ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk2[5].NEURON_L3 $end
+$var wire 32 V a_1 [31:0] $end
+$var wire 32 p a_2 [63:32] $end
+$var wire 32 ,! a_3 [95:64] $end
+$var wire 32 v" w_1 [511:480] $end
+$var wire 32 w" w_2 [543:512] $end
+$var wire 32 x" w_3 [575:544] $end
+$var wire 32 y" b [191:160] $end
+$var wire 32 z" y [191:160] $end
+$var wire 32 {" pre_activation [31:0] $end
+$var wire 32 |" out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 V a [31:0] $end
+$var wire 32 v" b [511:480] $end
+$var wire 32 }" y [95:64] $end
+$var wire 64 ~" raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 p a [63:32] $end
+$var wire 32 w" b [543:512] $end
+$var wire 32 !# y [63:32] $end
+$var wire 64 "# raw_y [63:0] $end
+$upscope $end
+$scope module mult_2 $end
+$var wire 32 ,! a [95:64] $end
+$var wire 32 x" b [575:544] $end
+$var wire 32 ## y [31:0] $end
+$var wire 64 $# raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 {" a [31:0] $end
+$var wire 32 |" y [31:0] $end
+$var wire 1 %# sign $end
+$var wire 32 &# a_pos [31:0] $end
+$var wire 32 '# ai [31:0] $end
+$var reg 32 (# p1 [31:0] $end
+$var reg 32 )# p2 [31:0] $end
+$var reg 32 *# p3 [31:0] $end
+$var wire 64 +# ai_sq_full [63:0] $end
+$var wire 32 ,# ai_sq [31:0] $end
+$var wire 64 -# term1_full [63:0] $end
+$var wire 32 .# term1 [31:0] $end
+$var wire 64 /# term2_full [63:0] $end
+$var wire 32 0# term2 [31:0] $end
+$var wire 32 1# y_abs [31:0] $end
+$var wire 32 2# y_signed [31:0] $end
+$var wire 32 3# ONE_POS [31:0] $end
+$var wire 32 4# ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk2[6].NEURON_L3 $end
+$var wire 32 V a_1 [31:0] $end
+$var wire 32 p a_2 [63:32] $end
+$var wire 32 ,! a_3 [95:64] $end
+$var wire 32 5# w_1 [607:576] $end
+$var wire 32 6# w_2 [639:608] $end
+$var wire 32 7# w_3 [671:640] $end
+$var wire 32 8# b [223:192] $end
+$var wire 32 9# y [223:192] $end
+$var wire 32 :# pre_activation [31:0] $end
+$var wire 32 ;# out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 V a [31:0] $end
+$var wire 32 5# b [607:576] $end
+$var wire 32 <# y [95:64] $end
+$var wire 64 =# raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 p a [63:32] $end
+$var wire 32 6# b [639:608] $end
+$var wire 32 ># y [63:32] $end
+$var wire 64 ?# raw_y [63:0] $end
+$upscope $end
+$scope module mult_2 $end
+$var wire 32 ,! a [95:64] $end
+$var wire 32 7# b [671:640] $end
+$var wire 32 @# y [31:0] $end
+$var wire 64 A# raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 :# a [31:0] $end
+$var wire 32 ;# y [31:0] $end
+$var wire 1 B# sign $end
+$var wire 32 C# a_pos [31:0] $end
+$var wire 32 D# ai [31:0] $end
+$var reg 32 E# p1 [31:0] $end
+$var reg 32 F# p2 [31:0] $end
+$var reg 32 G# p3 [31:0] $end
+$var wire 64 H# ai_sq_full [63:0] $end
+$var wire 32 I# ai_sq [31:0] $end
+$var wire 64 J# term1_full [63:0] $end
+$var wire 32 K# term1 [31:0] $end
+$var wire 64 L# term2_full [63:0] $end
+$var wire 32 M# term2 [31:0] $end
+$var wire 32 N# y_abs [31:0] $end
+$var wire 32 O# y_signed [31:0] $end
+$var wire 32 P# ONE_POS [31:0] $end
+$var wire 32 Q# ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk2[7].NEURON_L3 $end
+$var wire 32 V a_1 [31:0] $end
+$var wire 32 p a_2 [63:32] $end
+$var wire 32 ,! a_3 [95:64] $end
+$var wire 32 R# w_1 [703:672] $end
+$var wire 32 S# w_2 [735:704] $end
+$var wire 32 T# w_3 [767:736] $end
+$var wire 32 U# b [255:224] $end
+$var wire 32 V# y [255:224] $end
+$var wire 32 W# pre_activation [31:0] $end
+$var wire 32 X# out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 V a [31:0] $end
+$var wire 32 R# b [703:672] $end
+$var wire 32 Y# y [95:64] $end
+$var wire 64 Z# raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 p a [63:32] $end
+$var wire 32 S# b [735:704] $end
+$var wire 32 [# y [63:32] $end
+$var wire 64 \# raw_y [63:0] $end
+$upscope $end
+$scope module mult_2 $end
+$var wire 32 ,! a [95:64] $end
+$var wire 32 T# b [767:736] $end
+$var wire 32 ]# y [31:0] $end
+$var wire 64 ^# raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 W# a [31:0] $end
+$var wire 32 X# y [31:0] $end
+$var wire 1 _# sign $end
+$var wire 32 `# a_pos [31:0] $end
+$var wire 32 a# ai [31:0] $end
+$var reg 32 b# p1 [31:0] $end
+$var reg 32 c# p2 [31:0] $end
+$var reg 32 d# p3 [31:0] $end
+$var wire 64 e# ai_sq_full [63:0] $end
+$var wire 32 f# ai_sq [31:0] $end
+$var wire 64 g# term1_full [63:0] $end
+$var wire 32 h# term1 [31:0] $end
+$var wire 64 i# term2_full [63:0] $end
+$var wire 32 j# term2 [31:0] $end
+$var wire 32 k# y_abs [31:0] $end
+$var wire 32 l# y_signed [31:0] $end
+$var wire 32 m# ONE_POS [31:0] $end
+$var wire 32 n# ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk2[8].NEURON_L3 $end
+$var wire 32 V a_1 [31:0] $end
+$var wire 32 p a_2 [63:32] $end
+$var wire 32 ,! a_3 [95:64] $end
+$var wire 32 o# w_1 [799:768] $end
+$var wire 32 p# w_2 [831:800] $end
+$var wire 32 q# w_3 [863:832] $end
+$var wire 32 r# b [287:256] $end
+$var wire 32 s# y [287:256] $end
+$var wire 32 t# pre_activation [31:0] $end
+$var wire 32 u# out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 V a [31:0] $end
+$var wire 32 o# b [799:768] $end
+$var wire 32 v# y [95:64] $end
+$var wire 64 w# raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 p a [63:32] $end
+$var wire 32 p# b [831:800] $end
+$var wire 32 x# y [63:32] $end
+$var wire 64 y# raw_y [63:0] $end
+$upscope $end
+$scope module mult_2 $end
+$var wire 32 ,! a [95:64] $end
+$var wire 32 q# b [863:832] $end
+$var wire 32 z# y [31:0] $end
+$var wire 64 {# raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 t# a [31:0] $end
+$var wire 32 u# y [31:0] $end
+$var wire 1 |# sign $end
+$var wire 32 }# a_pos [31:0] $end
+$var wire 32 ~# ai [31:0] $end
+$var reg 32 !$ p1 [31:0] $end
+$var reg 32 "$ p2 [31:0] $end
+$var reg 32 #$ p3 [31:0] $end
+$var wire 64 $$ ai_sq_full [63:0] $end
+$var wire 32 %$ ai_sq [31:0] $end
+$var wire 64 &$ term1_full [63:0] $end
+$var wire 32 '$ term1 [31:0] $end
+$var wire 64 ($ term2_full [63:0] $end
+$var wire 32 )$ term2 [31:0] $end
+$var wire 32 *$ y_abs [31:0] $end
+$var wire 32 +$ y_signed [31:0] $end
+$var wire 32 ,$ ONE_POS [31:0] $end
+$var wire 32 -$ ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module DISCRIMINATOR $end
+$var wire 32 9 a_1 [31:0] $end
+$var wire 32 : a_2 [31:0] $end
+$var wire 32 ; a_3 [31:0] $end
+$var wire 32 < a_4 [31:0] $end
+$var wire 32 = a_5 [31:0] $end
+$var wire 32 > a_6 [31:0] $end
+$var wire 32 ? a_7 [31:0] $end
+$var wire 32 @ a_8 [31:0] $end
+$var wire 32 A a_9 [31:0] $end
+$var wire 864 3 w_L2 [863:0] $end
+$var wire 96 4 w_L3 [95:0] $end
+$var wire 96 7 b_L2 [95:0] $end
+$var wire 32 8 b_L3 [31:0] $end
+$var wire 32 B y [31:0] $end
+$var wire 32 .$ out_L3 [31:0] $end
+$scope module genblk1[0].NEURON_L2 $end
+$var wire 32 9 a_1 [31:0] $end
+$var wire 32 : a_2 [31:0] $end
+$var wire 32 ; a_3 [31:0] $end
+$var wire 32 < a_4 [31:0] $end
+$var wire 32 = a_5 [31:0] $end
+$var wire 32 > a_6 [31:0] $end
+$var wire 32 ? a_7 [31:0] $end
+$var wire 32 @ a_8 [31:0] $end
+$var wire 32 A a_9 [31:0] $end
+$var wire 32 /$ w_1 [31:0] $end
+$var wire 32 0$ w_2 [63:32] $end
+$var wire 32 1$ w_3 [95:64] $end
+$var wire 32 2$ w_4 [127:96] $end
+$var wire 32 3$ w_5 [159:128] $end
+$var wire 32 4$ w_6 [191:160] $end
+$var wire 32 5$ w_7 [223:192] $end
+$var wire 32 6$ w_8 [255:224] $end
+$var wire 32 7$ w_9 [287:256] $end
+$var wire 32 8$ b [31:0] $end
+$var wire 32 9$ y [31:0] $end
+$var wire 32 :$ m_1 [31:0] $end
+$var wire 32 ;$ m_2 [31:0] $end
+$var wire 32 <$ m_3 [31:0] $end
+$var wire 32 =$ m_4 [31:0] $end
+$var wire 32 >$ m_5 [31:0] $end
+$var wire 32 ?$ m_6 [31:0] $end
+$var wire 32 @$ m_7 [31:0] $end
+$var wire 32 A$ m_8 [31:0] $end
+$var wire 32 B$ m_9 [31:0] $end
+$var wire 32 C$ s_1 [31:0] $end
+$var wire 32 D$ s_2 [31:0] $end
+$var wire 32 E$ s_3 [31:0] $end
+$var wire 32 F$ s_4 [31:0] $end
+$var wire 32 G$ s_5 [31:0] $end
+$var wire 32 H$ s_6 [31:0] $end
+$var wire 32 I$ s_7 [31:0] $end
+$var wire 32 J$ s_8 [31:0] $end
+$var wire 32 K$ s_9 [31:0] $end
+$var wire 32 L$ sum_123 [31:0] $end
+$var wire 32 M$ sum_456 [31:0] $end
+$var wire 32 N$ sum_789 [31:0] $end
+$var wire 32 O$ total_sum [31:0] $end
+$var wire 32 P$ out [31:0] $end
+$scope module genblk1[1].multiplier $end
+$var wire 32 Q$ a [287:256] $end
+$var wire 32 R$ b [287:256] $end
+$var wire 32 S$ y [287:256] $end
+$var wire 64 T$ raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[2].multiplier $end
+$var wire 32 U$ a [255:224] $end
+$var wire 32 V$ b [255:224] $end
+$var wire 32 W$ y [255:224] $end
+$var wire 64 X$ raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[3].multiplier $end
+$var wire 32 Y$ a [223:192] $end
+$var wire 32 Z$ b [223:192] $end
+$var wire 32 [$ y [223:192] $end
+$var wire 64 \$ raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[4].multiplier $end
+$var wire 32 ]$ a [191:160] $end
+$var wire 32 ^$ b [191:160] $end
+$var wire 32 _$ y [191:160] $end
+$var wire 64 `$ raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[5].multiplier $end
+$var wire 32 a$ a [159:128] $end
+$var wire 32 b$ b [159:128] $end
+$var wire 32 c$ y [159:128] $end
+$var wire 64 d$ raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[6].multiplier $end
+$var wire 32 e$ a [127:96] $end
+$var wire 32 f$ b [127:96] $end
+$var wire 32 g$ y [127:96] $end
+$var wire 64 h$ raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[7].multiplier $end
+$var wire 32 i$ a [95:64] $end
+$var wire 32 j$ b [95:64] $end
+$var wire 32 k$ y [95:64] $end
+$var wire 64 l$ raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[8].multiplier $end
+$var wire 32 m$ a [63:32] $end
+$var wire 32 n$ b [63:32] $end
+$var wire 32 o$ y [63:32] $end
+$var wire 64 p$ raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[9].multiplier $end
+$var wire 32 q$ a [31:0] $end
+$var wire 32 r$ b [31:0] $end
+$var wire 32 s$ y [31:0] $end
+$var wire 64 t$ raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 O$ a [31:0] $end
+$var wire 32 P$ y [31:0] $end
+$var wire 1 u$ sign $end
+$var wire 32 v$ a_pos [31:0] $end
+$var wire 32 w$ ai [31:0] $end
+$var reg 32 x$ p1 [31:0] $end
+$var reg 32 y$ p2 [31:0] $end
+$var reg 32 z$ p3 [31:0] $end
+$var wire 64 {$ ai_sq_full [63:0] $end
+$var wire 32 |$ ai_sq [31:0] $end
+$var wire 64 }$ term1_full [63:0] $end
+$var wire 32 ~$ term1 [31:0] $end
+$var wire 64 !% term2_full [63:0] $end
+$var wire 32 "% term2 [31:0] $end
+$var wire 32 #% y_abs [31:0] $end
+$var wire 32 $% y_signed [31:0] $end
+$var wire 32 %% ONE_POS [31:0] $end
+$var wire 32 &% ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk1[1].NEURON_L2 $end
+$var wire 32 9 a_1 [31:0] $end
+$var wire 32 : a_2 [31:0] $end
+$var wire 32 ; a_3 [31:0] $end
+$var wire 32 < a_4 [31:0] $end
+$var wire 32 = a_5 [31:0] $end
+$var wire 32 > a_6 [31:0] $end
+$var wire 32 ? a_7 [31:0] $end
+$var wire 32 @ a_8 [31:0] $end
+$var wire 32 A a_9 [31:0] $end
+$var wire 32 '% w_1 [319:288] $end
+$var wire 32 (% w_2 [351:320] $end
+$var wire 32 )% w_3 [383:352] $end
+$var wire 32 *% w_4 [415:384] $end
+$var wire 32 +% w_5 [447:416] $end
+$var wire 32 ,% w_6 [479:448] $end
+$var wire 32 -% w_7 [511:480] $end
+$var wire 32 .% w_8 [543:512] $end
+$var wire 32 /% w_9 [575:544] $end
+$var wire 32 0% b [63:32] $end
+$var wire 32 1% y [63:32] $end
+$var wire 32 2% m_1 [31:0] $end
+$var wire 32 3% m_2 [31:0] $end
+$var wire 32 4% m_3 [31:0] $end
+$var wire 32 5% m_4 [31:0] $end
+$var wire 32 6% m_5 [31:0] $end
+$var wire 32 7% m_6 [31:0] $end
+$var wire 32 8% m_7 [31:0] $end
+$var wire 32 9% m_8 [31:0] $end
+$var wire 32 :% m_9 [31:0] $end
+$var wire 32 ;% s_1 [31:0] $end
+$var wire 32 <% s_2 [31:0] $end
+$var wire 32 =% s_3 [31:0] $end
+$var wire 32 >% s_4 [31:0] $end
+$var wire 32 ?% s_5 [31:0] $end
+$var wire 32 @% s_6 [31:0] $end
+$var wire 32 A% s_7 [31:0] $end
+$var wire 32 B% s_8 [31:0] $end
+$var wire 32 C% s_9 [31:0] $end
+$var wire 32 D% sum_123 [31:0] $end
+$var wire 32 E% sum_456 [31:0] $end
+$var wire 32 F% sum_789 [31:0] $end
+$var wire 32 G% total_sum [31:0] $end
+$var wire 32 H% out [31:0] $end
+$scope module genblk1[1].multiplier $end
+$var wire 32 I% a [287:256] $end
+$var wire 32 J% b [287:256] $end
+$var wire 32 K% y [287:256] $end
+$var wire 64 L% raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[2].multiplier $end
+$var wire 32 M% a [255:224] $end
+$var wire 32 N% b [255:224] $end
+$var wire 32 O% y [255:224] $end
+$var wire 64 P% raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[3].multiplier $end
+$var wire 32 Q% a [223:192] $end
+$var wire 32 R% b [223:192] $end
+$var wire 32 S% y [223:192] $end
+$var wire 64 T% raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[4].multiplier $end
+$var wire 32 U% a [191:160] $end
+$var wire 32 V% b [191:160] $end
+$var wire 32 W% y [191:160] $end
+$var wire 64 X% raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[5].multiplier $end
+$var wire 32 Y% a [159:128] $end
+$var wire 32 Z% b [159:128] $end
+$var wire 32 [% y [159:128] $end
+$var wire 64 \% raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[6].multiplier $end
+$var wire 32 ]% a [127:96] $end
+$var wire 32 ^% b [127:96] $end
+$var wire 32 _% y [127:96] $end
+$var wire 64 `% raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[7].multiplier $end
+$var wire 32 a% a [95:64] $end
+$var wire 32 b% b [95:64] $end
+$var wire 32 c% y [95:64] $end
+$var wire 64 d% raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[8].multiplier $end
+$var wire 32 e% a [63:32] $end
+$var wire 32 f% b [63:32] $end
+$var wire 32 g% y [63:32] $end
+$var wire 64 h% raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[9].multiplier $end
+$var wire 32 i% a [31:0] $end
+$var wire 32 j% b [31:0] $end
+$var wire 32 k% y [31:0] $end
+$var wire 64 l% raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 G% a [31:0] $end
+$var wire 32 H% y [31:0] $end
+$var wire 1 m% sign $end
+$var wire 32 n% a_pos [31:0] $end
+$var wire 32 o% ai [31:0] $end
+$var reg 32 p% p1 [31:0] $end
+$var reg 32 q% p2 [31:0] $end
+$var reg 32 r% p3 [31:0] $end
+$var wire 64 s% ai_sq_full [63:0] $end
+$var wire 32 t% ai_sq [31:0] $end
+$var wire 64 u% term1_full [63:0] $end
+$var wire 32 v% term1 [31:0] $end
+$var wire 64 w% term2_full [63:0] $end
+$var wire 32 x% term2 [31:0] $end
+$var wire 32 y% y_abs [31:0] $end
+$var wire 32 z% y_signed [31:0] $end
+$var wire 32 {% ONE_POS [31:0] $end
+$var wire 32 |% ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module genblk1[2].NEURON_L2 $end
+$var wire 32 9 a_1 [31:0] $end
+$var wire 32 : a_2 [31:0] $end
+$var wire 32 ; a_3 [31:0] $end
+$var wire 32 < a_4 [31:0] $end
+$var wire 32 = a_5 [31:0] $end
+$var wire 32 > a_6 [31:0] $end
+$var wire 32 ? a_7 [31:0] $end
+$var wire 32 @ a_8 [31:0] $end
+$var wire 32 A a_9 [31:0] $end
+$var wire 32 }% w_1 [607:576] $end
+$var wire 32 ~% w_2 [639:608] $end
+$var wire 32 !& w_3 [671:640] $end
+$var wire 32 "& w_4 [703:672] $end
+$var wire 32 #& w_5 [735:704] $end
+$var wire 32 $& w_6 [767:736] $end
+$var wire 32 %& w_7 [799:768] $end
+$var wire 32 && w_8 [831:800] $end
+$var wire 32 '& w_9 [863:832] $end
+$var wire 32 (& b [95:64] $end
+$var wire 32 )& y [95:64] $end
+$var wire 32 *& m_1 [31:0] $end
+$var wire 32 +& m_2 [31:0] $end
+$var wire 32 ,& m_3 [31:0] $end
+$var wire 32 -& m_4 [31:0] $end
+$var wire 32 .& m_5 [31:0] $end
+$var wire 32 /& m_6 [31:0] $end
+$var wire 32 0& m_7 [31:0] $end
+$var wire 32 1& m_8 [31:0] $end
+$var wire 32 2& m_9 [31:0] $end
+$var wire 32 3& s_1 [31:0] $end
+$var wire 32 4& s_2 [31:0] $end
+$var wire 32 5& s_3 [31:0] $end
+$var wire 32 6& s_4 [31:0] $end
+$var wire 32 7& s_5 [31:0] $end
+$var wire 32 8& s_6 [31:0] $end
+$var wire 32 9& s_7 [31:0] $end
+$var wire 32 :& s_8 [31:0] $end
+$var wire 32 ;& s_9 [31:0] $end
+$var wire 32 <& sum_123 [31:0] $end
+$var wire 32 =& sum_456 [31:0] $end
+$var wire 32 >& sum_789 [31:0] $end
+$var wire 32 ?& total_sum [31:0] $end
+$var wire 32 @& out [31:0] $end
+$scope module genblk1[1].multiplier $end
+$var wire 32 A& a [287:256] $end
+$var wire 32 B& b [287:256] $end
+$var wire 32 C& y [287:256] $end
+$var wire 64 D& raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[2].multiplier $end
+$var wire 32 E& a [255:224] $end
+$var wire 32 F& b [255:224] $end
+$var wire 32 G& y [255:224] $end
+$var wire 64 H& raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[3].multiplier $end
+$var wire 32 I& a [223:192] $end
+$var wire 32 J& b [223:192] $end
+$var wire 32 K& y [223:192] $end
+$var wire 64 L& raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[4].multiplier $end
+$var wire 32 M& a [191:160] $end
+$var wire 32 N& b [191:160] $end
+$var wire 32 O& y [191:160] $end
+$var wire 64 P& raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[5].multiplier $end
+$var wire 32 Q& a [159:128] $end
+$var wire 32 R& b [159:128] $end
+$var wire 32 S& y [159:128] $end
+$var wire 64 T& raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[6].multiplier $end
+$var wire 32 U& a [127:96] $end
+$var wire 32 V& b [127:96] $end
+$var wire 32 W& y [127:96] $end
+$var wire 64 X& raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[7].multiplier $end
+$var wire 32 Y& a [95:64] $end
+$var wire 32 Z& b [95:64] $end
+$var wire 32 [& y [95:64] $end
+$var wire 64 \& raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[8].multiplier $end
+$var wire 32 ]& a [63:32] $end
+$var wire 32 ^& b [63:32] $end
+$var wire 32 _& y [63:32] $end
+$var wire 64 `& raw_y [63:0] $end
+$upscope $end
+$scope module genblk1[9].multiplier $end
+$var wire 32 a& a [31:0] $end
+$var wire 32 b& b [31:0] $end
+$var wire 32 c& y [31:0] $end
+$var wire 64 d& raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 ?& a [31:0] $end
+$var wire 32 @& y [31:0] $end
+$var wire 1 e& sign $end
+$var wire 32 f& a_pos [31:0] $end
+$var wire 32 g& ai [31:0] $end
+$var reg 32 h& p1 [31:0] $end
+$var reg 32 i& p2 [31:0] $end
+$var reg 32 j& p3 [31:0] $end
+$var wire 64 k& ai_sq_full [63:0] $end
+$var wire 32 l& ai_sq [31:0] $end
+$var wire 64 m& term1_full [63:0] $end
+$var wire 32 n& term1 [31:0] $end
+$var wire 64 o& term2_full [63:0] $end
+$var wire 32 p& term2 [31:0] $end
+$var wire 32 q& y_abs [31:0] $end
+$var wire 32 r& y_signed [31:0] $end
+$var wire 32 s& ONE_POS [31:0] $end
+$var wire 32 t& ONE_NEG [31:0] $end
+$upscope $end
+$upscope $end
+$scope module NEURON_L3 $end
+$var wire 32 9$ a_1 [31:0] $end
+$var wire 32 1% a_2 [63:32] $end
+$var wire 32 )& a_3 [95:64] $end
+$var wire 32 u& w_1 [31:0] $end
+$var wire 32 v& w_2 [63:32] $end
+$var wire 32 w& w_3 [95:64] $end
+$var wire 32 8 b [31:0] $end
+$var wire 32 .$ y [31:0] $end
+$var wire 32 x& pre_activation [31:0] $end
+$var wire 32 y& out [31:0] $end
+$scope module mult_0 $end
+$var wire 32 9$ a [31:0] $end
+$var wire 32 u& b [31:0] $end
+$var wire 32 z& y [95:64] $end
+$var wire 64 {& raw_y [63:0] $end
+$upscope $end
+$scope module mult_1 $end
+$var wire 32 1% a [63:32] $end
+$var wire 32 v& b [63:32] $end
+$var wire 32 |& y [63:32] $end
+$var wire 64 }& raw_y [63:0] $end
+$upscope $end
+$scope module mult_2 $end
+$var wire 32 )& a [95:64] $end
+$var wire 32 w& b [95:64] $end
+$var wire 32 ~& y [31:0] $end
+$var wire 64 !' raw_y [63:0] $end
+$upscope $end
+$scope module activate_func $end
+$var wire 32 x& x [31:0] $end
+$var reg 32 "' y [31:0] $end
+$var reg 31 #' abs_x [30:0] $end
+$var reg 32 $' val [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+b1111111111111111101101111110101110100110001100110111001011000000 !!
+b1001110010001010010101 !"
+b10010100111101101111000 !#
+b11111111111111001011010101001000 !$
+b110100111000100100001110010110100111011111110 !%
+b101111111001110001111 !&
+b10011000101000101110010000010001011101100001110 !'
+b0 "
+b11111111101101111110101110100110 "!
+b1000010111100010111000110 ""
+b10010100111101101111000111010111001111101110010 "#
+b101110110011110111011 "$
+b110100111000100100001 "%
+b110000101101001001000 "&
+b11110011010011001010001 "'
+b1000000000000000000000000 #
+b1000001100000100100101100010101110010111011010100 #!
+b111110100000100010011101 #"
+b1001110000000000 ##
+b110101100011001001000001 #$
+b110011011010100111011 #%
+b11111111111000011111001000011100 #&
+b110010110011010111111 #'
+b11110011010011001010001 $
+b1000001100000100100101100 $!
+b10001110110100100111011101 $"
+b1001110000000000101101100010110010110000 $#
+b101001011001110101101101000101010010000010000000000 $$
+b11111111111001100100101011000101 $%
+b1000100001110000101011 $&
+b100001100101100110101111 $'
+b111110100001001111000011 %
+b101111011111010011010010 %!
+b111110100000100010011101 %"
+0%#
+b101001011001110101101101000 %$
+b1000000000000000000000000 %%
+b10111111100111111101 %&
+b111110100101000000110011 &
+b101111011111010011010010 &!
+b110110000000111101010110 &"
+b10010010101101011100101110 &#
+b1111111111111111111011101111011010001001011100101011110101000000 &$
+b11111111000000000000000000000000 &%
+b111011110110011001011 &&
+b111110100000100010011101 '
+b1000000000000000000000000 '!
+b110110000000111101010110011101101100101100001001 '"
+b10010010101101011100101110 '#
+b11111111111011101111011010001001 '$
+b11111111101010000110110010100001 '%
+b10000011111101101101110 '&
+b111110100110010011001101 (
+b11111111000000000000000000000000 (!
+b10100011100010101000011 ("
+b11111111111111001011010101001000 (#
+b1101010011111011111010100101000000001101100000 ($
+b11111111110001110001111110100010 (%
+b11111110111010001111001101110001 (&
+b11111111000001011001011111010001 )
+b11111111110011010000001010100111 )!
+b10100011100010101000011001001000111100100101010 )"
+b101110110011110111011 )#
+b1101010011111011111010 )$
+b11111111110111100001101101111101 )%
+b1110011000110110101111 )&
+b111110101000110100000010 *
+b11111111111000101010101100000111 *!
+b1011010111101111110 *"
+b110101100011001001000001 *#
+b111110100110011111000100 *$
+b11111111110100100000010000001110 *%
+bz *&
+b111110100110010111000001 +
+b10000010100001100101110 +!
+b1011010111101111110001110010111011100010011 +"
+b101010000010011110111010011011101100100110001000100 +#
+b111110100110011111000100 +$
+b1100010011110001011101 +%
+bz +&
+b111110101011011001011000 ,
+b1001010011000100000111 ,!
+0,"
+b101010000010011110111010011 ,#
+b1000000000000000000000000 ,$
+b11111111110110001101101100000010 ,%
+bz ,&
+b111110100110011111000100 -
+b1000111110111000110101 -!
+b10001110110100100111011101 -"
+b1111111111111111111011101011001110100011110000111001001001011000 -#
+b11111111000000000000000000000000 -$
+b11111111101100110101010001001101 -%
+bz -&
+0.
+b1001010011000100000111 .!
+b10001110110100100111011101 ."
+b11111111111011101011001110100011 .#
+b11110011010011001010001 .$
+b11111111111011010001101100000100 .%
+bz .&
+b0 /
+b0 /!
+b11111111111111001011010101001000 /"
+b1101011010011100011110011000001011000010011010 /#
+b11111111110100100111110100110111 /$
+b11111111110100010001000100111001 /%
+bz /&
+b1000000000000000000000000 0
+b0 0!
+b101110110011110111011 0"
+b1101011010011100011110 0#
+b11111111110011000101111000011101 0$
+b1100101010100011000111101 0%
+bz 0&
+b111111111110001010101011000001111111111111001101000000101010011100000000000000111010000101000001000000000001000100000001100010110000000000000011101100010110110011111111111111110001001101101011 1
+b11111111111000101010101100000111 1!
+b110101100011001001000001 1"
+b111110101000110100000010 1#
+b11111111101000000001100111010010 1$
+b11111111110101101111001011011111 1%
+bz 1&
+b111111111111111111000100111101000000000001111010000111100000111000000000110000100001110000111101111111111111110110111000101101100000000001101011001111101111110000000000110001111101001100111001000000000010110000110101010111000000000000111101000001000110010000000000110101000001101000000110000000000000010000110001110100000000000001100100011000001101000100000001000000010101101101110000111111111111111011101000001000111111111111000111110000001011000011111111000110010101000110011010000000000000111101111011000110000000000001110011000000101110111000000000111011011111010001011000000000000010011100100010100101010000000001101110001100110100110100000000111010000101010011111101000000000010111111110100001001000000000001010100000001101111100000000000110000010010011000101011000000000010001011100100110100100000000001001110111100110110111000000000101001001000111001000100 2
+b1111111111111111111000101010101100000111000000000000000000000000 2!
+b100111110101110001010010101001011011100100011001001 2"
+b111110101000110100000010 2#
+b11111111101101010101011000100000 2$
+bz 2%
+bz 2&
+b100000111111011011011100000000000011101111011001100101100000000000010111111100111111101000000000010001000011100001010111111111111100001111100100001110000000000000110000101101001001000000000000001011111110011100011110000000001000101110101000100011000000000001101010111100110001110111111111101000100010001001110011111111111101101000110110000010011111111101100110101010001001101111111111101100011011011000000100000000000110001001111000101110111111111110100100000010000001110111111111101111000011011011111011111111111000111000111111010001011111111101010000110110010100001111111111100100011111001100111011111111110101000101010100101100111111111101110101110111010100001111111111011011010111010101000000000000001010001010011010010001111111111101101010101011000100000111111111010000000011001110100101111111111001100010111100001110111111111110100100111110100110111 3
+03!
+b100111110101110001010010101 3"
+b1000000000000000000000000 3#
+b10100010100110100100011 3$
+bz 3%
+bz 3&
+b10101001101110111010100101111111000101010111100111011001011111101010101110110000111001100 4
+b1000111110111000110101 4!
+b1111111111111111111011111001101100111110011011110001001011101000 4"
+b11111111000000000000000000000000 4#
+b11111111101101101011101010100000 4$
+bz 4%
+bz 4&
+b100000101000011001011100000000011101111001101111110001100000001101000011011001001010001 5
+b1000111110111000110101 5!
+b11111111111011111001101100111110 5"
+b110101000001101000000110 5#
+b11111111101110101110111010100001 5$
+bz 5%
+bz 5&
+b10011011101001011110110000000000101000110110001100101101000000001010011010011010100011111000000010001000001101010100111111111111010111001111110101010110100000001000100010010100101011010000000010000101111000101110001100000000101001010101010110101010000000001011000111110001100101100 6
+b11111111101011111110011011100111 6!
+b1101000011101100011110111000011101111101101111 6"
+b1111010000010001100100 6#
+b11111111101010001010101001011001 6$
+bz 6%
+bz 6&
+b111111101110100011110011011100010000000110010101010001100011110100000010010100110100011010110001 7
+b1000101000011101000001101 7!
+b1101000011101100011110 7"
+b1011000011010101011100 7#
+b11111111110010001111100110011101 7$
+bz 7%
+bz 7&
+b11111111000010101011011110000010 8
+b0 8!
+b111110100000100010011101 8"
+b1010011010011010100011111 8#
+b10010100110100011010110001 8$
+bz 8%
+bz 8&
+b111110100001001111000011 9
+b1010000101100000000001001001001011011111001 9!
+b111110100000100010011101 9"
+b111110100110010111000001 9#
+b11111111111001100100101011000101 9$
+bz 9%
+bz 9&
+b111110100101000000110011 :
+b1010000101100000000 :!
+b1000000000000000000000000 :"
+b10010001100010011011111100 :#
+bz :$
+bz :%
+bz :&
+b111110100000100010011101 ;
+b1111111111111111111111100110110000010001011011101110110100000000 ;!
+b11111111000000000000000000000000 ;"
+b111110100110010111000001 ;#
+bz ;$
+bz ;%
+bz ;&
+b111110100110010011001101 <
+b11111111111111100110110000010001 <!
+b111011011111010001011000 <"
+b110001010011111100011000 <#
+bz <$
+bz <%
+b100011111110100010101000 <&
+b11111111000001011001011111010001 =
+b1001101100010011110110111011110001101010110001 =!
+b11100110000001011101110 ="
+b110001010011111100011000111011000001110111101110 =#
+bz =$
+bz =%
+b10101101001100111010111 =&
+b111110101000110100000010 >
+b1001101100010011110110 >!
+b11110111101100011000 >"
+b1011010100011010011000 >#
+bz >$
+bz >%
+b11010011000111110111001 >&
+b111110100110010111000001 ?
+b1001010011000100000111 ?!
+b1000100010010100101011010 ?"
+b1011010100011010011000000100001110101000001000 ?#
+bz ?$
+bz ?%
+b1110010000010110101001 ?&
+b111110101011011001011000 @
+b1001010011000100000111 @!
+b111110100110010011001101 @"
+b1100110110000101101 @#
+bz @$
+bz @%
+b1110011000110110101111 @&
+b111110100110011111000100 A
+b1000000000000000000000000 A!
+b10010001100000101000100011 A"
+b1100110110000101101101110000001000110000100 A#
+bz A$
+bz A%
+b111110100001001111000011 A&
+b11110011010011001010001 B
+b11111111000000000000000000000000 B!
+b111110100110010011001101 B"
+0B#
+bz B$
+bz B%
+b1101010111100110001110 B&
+b111111111110001010101011000001111111111111001101000000101010011100000000000000111010000101000001000000000001000100000001100010110000000000000011101100010110110011111111111111110001001101101011 C
+b101001001000111001000100 C!
+b110111010100100111100010 C"
+b10010001100010011011111100 C#
+bz C$
+bz C%
+b1101000011110011010101 C&
+b111111111111011111110000011010111111111111110101100011110110101111111111111101110101010101110100000000000000011001101001100011000000000000001011000111110010110100000000000000110001101100100011 D
+b10011101111001101101110 D!
+b110111010100100111100010001101000101001011111000 D"
+b10010001100010011011111100 D#
+bz D$
+b11111111010100011011110000011000 D%
+b1101000011110011010101011011010010000100101010 D&
+b111111111111111111000100111101000000000001111010000111100000111000000000110000100001110000111101111111111111110110111000101101100000000001101011001111101111110000000000110001111101001100111001000000000010110000110101010111000000000000111101000001000110010000000000110101000001101000000110000000000000010000110001110100000000000001100100011000001101000100000001000000010101101101110000111111111111111011101000001000111111111111000111110000001011000011111111000110010101000110011010000000000000111101111011000110000000000001110011000000101110111000000000111011011111010001011000000000000010011100100010100101010000000001101110001100110100110100000000111010000101010011111101000000000010111111110100001001000000000001010100000001101111100000000000110000010010011000101011000000000010001011100100110100100000000001001110111100110110111000000000101001001000111001000100 E
+b1000101110010011010010 E!
+b10101010101011100100110 E"
+b11111111111111001011010101001000 E#
+bz E$
+b11111111011111001000110100101101 E%
+b111110100101000000110011 E&
+b111101001011111010010011111111110011001011010000100110011111111111100001111100110110011111111110110111010010100000111100000000010000010111100000101110100000000000110011000001001111100000000001000101111111010100100011111111101101111001011100010001111111111111101110101011001000111111111110111101110011110001010110000000001111110011010011100000100000000011001110110110000100101111111111000011011111010011101000000000010100000100100011010010011111111111110100011100110001111111111111000010011100000011111000000000010010100010100111100100100000000011000001000010101100000000000001001111100011001111001011111111110011110101101100000110000000000001110110011010110010111111111111000111010011100011010000000000010000100101010100000000000000000001001110110110100111011000000001000000000000101011110111111111110001011000001101001001011111111110110001010001110110010 F
+b1011000111110001100101100 F!
+b10101010101011100100110110110010011111100111100 F"
+b101110110011110111011 F#
+bz F$
+b11111111011101001001100010010000 F%
+b10001011101010001000110 F&
+b100000111111011011011100000000000011101111011001100101100000000000010111111100111111101000000000010001000011100001010111111111111100001111100100001110000000000000110000101101001001000000000000001011111110011100011110000000001000101110101000100011000000000001101010111100110001110111111111101000100010001001110011111111111101101000110110000010011111111101100110101010001001101111111111101100011011011000000100000000000110001001111000101110111111111110100100000010000001110111111111101111000011011011111011111111111000111000111111010001011111111101010000110110010100001111111111100100011111001100111011111111110101000101010100101100111111111101110101110111010100001111111111011011010111010101000000000000001010001010011010010001111111111101101010101011000100000111111111010000000011001110100101111111111001100010111100001110111111111110100100111110100110111 G
+b111110100001001111000011 G!
+b100011111111000001 G"
+b110101100011001001000001 G#
+bz G$
+b11111111110110000010100000010010 G%
+b10001000100011100101100 G&
+b10000110101110111010101111111111100111011010100010001111111111111010000111010101100000111111111110010100011100101011010000000000001010111101011001110011111111111001001111110110010001111111111111111111101111101111010000000000011101111100100111000000000000001010010111100111001111111111111001110011101101000010010000000001011111000000010100111011111111101000010101000101111111000000000101000101101111011100010000000001010110101101111101010100000000010011110010100010110000111111111010100010011101010000100000000001010100010000000110001011111111100110101110010101000011111111111110101100011110101000000000000000010001000001111111110111111111111011101111011010010111000000000010110001100000010111010000000000011101001010001100010000000000000111110110001001001100111111111011100101101110101000000000000000101010110011011011011011111111111001010001011101101111 H
+b10001111001001000111111000 H!
+b100011111111000001011100111111010110101000 H"
+b101001010111101010101000111101111111100100000010000 H#
+bz H$
+b11111111110101101111001011011111 H%
+b10001000100011100101100100110110010100111110010 H&
+b10101001101110111010100101111111000101010111100111011001011111101010101110110000111001100 I
+b111110100001001111000011 I!
+0I"
+b101001010111101010101000111 I#
+bz I$
+b111110100001001111000011 I%
+b111110100000100010011101 I&
+b111111111110000011001011001000000000001110000001000110000101001100000001001010010001100010101100 J
+b100110010000011111010011 J!
+b10010001100000101000100011 J"
+b1111111111111111111011101111101000011101000000110010111011111000 J#
+bz J$
+b11111111101010000110110010100001 J%
+b101111111001110001111 J&
+b100000101000011001011100000000011101111001101111110001100000001101000011011001001010001 K
+b100110010000011111010011010010110001110100110100 K!
+b10010001100000101000100011 K"
+b11111111111011101111101000011101 K#
+bz K$
+b11111111101010100111001101010010 K%
+b101110110010010100111 K&
+b111111101100011011111101100111000000000100110010000100011110110000000000010011111111010110110110 L
+b1110101001010100111000 L!
+b11111111111111001011010101001000 L"
+b1101010011100101100011100100011101111000010100 L#
+b11111111010000110110010001111100 L$
+b1111111111111111101010100111001101010010100101001011000110100011 L%
+b101110110010010100111111100101101011010110011 L&
+b10011011101001011110110000000000101000110110001100101101000000001010011010011010100011111000000010001000001101010100111111111111010111001111110101010110100000001000100010010100101011010000000010000101111000101110001100000000101001010101010110101010000000001011000111110001100101100 M
+b1110101001010100111000111111101000100000111100 M!
+b101110110011110111011 M"
+b1101010011100101100011 M#
+b11111111000111111011110000101110 M$
+b111110100101000000110011 M%
+b111110100110010011001101 M&
+b111111100110111001111110011011110000000101010100010100101011100011111110101011011110110100101001000000010100111101110101110110110000000101011110101110100101101100000001010010100110001010101100111111100111110111110110111101100000000101110111011100100110011011111110100101111011101000010100 N
+b1010001000111000001 N!
+b110101100011001001000001 N"
+b111110100110010111000001 N#
+b11111111001100010001011100101111 N$
+b11111111110001110001111110100010 N%
+b110000101101001001000 N&
+b111111101110100011110011011100010000000110010101010001100011110100000010010100110100011010110001 O
+b1010001000111000001000110100111001110111110 O!
+b101001010110101001000010111100010101100000011001001 O"
+b111110100110010111000001 O#
+b11111111111001110111111010001010 O$
+b11111111110010000110001100010010 O%
+b101111101000111000001 O&
+b11000001101011011011111110011111010001110100011110111111111001000100011111101101111 P
+0P!
+b101001010110101001000010111 P"
+b1000000000000000000000000 P#
+b11111111111001100100101011000101 P$
+b1111111111111111110010000110001100010010110000011110110101000110 P%
+b101111101000111000001000101000110101110101000 P&
+b11111111000010101011011110000010 Q
+b10001111001001000111111000 Q!
+b1111111111111111111011101111101111001100110111010101100101111000 Q"
+b11111111000000000000000000000000 Q#
+b111110100001001111000011 Q$
+b111110100000100010011101 Q%
+b11111111000001011001011111010001 Q&
+b11111111010000111111110001100111 R
+b10001111001001000111111000 R!
+b11111111111011101111101111001100 R"
+b110001111101001100111001 R#
+b11111111110100100111110100110111 R$
+b11111111110111100001101101111101 R%
+b11111111111000011111001000011100 R&
+b11111111111111110001001101101011 S
+b11111111111111001011010101001000 S!
+b1101010011011011000000011000100111110010010001 S"
+b11010110011111011111100 S#
+b11111111110100111000101011000100 S$
+b11111111110111101110010110110100 S%
+b111010110010111001011 S&
+b111011000101101100 T
+b101110110011110111011 T!
+b1101010011011011000000 T"
+b11111111111111011011100010110110 T#
+b1111111111111111110100111000101011000100010101100111010111100101 T$
+b1111111111111111110111101110010110110100001001001100001110101001 T%
+b111010110010111001011110100010010110011011100 T&
+b1101000011011001001010001 U
+b110101100011001001000001 U!
+b111110100110010011001101 U"
+b1010001101100011001011010 U#
+b111110100101000000110011 U$
+b111110100110010011001101 U%
+b111110101000110100000010 U&
+b111011100001000111111101 V
+b101000000001001110010011111011110101110000001000000 V!
+b111110100110010011001101 V"
+b111110101011011001011000 V#
+b11111111110011000101111000011101 V$
+b11111111110100100000010000001110 V%
+b1000100001110000101011 V&
+b1101001010110001110111101 W
+b101000000001001110010011111 W!
+b1000000000000000000000000 W"
+b10010011111101101000010101 W#
+b11111111110011011000001110111011 W$
+b11111111110100110000010111011010 W%
+b1000010110001001001011 W&
+b111011100001000111111101 X
+b1111111111111111111011111000100001100100011011000111011110111000 X!
+b11111111000000000000000000000000 X"
+b111110101011011001011000 X#
+b1111111111111111110011011000001110111011011100011100111111000111 X$
+b1111111111111111110100110000010111011010011011101011011100110110 X%
+b1000010110001001001011110001011110011101010110 X&
+b0 Y
+b11111111111011111000100001100100 Y!
+b11111111000110010101000110011010 Y"
+b101110011101010001101001 Y#
+b111110100000100010011101 Y$
+b11111111000001011001011111010001 Y%
+b111110100110010111000001 Y&
+b0 Z
+b1101000101100100011110010000010110100000101000 Z!
+b11111111110001111100000010110000 Z"
+b101110011101010001101001100000001000100001010101 Z#
+b11111111101000000001100111010010 Z$
+b1100010011110001011101 Z%
+b10111111100111111101 Z&
+b111011000101101100 [
+b1101000101100100011110 [!
+b11111111111111101110100000100011 ["
+b10011111001010000010000 [#
+b11111111101000100101010111111101 [$
+b11111111110011111101011100000011 [%
+b10111011011011100011 [&
+b111011000101101100000000000000000000000000 \
+b111110100001001111000011 \!
+b11111110101110011111101010101101 \"
+b10011111001010000010000000011011101101010111000 \#
+b1111111111111111101000100101010111111101000100100110010111001010 \$
+b1111111111111111110011111101011100000011100111100010001011101101 \%
+b10111011011011100011101110100100100010111101 \&
+0]
+b111110100001001111000011 ]!
+b11111111000001011001011111010001 ]"
+b11111111111111111010101101000010 ]#
+b111110100110010011001101 ]$
+b111110101000110100000010 ]%
+b111110101011011001011000 ]&
+b1101001010110001110111101 ^
+b1000000000000000000000000 ^!
+b11111101101110011000111100100010 ^"
+b1111111111111111111111111010101101000010100110001110001011111010 ^#
+b11111111101101010101011000100000 ^$
+b11111111110110001101101100000010 ^%
+b111011110110011001011 ^&
+b1101001010110001110111101 _
+b11111111000000000000000000000000 _!
+b11111111000001011001011111010001 _"
+0_#
+b11111111101101101111100010110101 _$
+b11111111110110011011000001010000 _%
+b111010100111010001110 _&
+b11111111110101001101001101011001 `
+b110000010010011000101011 `!
+b11111111001010010111100110100111 `"
+b10010011111101101000010101 `#
+b1111111111111111101101101111100010110101000110100111011110100000 `$
+b1111111111111111110110011011000001010000010001011101000000000100 `%
+b111010100111010001110110111111011011111001000 `&
+b101100110010011111100010 a
+b10101000000011011111000 a!
+b1111111111111111001010010111100110100111100111001101111100110010 a"
+b10010011111101101000010101 a#
+b11111111000001011001011111010001 a$
+b111110100110010111000001 a%
+b111110100110011111000100 a&
+b1111000010011010101010 b
+b1011111111010000100100 b!
+b11111111110101100100001101110111 b"
+b11111111111111001011010101001000 b#
+b10100010100110100100011 b$
+b11111111101100110101010001001101 b%
+b10000011111101101101110 b&
+b10101101011010000100110010011111011011100110001001 c
+b1010010101010101101010100 c!
+b1111111111111111110101100100001101110111011100111101000001100000 c"
+b101110110011110111011 c#
+b11111111101100000111100110010101 c$
+b11111111101101010000000111011001 c%
+b10000001000101001001000 c&
+b10101101011010000100110010 d
+b111110100101000000110011 d!
+b11111111111111111101011101010111 d"
+b110101100011001001000001 d#
+b1111111111111111101100000111100110010101100011101001111010010011 d$
+b1111111111111111101101010000000111011001101001101110111100001101 d%
+b10000001000101001001000000110011100001000111000 d&
+b1111111111111111100010110000010011110000011010010100000001100010 e
+b10010000111001101101011010 e!
+b1111111111111111111111111101011101010111011101100000101111110101 e"
+b101010110000101000010100110101111011100010110111001 e#
+b111110101000110100000010 e$
+b111110101011011001011000 e%
+0e&
+b11111111100010110000010011110000 f
+b111110100101000000110011 f!
+1f"
+b101010110000101000010100110 f#
+b11111111101101101011101010100000 f$
+b11111111111011010001101100000100 f%
+b1110010000010110101001 f&
+b1001001101110011001100011010110101101011111011010 g
+b101100111001111100001110 g!
+b10010001100111000011011110 g"
+b1111111111111111111011100110011110101111010001000000110010110000 g#
+b11111111101110000100100111100100 g$
+b11111111111011010111111011101100 g%
+b1110010000010110101001 g&
+b1001001101110011001100011 h
+b101100111001111100001110011001011001001101111111 h!
+b10010001100111000011011110 h"
+b11111111111011100110011110101111 h#
+b1111111111111111101110000100100111100100011101111001010101000000 h$
+b1111111111111111111011010111111011101100100111100010000101100000 h%
+b11111111101011111110011011100111 h&
+b111011100001000111111101 i
+b1111100101100110000000 i!
+b11111111111111001011010101001000 i"
+b1101100001110001101000111101011100000001010111 i#
+b111110100110010111000001 i$
+b111110100110011111000100 i%
+b1000101000011101000001101 i&
+b111011100001000111111101 j
+b1111100101100110000000101010100001011101110000 j!
+b101110110011110111011 j"
+b1101100001110001101000 j#
+b11111111101110101110111010100001 j$
+b11111111110100010001000100111001 j%
+b0 j&
+b1000000000000000000000000 k
+b1101111011101111000 k!
+b110101100011001001000001 k"
+b111110101011011001011000 k#
+b11111111101111000111000110010101 k$
+b11111111110100100001011111001011 k%
+b11001011001110000101011000100000100110010001 k&
+b11111111000000000000000000000000 l
+b1101111011101111000001111101001000011111100 l!
+b101001011010010010101100011001010110000000010000100 l"
+b111110101011011001011000 l#
+b1111111111111111101111000111000110010101010011010110110001100001 l$
+b1111111111111111110100100001011111001011101010010001111010100100 l%
+b11001011001110000101 l&
+b100010000000110001011 m
+0m!
+b101001011010010010101100011 m"
+b1000000000000000000000000 m#
+b111110101011011001011000 m$
+1m%
+b1111111111111111111111000000011010100111101010100111101100000011 m&
+b111010000101000001 n
+b10010000111001101101011010 n!
+b1111111111111111111011101111010111001010100101011000001011011000 n"
+b11111111000000000000000000000000 n#
+b11111111101010001010101001011001 n$
+b1001111101011111101110 n%
+b11111111111111000000011010100111 n&
+b111011110011011111100011 o
+b10010000111001101101011010 o!
+b11111111111011101111010111001010 o"
+b110000100001110000111101 o#
+b11111111101010100111100000100101 o$
+b1001111101011111101110 o%
+b1111011000011100001000011000011001001110010101 o&
+b101111011111010011010010 p
+b11111111111111001011010101001000 p!
+b1101010100000000100100110011111100010000101010 p"
+b11110100001111000001110 p#
+b1111111111111111101010100111100000100101111111111101010010011000 p$
+b11111111101011111110011011100111 p%
+b1111011000011100001000 p&
+b111100101101100100100100 q
+b101110110011110111011 q!
+b1101010100000000100100 q"
+b11111111111111111100010011110100 q#
+b111110100110011111000100 q$
+b1000101000011101000001101 q%
+b1110011000110110101111 q&
+b101111011111010011010010 r
+b110101100011001001000001 r!
+b111110100110100000101111 r"
+b1001101110100101111011000 r#
+b11111111110010001111100110011101 r$
+b0 r%
+b1110011000110110101111 r&
+b0 s
+b101001000000100100000010111011000100001101110100100 s!
+b11111111000001011001011111010001 s"
+b111110100110011111000100 s#
+b11111111110010100010110101110101 s$
+b1100011001110000000101001011010000101000100 s%
+b1000000000000000000000000 s&
+b0 t
+b101001000000100100000010111 t!
+b1000000000000000000000000 t"
+b10010001100110010000100000 t#
+b1111111111111111110010100010110101110101100111110100011100110100 t$
+b1100011001110000000 t%
+b11111111000000000000000000000000 t&
+b111010000101000001 u
+b1111111111111111111011110010000000100011101100001000100101111000 u!
+b11111111000000000000000000000000 u"
+b111110100110011111000100 u#
+1u$
+b1111111111111111111111100000111101001100010111010111100010000000 u%
+b11111101010101110110000111001100 u&
+b111010000101000001000000000000000000000000 v
+b11111111111011110010000000100011 v!
+b1000000010101101101110000 v"
+b101101001000001111100100 v#
+b110001000000101110110 v$
+b11111111111111100000111101001100 v%
+b11111110001010101111001110110010 v&
+0w
+b1101001111110111001111111110011011000010111110 w!
+b11001000110000011010001 w"
+b101101001000001111100100011010111111010101001001 w#
+b110001000000101110110 w$
+b1010101111110111010101100010011110001100010110 w%
+b1010100110111011101010010 w&
+b111100101101100100100100 x
+b1101001111110111001111 x!
+b1000011000111010000 x"
+b10110101001110011111001 x#
+b11111111101011111110011011100111 x$
+b1010101111110111010101 x%
+b11111111111001101001100101000001 x&
+b111100101101100100100100 y
+b111110100101000000110011 y!
+b1000100000110101010011111 y"
+b10110101001110011111001001001111111111101111100 y#
+b1000101000011101000001101 y$
+b1010010000110100100001 y%
+b11110011010011001010001 y&
+b11111111101011111110011011100111 z
+b111110100101000000110011 z!
+b111110101000110100000010 z"
+b11111111111111111111011101101011 z#
+b0 z$
+b11111111110101101111001011011111 z%
+b10001000101100101000111 z&
+b1000101000011101000001101 {
+b1000000000000000000000000 {!
+b10010010101101011100101110 {"
+b1111111111111111111111111111011101101011111101010001011010101100 {#
+b100101100010000111100110000010001001100100 {$
+b1000000000000000000000000 {%
+b10001000101100101000111110010110011100111111100 {&
+b0 |
+b11111111000000000000000000000000 |!
+b111110101000110100000010 |"
+0|#
+b100101100010000111 |$
+b11111111000000000000000000000000 |%
+b10010110011011100000110 |&
+b111001100101111101000000001111100000110100010000 }
+b111010000101010011111101 }!
+b111011110101010100010111 }"
+b10010001100110010000100000 }#
+b1111111111111111111111110100010000011010111100000010101111010001 }$
+b1101010111100110001110 }%
+b10010110011011100000110100101001000110000001110 }&
+b111001100101111101000000 ~
+b11011100011001101001101 ~!
+b111011110101010100010111100010011100110110110000 ~"
+b10010001100110010000100000 ~#
+b11111111111111110100010000011010 ~$
+b10001011101010001000110 ~%
+b10011000101000101110010 ~&
+$end
+
+#10000
+1!
+b1111111111111111110001011011101100010000011011011100110100010110 !!
+b100111110001100111100101 !"
+b11001111011010001100110 !#
+b10011011001111110101010010100111001110101000011 !%
+b11111111111111111110111110111101 !&
+b10011011000110010110001110010010100100000000 !'
+b11111111110001011011101100010000 "!
+b11111110011111011111011011110110 ""
+b11001111011010001100110100001010011001110010111 "#
+b10011011001111110101010 "%
+b11111111111001001111110110010001 "&
+b11110000110101110111011 "'
+b110100000010000110011101011011001110001011000000 #!
+b11111111000001011010101000001110 #"
+b11100000010111000000101 ##
+b10001110100110001100101 #%
+b10101111010110011100 #&
+b111100101000100010100 #'
+b11110000110101110111011 $
+b110100000010000110011101 $!
+b11111101101110111011011101101011 $"
+b11100000010111000000101000011111011000010111110 $#
+b101011001001100010101011001100110101101010100010000 $$
+b10001110100110001100101 $%
+b11111111111001010001110010101101 $&
+b100001111001010001000101 $'
+b11111111000001011011101100101110 %
+b110100100000001101010111 %!
+b11111111000001011010101000001110 %"
+b101011001001100010101011001 %$
+b11111111111010000111010101100000 %&
+b111110101100011101011111 &
+b110100100000001101010111 &!
+b101000110001010100100 &"
+b10010010101111001111001110 &#
+b1111111111111111111011100011111010101110011110110110111000001000 &$
+b11111111111001110110101000100011 &&
+b11111111000001011010101000001110 '
+b101000110001010100100001001101000100001100110 '"
+b10010010101111001111001110 '#
+b11111111111011100011111010101110 '$
+b11111111100110101110010101000011 '%
+b1000011010111011101010 '&
+b111110101010010000011111 (
+b11111111101100000011000000010000 ("
+b1101100101101101010001000110110110010001001100 ($
+b10101000100000001100010 (%
+b1100000110101101101 (&
+b111110100110110100001010 )
+b11111111111101011000111101101011 )!
+b1111111111111111101100000011000000010000111010100000001000010100 )"
+b1101100101101101010001 )$
+b11111111101010001001110101000010 )%
+b11111111101100000111101010001000 )&
+b111110101000110111110000 *
+b11111111111101111111000001101011 *!
+b11111111011110010010110111000001 *"
+b111110101100110001000000 *$
+b10011110010100010110000 *%
+b11111111000001011011100101101000 +
+b11111110110001101111110110011100 +!
+b1111111111111111011110010010110111000001101001110001001011100010 +"
+b101010000011100000100010011010010001011100111000100 +#
+b11111111000001010011001111000000 +$
+b10101101011011111010101 +%
+b111110100101000101110001 ,
+b11111111001001110001000100111010 ,!
+1,"
+b101010000011100000100010011 ,#
+b10100010110111101110001 ,%
+b11111111000001010011001111000000 -
+b11111110101111101110111000000111 -!
+b10010001000100100010010101 -"
+b1111111111111111111011101011000111110011101101001011110001011000 -#
+b11111111101000010101000101111111 -%
+1.
+b11111111001001110001000100111010 .!
+b10010001000100100010010101 ."
+b11111111111011101011000111110011 .#
+b11110000110101110111011 .$
+b10111110000000101001110 .%
+b1101011010100110111100010110011111100101111010 /#
+b11111111111001010001011101101111 /$
+b11111111100111001110110100001001 /%
+b1101011010100110111100 0#
+b1010101100110110110110 0$
+b11111100111110100011101000111101 0%
+b111111111111011111110000011010111111111111110101100011110110101111111111111101110101010101110100000000000000011001101001100011000000000000001011000111110010110100000000000000110001101100100011 1
+b11111111111101111111000001101011 1!
+b111110101000110111110000 1#
+b11111111101110010110111010100000 1$
+b100101001111101110001 1%
+b111101001011111010010011111111110011001011010000100110011111111111100001111100110110011111111110110111010010100000111100000000010000010111100000101110100000000000110011000001001111100000000001000101111111010100100011111111101101111001011100010001111111111111101110101011001000111111111110111101110011110001010110000000001111110011010011100000100000000011001110110110000100101111111111000011011111010011101000000000010100000100100011010010011111111111110100011100110001111111111111000010011100000011111000000000010010100010100111100100100000000011000001000010101100000000000001001111100011001111001011111111110011110101101100000110000000000001110110011010110010111111111111000111010011100011010000000000010000100101010100000000000000000001001110110110100111011000000001000000000000101011110111111111110001011000001101001001011111111110110001010001110110010 2
+b1111111111111111111101111111000001101011000000000000000000000000 2!
+b101001000110101100011110111101111000010011010111001 2"
+b111110101000110111110000 2#
+b111110110001001001100 2$
+b10000110101110111010101111111111100111011010100010001111111111111010000111010101100000111111111110010100011100101011010000000000001010111101011001110011111111111001001111110110010001111111111111111111101111101111010000000000011101111100100111000000000000001010010111100111001111111111111001110011101101000010010000000001011111000000010100111011111111101000010101000101111111000000000101000101101111011100010000000001010110101101111101010100000000010011110010100010110000111111111010100010011101010000100000000001010100010000000110001011111111100110101110010101000011111111111110101100011110101000000000000000010001000001111111110111111111111011101111011010010111000000000010110001100000010111010000000000011101001010001100010000000000000111110110001001001100111111111011100101101110101000000000000000101010110011011011011011111111111001010001011101101111 3
+13!
+b101001000110101100011110111 3"
+b111010010100011000100 3$
+b111111111110000011001011001000000000001110000001000110000101001100000001001010010001100010101100 4
+b1010000010001000111111001 4!
+b1111111111111111111011110001011000001011111110111010100001111000 4"
+b1011000110000001011101 4$
+b111111101100011011111101100111000000000100110010000100011110110000000000010011111111010110110110 5
+b1010000010001000111111001 5!
+b11111111111011110001011000001011 5"
+b11111111111101110101011001000111 5#
+b11111111111011101111011010010111 5$
+b111111100110111001111110011011110000000101010100010100101011100011111110101011011110110100101001000000010100111101110101110110110000000101011110101110100101101100000001010010100110001010101100111111100111110111110110111101100000000101110111011100100110011011111110100101111011101000010100 6
+b11111111110101001101001101011001 6!
+b1101010000110110100110011101111111011111010111 6"
+b11111111011011110010111000100011 6#
+b100010000011111111101 6$
+b11000001101011011011111110011111010001110100011110111111111001000100011111101101111 7
+b101100110010011111100010 7!
+b1101010000110110100110 7"
+b100010111111101010010001 7#
+b11111111111010110001111010100000 7$
+b11111111010000111111110001100111 8
+b1111000010011010101010 8!
+b111110100101010111110010 8"
+b11111110101011011110110100101001 8#
+b11111111001000100011111101101111 8$
+b11111111000001011011101100101110 9
+b1100100101010111000010011101101010000010000110001 9!
+b11111111000001011010101000001110 9"
+b11111111000001011011100101101000 9#
+b10001110100110001100101 9$
+b111110101100011101011111 :
+b1100100101010111000010011 :!
+b11111101101111011000010110011000 :#
+b11111111000001011010101000001110 ;
+b1111111111111111101111000001011010000110001101000010110110011011 ;!
+b11111111000001011011100101101000 ;#
+b111110101010010000011111 <
+b11111111101111000001011010000110 <!
+b11000001000010101100000 <"
+b11111111111111010000010001110100 <#
+b11111111111101001101100111011110 <&
+b111110100110110100001010 =
+b111000001011000110010110010010011100110011010010 =!
+b100101000101001111001001 ="
+b1111111111111111111111010000010001110100100010000011011101000110 =#
+b11111111110101011111010111101011 =&
+b111110101000110111110000 >
+b111000001011000110010110 >!
+b11111111100001001110000001111100 >"
+b11111111100010010011000111110101 >#
+b11111111110111011111101000000000 >&
+b11111111000001011011100101101000 ?
+b110110001110111011000110 ?!
+b1010010100110001010101100 ?"
+b1111111111111111100010010011000111110101000010010001011011100101 ?#
+b11111111101011101101011100110110 ?&
+b111110100101000101110001 @
+b11111111001001110001000100111010 @!
+b111110101010010000011111 @"
+b11111111100010010110001000000110 @#
+b11111111101100000111101010001000 @&
+b11111111000001010011001111000000 A
+b10010011011010001000000010 A"
+b1111111111111111100010010110001000000110011100010110010111011010 A#
+b11111111000001011011101100101110 A&
+b11110000110101110111011 B
+b111110101010010000011111 B"
+1B#
+b1010010111100111001111 B&
+b11111111110110001010001110110010 C!
+b1000010011101100111111 C"
+b10010000100111101001101000 C#
+b11111111110101110111001111100101 C&
+b11111111100010110000011010010010 D!
+b1000010011101100111111010001000000010111000000 D"
+b10010000100111101001101000 D#
+b1000010101101001110001010 D%
+b1111111111111111110101110111001111100101011110010001100000110010 D&
+b100000000000010101111011 E!
+b11110011010111010101010 E"
+b111100100000100011101011 E%
+b111110101100011101011111 E&
+b11111110100101111011101000010100 F!
+b11110011010111010101010010001011101010001001111 F"
+b1000110101000010110010101 F%
+b111011111001001110000 F&
+b11111111000001011011101100101110 G!
+b11010000101010101101101 G"
+b100011001110001000111 G%
+b111010101011000010011 G&
+b11111101101111011011101010110111 H!
+b11010000101010101101101111001110001100000011000 H"
+b101000110110010110011111000001001110100101001000000 H#
+b100101001111101110001 H%
+b111010101011000010011111100100000011110010000 H&
+b11111111000001011011101100101110 I!
+b101000110110010110011111000 I#
+b11111111000001011011101100101110 I%
+b11111111000001011010101000001110 I&
+b11111111111100100111001011001110 J!
+b10010011011010001000000010 J"
+b1111111111111111111011110011000011110010100011111111110111000000 J#
+b11111111100110101110010101000011 J%
+b11111111111111111110111110111101 J&
+b1111111111111111111100100111001011001110010110011001001111110100 K!
+b10010011011010001000000010 K"
+b11111111111011110011000011110010 K#
+b11000101101011101001010 K%
+b111111100110 K&
+b11111111101000000000100111011101 L!
+b1101001110001101100101001001110100000111111000 L#
+b100010010011111000111010 L$
+b11000101101011101001010100111000010001100001010 L%
+b111111100110111000111001111001010110 L&
+b1111111111111111101000000000100111011101000101101111000110011110 M!
+b1101001110001101100101 M#
+b11001101010111100001011 M$
+b111110101100011101011111 M%
+b111110101010010000011111 M&
+b11111111100100111000001111111000 N!
+b111110100100011010011000 N#
+b1101011100001111011011 N$
+b10101000100000001100010 N%
+b11111111111001001111110110010001 N&
+b1111111111111111100100111000001111111000000110110110100011011110 O!
+b101010011100001001011100011101110101000100000000100 O"
+b11111111000001011011100101101000 O#
+b10001111111000010001111 O$
+b10100101000100001111101 O%
+b11111111111001011000111001001110 O&
+1P!
+b101010011100001001011100011 P"
+b10001110100110001100101 P$
+b10100101000100001111101000001000001001001011110 P%
+b1111111111111111111001011000111001001110110001011001100010001111 P&
+b10010000100100010101001001 Q!
+b1111111111111111111011101000100101100101110000111100111011011000 Q"
+b11111111000001011011101100101110 Q$
+b11111111000001011010101000001110 Q%
+b111110100110110100001010 Q&
+b10010000100100010101001001 R!
+b11111111111011101000100101100101 R"
+b110011000001001111100 R#
+b11111111111001010001011101101111 R$
+b11111111101010001001110101000010 R%
+b10101111010110011100 R&
+b110001101100100011 S
+b1101011110100001111001000100100010010101110110 S"
+b100000101111000001011101 S#
+b110100100111001011001 S$
+b10101010111001111000011 S%
+b10101011100010000101 S&
+b10110001111100101101 T
+b1101011110100001111001 T"
+b11111111011011101001010000011110 T#
+b110100100111001011001011100110100101011110010 T$
+b10101010111001111000011111100000110110110011100 T%
+b10101011100010000101010110010000010000011000 T&
+b10011111111010110110110 U
+b111110101010010000011111 U"
+b1010101000101001010111000 U#
+b111110101100011101011111 U$
+b111110101010010000011111 U%
+b111110101000110111110000 U&
+b10110000010001110001010 V
+b101000110100011110011110000011001000110111011010001 V!
+b111110101010010000011111 V"
+b111110100101000101110001 V#
+b1010101100110110110110 V$
+b10011110010100010110000 V%
+b11111111111001010001110010101101 V&
+b10110110001010011100011 W
+b101000110100011110011110000 W!
+b10010000111100000010100111 W#
+b1010011110111000111001 W$
+b10011011000000001111011 W%
+b11111111111001011010111100011000 W&
+b10110000010001110001010 X
+b1111111111111111111011110011010000001000101101101101001110000000 X!
+b111110100101000101110001 X#
+b1010011110111000111001100001101101000010001010 X$
+b10011011000000001111011100001101010110101010000 X%
+b1111111111111111111001011010111100011000100010000010101100110000 X&
+b11111111111011110011010000001000 Y!
+b11111111111110100011100110001111 Y"
+b10001100100001100101 Y#
+b11111111000001011010101000001110 Y$
+b111110100110110100001010 Y%
+b11111111000001011011100101101000 Y&
+b1101001101111010001001110101111111101101010011 Z!
+b101000001001000110100100 Z"
+b10001100100001100101001101110100101011011000 Z#
+b11111111101110010110111010100000 Z$
+b10101101011011111010101 Z%
+b11111111111010000111010101100000 Z&
+b10110001111100101101 [
+b1101001101111010001001 [!
+b11111111100001101111101001110100 ["
+b11010110110101011100001 [#
+b10001010000000110101000 [$
+b10101001101010001110101 [%
+b101110000001111011110 [&
+b10110001111100101101000000000000000000000000 \
+b111110100100010011010010 \!
+b1010111101011101001011011 \"
+b11010110110101011100001100110101100011010011011 \#
+b10001010000000110101000101110100100110011000000 \$
+b10101001101010001110101101010101101111101010010 \%
+b101110000001111011110001000100000111100000000 \&
+b11111111000001011011101100101110 ]!
+b111110100110110100001010 ]"
+b11110110011101010101001 ]#
+b111110101010010000011111 ]$
+b111110101000110111110000 ]%
+b111110100101000101110001 ]&
+b10110110001010011100011 ^
+b10010001110000010001110100 ^"
+b11110110011101010101001011101011000110011001100 ^#
+b111110110001001001100 ^$
+b10100010110111101110001 ^%
+b11111111111001110110101000100011 ^&
+b10110110001010011100011 _
+b111110100110110100001010 _"
+b111101011101000011100 _$
+b10011111011001111111011 _%
+b11111111111001111111010111010011 _&
+b11111111101011111110011011100111 `
+b1001110110110100111011 `!
+b11111111111111100000001011111011 `"
+b10010000111100000010100111 `#
+b111101011101000011100111111011001011100110100 `$
+b10011111011001111111011000100111011011011110000 `%
+b1111111111111111111001111111010111010011111010001110110001110011 `&
+b1000101000011101000001101 a
+b100001001010101000000000 a!
+b1111111111111111111111100000001011111011111010011001010000010110 a"
+b10010000111100000010100111 a#
+b111110100110110100001010 a$
+b11111111000001011011100101101000 a%
+b11111111000001010011001111000000 a&
+b0 b
+b11111111100011101001110001101000 b!
+b100000111011100110010000 b"
+b111010010100011000100 b$
+b11111111101000010101000101111111 b%
+b1000011010111011101010 b&
+b1000000110011111011011000101100100000101001001 c
+b1011101110111001001100110 c!
+b100000111011100110010000110011100110101010111100 c"
+b111001000011000111010 c$
+b10111001001000010000101 c%
+b11111111110111110000000001001111 c&
+b1000000110011111011011 d
+b111110101100011101011111 d!
+b11001101000110110001110 d"
+b111001000011000111010111001110000101110101000 d$
+b10111001001000010000101111010001110001010011000 d%
+b1111111111111111110111110000000001001111101011011100110110000000 d&
+b1111111111111111111101011101110001011110010000010111100010011101 e
+b10010100011111000001100100 e!
+b11001101000110110001110111000100111001001001000 e"
+b101001000001111000100000100011001001110110011110001 e#
+b111110101000110111110000 e$
+b111110100101000101110001 e%
+1e&
+b11111111111101011101110001011110 f
+b111110101100011101011111 f!
+0f"
+b101001000001111000100000100 f#
+b1011000110000001011101 f$
+b10111110000000101001110 f%
+b10100010010100011001010 f&
+b11000100100011100101100000101110111110110000111 g
+b11011001001100000101 g!
+b10010001110000010001110100 g"
+b1111111111111111111011110001110111110111100110111001110100100000 g#
+b1010110110111010110101 g$
+b10111001110010101111111 g%
+b10100010010100011001010 g&
+b11000100100011100101100 h
+b11011001001100000101011101111111001011001110 h!
+b10010001110000010001110100 h"
+b11111111111011110001110111110111 h#
+b1010110110111010110101011111111001000000110000 h$
+b10111001110010101111111100001010100000101101110 h%
+b10110000010001110001010 i
+b11011001101010100101111 i!
+b1101010000000100111001000000011110101011111101 i#
+b11111111000001011011100101101000 i$
+b11111111000001010011001111000000 i%
+b10110000010001110001010 j
+b11011001101010100101111000100111100011000000000 j!
+b1101010000000100111001 j#
+b11111111111011101111011010010111 j$
+b11111111100111001110110100001001 j%
+b11000000001010111001010 k!
+b111110100101000101110001 k#
+b100001010011111100011 k$
+b11000010000111110010001 k%
+b110011011101011010110010100111011111101100100 k&
+b11000000001010111001010100010100101011110010000 l!
+b101001011111100010101001000011010111101010010010000 l"
+b111110100101000101110001 l#
+b100001010011111100011001110100100110001011000 l$
+b11000010000111110010001000101111001000111000000 l%
+b110011011101011010110 l&
+b1100110100110001100 m
+b101001011111100010101001000 m"
+b111110100101000101110001 m$
+0m%
+b1111111111111111111101111111001100010111010111011101101100011010 m&
+b11111111111101110101010101110100 n
+b10010100011111000001100100 n!
+b1111111111111111111011101110110100100110110010110110010001000000 n"
+b100010000011111111101 n$
+b100011001110001000111 n%
+b11111111111101111111001100010111 n&
+b1001100100001000111101100 o
+b10010100011111000001100100 o!
+b11111111111011101110110100100110 o"
+b11111111111100001111100110110011 o#
+b100001010011100111000 o$
+b100011001110001000111 o%
+b10101111001001001100001001001001101011001000010 o&
+b110100100000001101010111 p
+b1101010100110110100011000101101110110010111100 p"
+b11111111100110010110100001001100 p#
+b100001010011100111000000111011001001110101101 p$
+b10101111001001001100001 p&
+b1001010010110011101100000 q
+b1101010100110110100011 q"
+b11110100101111101001001 q#
+b11111111000001010011001111000000 q$
+b10011111000010101111000 q&
+b110100100000001101010111 r
+b111110100110110100001010 r"
+b11111110011011100111111001101111 r#
+b11111111111010110001111010100000 r$
+b11111111101100000111101010001000 r&
+b101011000011111101110010001000000111010011100010000 s!
+b111110100110110100001010 s"
+b11111111000001010011001111000000 s#
+b101000111010011000000 s$
+b10011011000100000110101001001101110110001 s%
+b101011000011111101110010001 t!
+b11111101101011010111010111011100 t#
+b101000111010011000000100100001101100000000000 t$
+b10011011000100000 t%
+b11111111111101110101010101110100 u
+b1111111111111111111011100100011111011100001010000100010111001000 u!
+b11111111000001010011001111000000 u#
+0u$
+b1111111111111111111111111001111011110111100110001001011011100000 u%
+b1001010010001100010101100 u&
+b1111111111111111111101110101010101110100000000000000000000000000 v
+b11111111111011100100011111011100 v!
+b11001110110110000100101 v"
+b11111111111110101101001110111111 v#
+b10001111111000010001111 v$
+b11111111111111111001111011110111 v%
+b11100000010001100001010011 v&
+b1101100100110101000010100011101101010100001100 w!
+b11111100110100111000001 w"
+b1111111111111111111110101101001110111111100100100001001101111110 w#
+b10001111111000010001111 w$
+b100110000000001111010110110010000010110011011 w%
+b11111111111000001100101100100000 w&
+b1001010010110011101100000 x
+b1101100100110101000010 x!
+b11111111011110111001111000101011 x"
+b11111111101010111101011000110111 x#
+b100110000000001111010 x%
+b11111111111000011010111011101100 x&
+b1001010010110011101100000 y
+b111110101100011101011111 y!
+b1010011110111010111011011 y"
+b1111111111111111101010111101011000110111101100110101010111010100 y#
+b100101001111101110001 y%
+b11110000110101110111011 y&
+b11111111110101001101001101011001 z
+b111110101100011101011111 z!
+b111110101000110111110000 z"
+b11111111100110000100110101110111 z#
+b100101001111101110001 z%
+b10100101011111010000000 z&
+b101100110010011111100010 {
+b10010010101111001111001110 {"
+b1111111111111111100110000100110101110111001011000110111110001010 {#
+b101000011011101010001010111100110111111100001 {$
+b10100101011111010000000001111011100101111011100 {&
+b1111000010011010101010 |
+b111110101000110111110000 |"
+1|#
+b101000011011101010001 |$
+b10000010100001001101111 |&
+b1010110011000000100000110011111100110010000000000 }
+b1110110011010110010111 }!
+b1000111001101110001000 }"
+b10010100101000101000100100 }#
+b1111111111111111111110011010110010111011010011111011000000010111 }$
+b1010010111100111001111 }%
+b10000010100001001101111111011010100100110100011 }&
+b1010110011000000100000110 ~
+b11111111100111101011011000001100 ~!
+b1000111001101110001000010000010101101011110010 ~"
+b10010100101000101000100100 ~#
+b11111111111110011010110010111011 ~$
+b111011111001001110000 ~%
+b10011011000110010110 ~&
+
+#20000
+0!
+b1111111111111111110101001011111111110111111111010010101010101000 !!
+b1001110010001010010101 !"
+b10011001110111110010010 !#
+b110100111000110011011101110001110111010111011 !%
+b101111111001110001111 !&
+b10011000101000011001101100110101110111101010110 !'
+b1000000000000000000000000 "
+b11111111110101001011111111110111 "!
+b1000010111100010111000110 ""
+b10011001110111110010010100111111100100000100011 "#
+b110100111000110011011 "%
+b110000101101001001000 "&
+b11110011010001001111000 "'
+b0 #
+b101100110101000000010010110111000111010100011100 #!
+b111110011111110101010000 #"
+b11111110001101 ##
+b110011011010110101111 #%
+b11111111111000011111001000011100 #&
+b110010111011000100001 #'
+b11110011010001001111000 $
+b101100110101000000010010 $!
+b10001110011111111001111101 $"
+b11111110001101110111111111110001010000 $#
+b101001110000100001101011010010100101100001000000001 $$
+b11111111111001100100101001010001 $%
+b1000100001110000101011 $&
+b100001100101110110001000 $'
+b111110100000011010011010 %
+b110001000011011010110011 %!
+b111110011111110101010000 %"
+b101001110000100001101011010 %$
+b10111111100111111101 %&
+b111110100011101000011101 &
+b110001000011011010110011 &!
+b110101110111000011110001 &"
+b10010011000011111101100000 &#
+b1111111111111111111011101101000100110010000010011001001101010000 &$
+b111011110110011001011 &&
+b111110011111110101010000 '
+b110101110111000011110001010001011010111010100001 '"
+b10010011000011111101100000 '#
+b11111111111011101101000100110010 '$
+b11111111101010000110110010100001 '%
+b10000011111101101101110 '&
+b111110100110101111101011 (
+b10101000111011011010010 ("
+b1101010111100100110100110110101100001010111011 ($
+b11111111110001110001111110100010 (%
+b11111110111010001111001101110001 (&
+b11111111000001011001001000110101 )
+b11111111110011010000001010100111 )!
+b10101000111011011010010110101000001110011010111 )"
+b1101010111100100110100 )$
+b11111111110111100001101101111101 )%
+b1110011000110100110011 )&
+b111110101001100010101110 *
+b11111111111000101010101100000111 *!
+b100101000011110100 *"
+b111110100111110010100111 *$
+b11111111110100100000010000001110 *%
+b111110100100110101011101 +
+b10000010100001100101110 +!
+b100101000011110100100101110100010011111101 +"
+b101010001111011001100110000101100000110010000000000 +#
+b111110100111110010100111 +$
+b1100010011110001011101 +%
+b111110101100100011111011 ,
+b11110010011011001001 ,!
+0,"
+b101010001111011001100110000 ,#
+b11111111110110001101101100000010 ,%
+b111110100111110010100111 -
+b11100100010111010101 -!
+b10001110011111111001111101 -"
+b1111111111111111111011101001111001100001000110110101010110000000 -#
+b11111111101100110101010001001101 -%
+0.
+b11110010011011001001 .!
+b10001110011111111001111101 ."
+b11111111111011101001111001100001 .#
+b11110011010001001111000 .$
+b11111111111011010001101100000100 .%
+b1000000000000000000000000 /
+b11111111110011010000001010100111 /!
+b1101011100100000001100110100011110101100100000 /#
+b11111111110100100111110100110111 /$
+b11111111110100010001000100111001 /%
+b0 0
+b1111111111111111110011010000001010100111000000000000000000000000 0!
+b1101011100100000001100 0#
+b11111111110011000101111000011101 0$
+b1100101010100011000111101 0%
+b111111111110001010101011000001111111111111001101000000101010011100000000000000111010000101000001000000000001000100000001100010110000000000000011101100010110110011111111111111110001001101101011 1
+b0 1!
+b111110101001100010101110 1#
+b11111111101000000001100111010010 1$
+b11111111110101101111101110010011 1%
+b111111111111111111000100111101000000000001111010000111100000111000000000110000100001110000111101111111111111110110111000101101100000000001101011001111101111110000000000110001111101001100111001000000000010110000110101010111000000000000111101000001000110010000000000110101000001101000000110000000000000010000110001110100000000000001100100011000001101000100000001000000010101101101110000111111111111111011101000001000111111111111000111110000001011000011111111000110010101000110011010000000000000111101111011000110000000000001110011000000101110111000000000111011011111010001011000000000000010011100100010100101010000000001101110001100110100110100000000111010000101010011111101000000000010111111110100001001000000000001010100000001101111100000000000110000010010011000101011000000000010001011100100110100100000000001001110111100110110111000000000101001001000111001000100 2
+b0 2!
+b100111101010001110101000100101001100100100100001001 2"
+b111110101001100010101110 2#
+b11111111101101010101011000100000 2$
+b100000111111011011011100000000000011101111011001100101100000000000010111111100111111101000000000010001000011100001010111111111111100001111100100001110000000000000110000101101001001000000000000001011111110011100011110000000001000101110101000100011000000000001101010111100110001110111111111101000100010001001110011111111111101101000110110000010011111111101100110101010001001101111111111101100011011011000000100000000000110001001111000101110111111111110100100000010000001110111111111101111000011011011111011111111111000111000111111010001011111111101010000110110010100001111111111100100011111001100111011111111110101000101010100101100111111111101110101110111010100001111111111011011010111010101000000000000001010001010011010010001111111111101101010101011000100000111111111010000000011001110100101111111111001100010111100001110111111111110100100111110100110111 3
+03!
+b100111101010001110101000100 3"
+b10100010100110100100011 3$
+b10101001101110111010100101111111000101010111100111011001011111101010101110110000111001100 4
+b11100100010111010101 4!
+b1111111111111111111011111010111000111101100100010100111100100000 4"
+b11111111101101101011101010100000 4$
+b100000101000011001011100000000011101111001101111110001100000001101000011011001001010001 5
+b11100100010111010101 5!
+b11111111111011111010111000111101 5"
+b110101000001101000000110 5#
+b11111111101110101110111010100001 5$
+b10011011101001011110110000000000101000110110001100101101000000001010011010011010100011111000000010001000001101010100111111111111010111001111110101010110100000001000100010010100101011010000000010000101111000101110001100000000101001010101010110101010000000001011000111110001100101100 6
+b11111111101011111110011011100111 6!
+b1101000001110011010010111111000011000001001111 6"
+b1111010000010001100100 6#
+b11111111101010001010101001011001 6$
+b111111101110100011110011011100010000000110010101010001100011110100000010010100110100011010110001 7
+b1000101000011101000001101 7!
+b1101000001110011010010 7"
+b1011000011010101011100 7#
+b11111111110010001111100110011101 7$
+b11111111000010101011011110000010 8
+b0 8!
+b111110011111110101010000 8"
+b1010011010011010100011111 8#
+b10010100110100011010110001 8$
+b111110100000011010011010 9
+b1100101110110110010110001000001100111001 9!
+b111110011111110101010000 9"
+b111110100100110101011101 9#
+b11111111111001100100101001010001 9$
+b111110100011101000011101 :
+b1100101110110110 :!
+b10010000110100010111010110 :#
+b111110011111110101010000 ;
+b1111111111111111111111111100000001000011001001110101010100111010 ;!
+b111110100100110101011101 ;#
+b111110100110101111101011 <
+b11111111111111111100000001000011 <!
+b111011011111010001011000 <"
+b110001001010111001111110 <#
+b100011111101111011010100 <&
+b11111111000001011001001000110101 =
+b11110110011010000110001011111100110111010001 =!
+b11100110000001011101110 ="
+b110001001010111001111110100011100011011010111110 =#
+b10101101001110010111011 =&
+b111110101001100010101110 >
+b11110110011010000110 >!
+b11110111101100011000 >"
+b1011101100010001100110 >#
+b11010011001011000100101 >&
+b111110100100110101011101 ?
+b11110010011011001001 ?!
+b1000100010010100101011010 ?"
+b1011101100010001100110001001110010100111101100 ?#
+b1110010000010100100101 ?&
+b111110101100100011111011 @
+b11110010011011001001 @!
+b111110100110101111101011 @"
+b101001110111010011 @#
+b1110011000110100110011 @&
+b111110100111110010100111 A
+b10010001101110001001100000 A"
+b101001110111010011000001011000110100111100 A#
+b111110100000011010011010 A&
+b11110011010001001111000 B
+b111110100110101111101011 B"
+0B#
+b1101010111100110001110 B&
+b101001001000111001000100 C!
+b110111001010011110100111 C"
+b10010000110100010111010110 C#
+b1101000011101000010101 C&
+b10011101111001101101110 D!
+b110111001010011110100111101101101011010000111000 D"
+b10010000110100010111010110 D#
+b11111111010100011100011100000000 D%
+b1101000011101000010101101100000111001101101100 D&
+b1000101110010011010010 E!
+b10110000010011011010001 E"
+b11111111011111001000100100001001 E%
+b111110100011101000011101 E&
+b1011000111110001100101100 F!
+b10110000010011011010001010000010100000001101010 F"
+b11111111011101001001101010101010 F%
+b10001011101010001000110 F&
+b111110100000011010011010 G!
+b1110101010001110 G"
+b11111111110110000011000011110000 G%
+b10001000100000100100110 G&
+b10001110110000111010111110 H!
+b1110101010001110110101010011010111011000 H"
+b101000111101100010011111001000100010000111011100100 H#
+b11111111110101101111101110010011 H%
+b10001000100000100100110010111001110011111101110 H&
+b111110100000011010011010 I!
+b101000111101100010011111001 I#
+b111110100000011010011010 I%
+b111110011111110101010000 I&
+b100110001001011110100011 J!
+b10010001101110001001100000 J"
+b1111111111111111111011110010010100011110000001110111001100001000 J#
+b11111111101010000110110010100001 J%
+b101111111001110001111 J&
+b100110001001011110100011001011010101000100010100 K!
+b10010001101110001001100000 K"
+b11111111111011110010010100011110 K#
+b11111111101010100111011111010011 K%
+b101110110001110011001 K&
+b1111001000001100111110 L!
+b1101001111010111111110011101110001110101010010 L#
+b11111111010000110110111110000010 L$
+b1111111111111111101010100111011111010011000101110001111011011010 L%
+b101110110001110011001010001110110111110110000 L&
+b1111001000001100111110110001010110100111101010 M!
+b1101001111010111111110 M#
+b11111111000111111011010011111011 M$
+b111110100011101000011101 M%
+b111110100110101111101011 M&
+b100001000010110001 N!
+b111110100100110101011101 N#
+b11111111001100010001001011101011 N$
+b11111111110001110001111110100010 N%
+b110000101101001001000 N&
+b100001000010110001101010101101010011100010 O!
+b101001011110010101000010100101011011010010000000000 O"
+b111110100100110101011101 O#
+b11111111111001110111111000011001 O$
+b11111111110010000110011111111010 O%
+b101111101001001101110 O&
+0P!
+b101001011110010101000010100 P"
+b11111111111001100100101001010001 P$
+b1111111111111111110010000110011111111010111011010100100101011010 P%
+b101111101001001101110011001101111100000011000 P&
+b10001110110000111010111110 Q!
+b1111111111111111111011101110111100100101101100111111100110100000 Q"
+b111110100000011010011010 Q$
+b111110011111110101010000 Q%
+b11111111000001011001001000110101 Q&
+b10001110110000111010111110 R!
+b11111111111011101110111100100101 R"
+b110001111101001100111001 R#
+b11111111110100100111110100110111 R$
+b11111111110111100001101101111101 R%
+b11111111111000011111001000011100 R&
+b11111111111111110001001101101011 S
+b1101010100101010000101011110111111110000100000 S"
+b11010110011111011111100 S#
+b11111111110100111000110100011011 S$
+b11111111110111101110011100110011 S%
+b111010110011001110100 S&
+b111011000101101100 T
+b1101010100101010000101 T"
+b11111111111111011011100010110110 T#
+b1111111111111111110100111000110100011011010001001001110100010110 T$
+b1111111111111111110111101110011100110011001010000010000000010000 T%
+b111010110011001110100011001110001011111001100 T&
+b1101000011011001001010001 U
+b111110100110101111101011 U"
+b1010001101100011001011010 U#
+b111110100011101000011101 U$
+b111110100110101111101011 U%
+b111110101001100010101110 U&
+b111011010110001101110101 V
+b100111110011101101011000100011011010101010100000100 V!
+b111110100110101111101011 V"
+b111110101100100011111011 V#
+b11111111110011000101111000011101 V$
+b11111111110100100000010000001110 V%
+b1000100001110000101011 V&
+b1101000001100010110111100 W
+b100111110011101101011000100 W!
+b10010100100010001100100100 W#
+b11111111110011011000100000101111 W$
+b11111111110100110000010010010011 W%
+b1000010110001111011001 W&
+b111011010110001101110101 X
+b1111111111111111111011111001111010100010111000100001101100100000 X!
+b111110101100100011111011 X#
+b1111111111111111110011011000100000101111110010110011101101001001 X$
+b1111111111111111110100110000010010010011001001111001001011011010 X%
+b1000010110001111011001111001101010110100111010 X&
+b11111111111111110001001101101011 Y
+b11111111111011111001111010100010 Y!
+b11111111000110010101000110011010 Y"
+b101110010100110000101101 Y#
+b111110011111110101010000 Y$
+b11111111000001011001001000110101 Y%
+b111110100100110101011101 Y&
+b1111111111111111111111110001001101101011000000000000000000000000 Z
+b1101000011010110110111001001000011011011001010 Z!
+b11111111110001111100000010110000 Z"
+b101110010100110000101101110001111001010000001101 Z#
+b11111111101000000001100111010010 Z$
+b1100010011110001011101 Z%
+b10111111100111111101 Z&
+b0 [
+b1101000011010110110111 [!
+b11111111111111101110100000100011 ["
+b10100100011001100100011 [#
+b11111111101000100101101000111000 [$
+b11111111110011111101010111101111 [%
+b10111011010110111111 [&
+b0 \
+b111110100000011010011010 \!
+b11111110101110011111101010101101 \"
+b10100100011001100100011001101100011001000110100 \#
+b1111111111111111101000100101101000111000110011101001101110100000 \$
+b1111111111111111110011111101010111101111011011111000100101000001 \%
+b10111011010110111111100111001110100111101001 \&
+b111110100000011010011010 ]!
+b11111111000001011001001000110101 ]"
+b11111111111111111101110101111010 ]#
+b111110100110101111101011 ]$
+b111110101001100010101110 ]%
+b111110101100100011111011 ]&
+b1101000001100010110111100 ^
+b11111101101110001110010010001010 ^"
+b1111111111111111111111111101110101111010010010110000101011100110 ^#
+b11111111101101010101011000100000 ^$
+b11111111110110001101101100000010 ^%
+b111011110110011001011 ^&
+b1101000001100010110111100 _
+b11111111000001011001001000110101 _"
+b11111111101101101111011010100001 _$
+b11111111110110011010111010000111 _%
+b111010101000010111100 _&
+b11111111110101001101001101011001 `
+b110000010010011000101011 `!
+b11111111001010100001011011101100 `"
+b10010100100010001100100100 `#
+b1111111111111111101101101111011010100001101101010110111101100000 `$
+b1111111111111111110110011010111010000111011000100000101101011100 `%
+b111010101000010111100100100111100001100001001 `&
+b101100110010011111100010 a
+b10101000000011011111000 a!
+b1111111111111111001010100001011011101100101100101101100101100010 a"
+b10010100100010001100100100 a#
+b11111111000001011001001000110101 a$
+b111110100100110101011101 a%
+b111110100111110010100111 a&
+b1111000010011010101010 b
+b1011111111010000100100 b!
+b11111111110101001110001110000010 b"
+b10100010100110100100011 b$
+b11111111101100110101010001001101 b%
+b10000011111101101101110 b&
+b10101001101000001100111011101110101110001000010000 c
+b1010010101010101101010100 c!
+b1111111111111111110101001110001110000010000100001101101100010000 c"
+b11111111101100000111011111001101 c$
+b11111111101101010000100100100111 c%
+b10000001000111110101010 c&
+b10101001101000001100111011 d
+b111110100011101000011101 d!
+b11111111111111111110111101101111 d"
+b1111111111111111101100000111011111001101100000011110111000111111 d$
+b1111111111111111101101010000100100100111101100101100100011111001 d%
+b10000001000111110101010010000000100110011000010 d&
+b1111111111111111100011011001000110011011111010010100000010000011 e
+b10010000010000010010001111 e!
+b1111111111111111111111111110111101101111101001100111010101111011 e"
+b101011000101110011100010111111000101101110100010000 e#
+b111110101001100010101110 e$
+b111110101100100011111011 e%
+0e&
+b11111111100011011001000110011011 f
+b111110100011101000011101 f!
+1f"
+b101011000101110011100010111 f#
+b11111111101101101011101010100000 f$
+b11111111111011010001101100000100 f%
+b1110010000010100100101 f&
+b1001000111010101100110000100000100011001111111000 g
+b101100110001101101011111 g!
+b10010001110001101101110110 g"
+b1111111111111111111011100100010011010100110110000100000101111000 g#
+b11111111101110000100011010001101 g$
+b11111111111011010111110110001100 g%
+b1110010000010100100101 g&
+b1001000111010101100110000 h
+b101100110001101101011111110110000001001010100111 h!
+b10010001110001101101110110 h"
+b11111111111011100100010011010100 h#
+b1111111111111111101110000100011010001101010000011101100011000000 h$
+b1111111111111111111011010111110110001100011111001001110011101100 h%
+b111011010110001101110101 i
+b10000000110011101001010 i!
+b1101100101000111100110010111110010011101001100 i#
+b111110100100110101011101 i$
+b111110100111110010100111 i%
+b111011010110001101110101 j
+b10000000110011101001010000110010010111101101000 j!
+b1101100101000111100110 j#
+b11111111101110101110111010100001 j$
+b11111111110100010001000100111001 j%
+b101101011010010010 k!
+b111110101100100011111011 k#
+b11111111101111000111100000101001 k$
+b11111111110100100001001111110111 k%
+b11001011001101001010100101000111011101011001 k&
+b101101011010010010000000000000100001000100 l!
+b101001100000010111000010110011001100001101001100100 l"
+b111110101100100011111011 l#
+b1111111111111111101111000111100000101001111010010001110101111101 l$
+b1111111111111111110100100001001111110111011000111101100000101111 l%
+b11001011001101001010 l&
+b100010000000110001011 m
+b101001100000010111000010110 m"
+b111110101100100011111011 m$
+1m%
+b1111111111111111111111000000011010111010001000000100001111000110 m&
+b111010000101000001 n
+b10010000010000010010001111 n!
+b1111111111111111111011101110101111001101110010101000010000110000 n"
+b11111111101010001010101001011001 n$
+b1001111100111100010000 n%
+b11111111111111000000011010111010 n&
+b111011110011011111100011 o
+b10010000010000010010001111 o!
+b11111111111011101110101111001101 o"
+b110000100001110000111101 o#
+b11111111101010100111000111001010 o$
+b1001111100111100010000 o%
+b1111011000011001111001111100111010010011100001 o&
+b110001000011011010110011 p
+b1101010100111110111101100101111000100100110010 p"
+b11110100001111000001110 p#
+b1111111111111111101010100111000111001010010111101000110101000011 p$
+b1111011000011001111001 p&
+b1000000000011100101101110 q
+b1101010100111110111101 q"
+b11111111111111111100010011110100 q#
+b111110100111110010100111 q$
+b1110011000110100110011 q&
+b110001000011011010110011 r
+b111110100110110111001011 r"
+b1001101110100101111011000 r#
+b11111111110010001111100110011101 r$
+b1110011000110100110011 r&
+b100010000000110001011 s
+b101000101001001010110001100101100101100011111100001 s!
+b11111111000001011001001000110101 s"
+b111110100111110010100111 s#
+b11111111110010100010100011111000 s$
+b1100011000010111110010110101110000100000000 s%
+b100010000000110001011000000000000000000000000 t
+b101000101001001010110001100 t!
+b10010010001110000100000001 t#
+b1111111111111111110010100010100011111000010101001110000101101011 t$
+b1100011000010111110 t%
+b0 u
+b1111111111111111111011110100011010100101010101100000101101100000 u!
+b111110100111110010100111 u#
+1u$
+b1111111111111111111111100001000000101001010000101010111101110010 u%
+b11111101010101110110000111001100 u&
+b0 v
+b11111111111011110100011010100101 v!
+b1000000010101101101110000 v"
+b101100111111111110001110 v#
+b110001000000111100111 v$
+b11111111111111100001000000101001 v%
+b11111110001010101111001110110010 v&
+b1101001100000100110111001011001101110101110101 w!
+b11001000110000011010001 w"
+b101100111111111110001110000110110111111011100001 w#
+b110001000000111100111 w$
+b1010101111010001000100001011110010001111010000 w%
+b1010100110111011101010010 w&
+b1000000000011100101101110 x
+b1101001100000100110111 x!
+b1000011000111010000 x"
+b10111011001100100011010 x#
+b1010101111010001000100 x%
+b11111111111001101000100111011111 x&
+b1000000000011100101101110 y
+b111110100011101000011101 y!
+b1000100000110101010011111 y"
+b10111011001100100011010011100011111011111001010 y#
+b1010010000010001101101 y%
+b11110011010001001111000 y&
+b111110100011101000011101 z!
+b111110101001100010101110 z"
+b11111111111111111111110010000001 z#
+b11111111110101101111101110010011 z%
+b10001000101101001111100 z&
+b10010011000011111101100000 {"
+b1111111111111111111111111111110010000001010110011101101110010100 {#
+b100101100010011101001110101001111001110001 {$
+b10001000101101001111100001100101110100110001100 {&
+b111110101001100010101110 |"
+0|#
+b100101100010011101 |$
+b10010110010011100010100 |&
+b1000000000111001011101000111000100010101101000100 }
+b111010000101010011111101 }!
+b111011101010010110100010 }"
+b10010010001110000100000001 }#
+b1111111111111111111111110100010000010100000011100000001110101011 }$
+b1101010111100110001110 }%
+b10010110010011100010100011001010111010100110110 }&
+b1000000000111001011101000 ~
+b11011100011001101001101 ~!
+b111011101010010110100010101010110001101000110000 ~"
+b10010010001110000100000001 ~#
+b11111111111111110100010000010100 ~$
+b10001011101010001000110 ~%
+b10011000101000011001101 ~&
+
+#30000
+1!
+b1111111111111111101111111010110000100001010110011000010110110000 !!
+b100111110001100111100101 !"
+b11010011110110010000000 !#
+b10011011011001111100110101010000100101100010000 !%
+b11111111111111111110111110111101 !&
+b10011011000110100101001101111001000010100000 !'
+b11111111101111111010110000100001 "!
+b11111110011111011111011011110110 ""
+b11010011110110010000000010110010101101001001110 "#
+b10011011011001111100110 "%
+b11111111111001001111110110010001 "&
+b11110001001110011001000 "'
+b110110101010111100000011100101000100011111110000 #!
+b11111111000001011000101010101100 #"
+b11100001000010010110010 ##
+b10001110101110101010100 #%
+b10101111010110011100 #&
+b111011000110011100001 #'
+b11110001001110011001000 $
+b110110101010111100000011 $!
+b11111101101101111111111011110001 $"
+b11100001000010010110010000100011010001101011111 $#
+b101011011001011010101100111100000010000000000000000 $$
+b10001110101110101010100 $%
+b11111111111001010001110010101101 $&
+b100001110110001100111000 $'
+b11111111000001011010111111111110 %
+b110101101000000111001110 %!
+b11111111000001011000101010101100 %"
+b101011011001011010101100111 %$
+b11111111111010000111010101100000 %&
+b111110101101001111110000 &
+b110101101000000111001110 &!
+b100101100011110001100 &"
+b10010010101011010010000100 &#
+b1111111111111111111011100010010010001101001110001101011111111000 &$
+b11111111111001110110101000100011 &&
+b11111111000001011000101010101100 '
+b100101100011110001100101001010011000011100000 '"
+b10010010101011010010000100 '#
+b11111111111011100010010010001101 '$
+b11111111100110101110010101000011 '%
+b1000011010111011101010 '&
+b111110101010011010011010 (
+b11111111101011100111101011011001 ("
+b1101101000001101000001111000110000010100000000 ($
+b10101000100000001100010 (%
+b1100000110101101101 (&
+b111110101000100010001000 )
+b11111111111101011000111101101011 )!
+b1111111111111111101011100111101011011001011110101000100110101000 )"
+b1101101000001101000001 )$
+b11111111101010001001110101000010 )%
+b11111111101100000111101000001101 )&
+b111110101000101111100010 *
+b11111111111101111111000001101011 *!
+b11111111011110001100010110010110 *"
+b111110101101101000001111 *$
+b10011110010100010110000 *%
+b11111111000001011010001011000100 +
+b11111110110001101111110110011100 +!
+b1111111111111111011110001100010110010110001011111100111001110001 +"
+b101010000001001111011101011100110011110010000010000 +#
+b11111111000001010010010111110001 +$
+b10101101011011111010101 +%
+b111110100110001000110011 ,
+b11111111001001100110100110011101 ,!
+1,"
+b101010000001001111011101011 ,#
+b10100010110111101110001 ,%
+b11111111000001010010010111110001 -
+b11111110101111001000110100000111 -!
+b10010010000000000100001111 -"
+b1111111111111111111011101011010110101110110111001101100100011000 -#
+b11111111101000010101000101111111 -%
+1.
+b11111111001001100110100110011101 .!
+b10010010000000000100001111 ."
+b11111111111011101011010110101110 .#
+b11110001001110011001000 .$
+b10111110000000101001110 .%
+b11111111111101011000111101101011 /!
+b1101011010001111110011000011101111100001101100 /#
+b11111111111001010001011101101111 /$
+b11111111100111001110110100001001 /%
+b1111111111111111111101011000111101101011000000000000000000000000 0!
+b1101011010001111110011 0#
+b1010101100110110110110 0$
+b11111100111110100011101000111101 0%
+b111111111111011111110000011010111111111111110101100011110110101111111111111101110101010101110100000000000000011001101001100011000000000000001011000111110010110100000000000000110001101100100011 1
+b111110101000101111100010 1#
+b11111111101110010110111010100000 1$
+b100101101000111001110 1%
+b111101001011111010010011111111110011001011010000100110011111111111100001111100110110011111111110110111010010100000111100000000010000010111100000101110100000000000110011000001001111100000000001000101111111010100100011111111101101111001011100010001111111111111101110101011001000111111111110111101110011110001010110000000001111110011010011100000100000000011001110110110000100101111111111000011011111010011101000000000010100000100100011010010011111111111110100011100110001111111111111000010011100000011111000000000010010100010100111100100100000000011000001000010101100000000000001001111100011001111001011111111110011110101101100000110000000000001110110011010110010111111111111000111010011100011010000000000010000100101010100000000000000000001001110110110100111011000000001000000000000101011110111111111110001011000001101001001011111111110110001010001110110010 2
+b101001101000100010011010100011100010001111011100001 2"
+b111110101000101111100010 2#
+b111110110001001001100 2$
+b10000110101110111010101111111111100111011010100010001111111111111010000111010101100000111111111110010100011100101011010000000000001010111101011001110011111111111001001111110110010001111111111111111111101111101111010000000000011101111100100111000000000000001010010111100111001111111111111001110011101101000010010000000001011111000000010100111011111111101000010101000101111111000000000101000101101111011100010000000001010110101101111101010100000000010011110010100010110000111111111010100010011101010000100000000001010100010000000110001011111111100110101110010101000011111111111110101100011110101000000000000000010001000001111111110111111111111011101111011010010111000000000010110001100000010111010000000000011101001010001100010000000000000111110110001001001100111111111011100101101110101000000000000000101010110011011011011011111111111001010001011101101111 3
+13!
+b101001101000100010011010100 3"
+b111010010100011000100 3$
+b111111111110000011001011001000000000001110000001000110000101001100000001001010010001100010101100 4
+b1010000110111001011111001 4!
+b1111111111111111111011101101111001011000000011010011111110100000 4"
+b1011000110000001011101 4$
+b111111101100011011111101100111000000000100110010000100011110110000000000010011111111010110110110 5
+b1010000110111001011111001 5!
+b11111111111011101101111001011000 5"
+b11111111111101110101011001000111 5#
+b11111111111011101111011010010111 5$
+b111111100110111001111110011011110000000101010100010100101011100011111110101011011110110100101001000000010100111101110101110110110000000101011110101110100101101100000001010010100110001010101100111111100111110111110110111101100000000101110111011100100110011011111110100101111011101000010100 6
+b11111111110101001101001101011001 6!
+b1101010110010010111011010111101100111011110101 6"
+b11111111011011110010111000100011 6#
+b100010000011111111101 6$
+b11000001101011011011111110011111010001110100011110111111111001000100011111101101111 7
+b101100110010011111100010 7!
+b1101010110010010111011 7"
+b100010111111101010010001 7#
+b11111111111010110001111010100000 7$
+b11111111010000111111110001100111 8
+b1111000010011010101010 8!
+b111110100111010101010100 8"
+b11111110101011011110110100101001 8#
+b11111111001000100011111101101111 8$
+b11111111000001011010111111111110 9
+b1100110001010101101010011111110001011011000110001 9!
+b11111111000001011000101010101100 9"
+b11111111000001011010001011000100 9#
+b10001110101110101010100 9$
+b111110101101001111110000 :
+b1100110001010101101010011 :!
+b11111101101110101101101101000101 :#
+b11111111000001011000101010101100 ;
+b1111111111111111101110110001001111110001000001001111100011011011 ;!
+b11111111000001011010001011000100 ;#
+b111110101010011010011010 <
+b11111111101110110001001111110001 <!
+b11000001000010101100000 <"
+b11111111111111010100000010011010 <#
+b11111111111101001101100110001001 <&
+b111110101000100010001000 =
+b111000100101101111001000001010100110111011010010 =!
+b100101000101001111001001 ="
+b1111111111111111111111010100000010011010001110111010011011100000 =#
+b11111111110101011111011100001100 =&
+b111110101000101111100010 >
+b111000100101101111001000 >!
+b11111111100001001110000001111100 >"
+b11111111100001101010011100100010 >#
+b11111111110111011111100010101000 >&
+b11111111000001011010001011000100 ?
+b110110011001011001100011 ?!
+b1010010100110001010101100 ?"
+b1111111111111111100001101010011100100010111110001100001100101010 ?#
+b11111111101011101101011010101010 ?&
+b111110100110001000110011 @
+b11111111001001100110100110011101 @!
+b111110101010011010011010 @"
+b11111111100010010000011001100000 @#
+b11111111101100000111101000001101 @&
+b11111111000001010010010111110001 A
+b10010011011110111100001110 A"
+b1111111111111111100010010000011001100000001001000010001111101101 A#
+b11111111000001011010111111111110 A&
+b11110001001110011001000 B
+b111110101010011010011010 B"
+1B#
+b1010010111100111001111 B&
+b11111111110110001010001110110010 C!
+b111101001110100011001 C"
+b10010001010010010010111011 C#
+b11111111110101110111001000010101 C&
+b11111111100010110000011010010010 D!
+b111101001110100011001011111010110110000000000 D"
+b10010001010010010010111011 D#
+b1000010101110011011001110 D%
+b1111111111111111110101110111001000010101011101100101110001100010 D&
+b100000000000010101111011 E!
+b11111000100100100111111 E"
+b111100100001001001010111 E%
+b111110101101001111110000 E&
+b11111110100101111011101000010100 F!
+b11111000100100100111111100110011011010010111110 F"
+b1000110101001100110000101 F%
+b111011111001001110000 F&
+b11111111000001011010111111111110 G!
+b11010001010011000001010 G"
+b100011100110011100111 G%
+b111010101011110001100 G&
+b11111101101111000110101001111110 H!
+b11010001010011000001010111110001000100000001100 H"
+b101001001110011111110111110000100110010000010011001 H#
+b100101101000111001110 H%
+b111010101011110001100010001011001100100000000 H&
+b11111111000001011010111111111110 I!
+b101001001110011111110111110 I#
+b11111111000001011010111111111110 I%
+b11111111000001011000101010101100 I&
+b11111111111100111000010000010110 J!
+b10010011011110111100001110 J"
+b1111111111111111111011110000100100110100001000110100001101110000 J#
+b11111111100110101110010101000011 J%
+b11111111111111111110111110111101 J&
+b1111111111111111111100111000010000010110010111110011101001000000 K!
+b10010011011110111100001110 K"
+b11111111111011110000100100110100 K#
+b11000101101101110110101 K%
+b111111101000 K&
+b11111111100111011111110000101110 L!
+b1101010010000111000111000101100001000110011001 L#
+b100010010100101000101000 L$
+b11000101101101110110101101101110100010101111010 L%
+b111111101000111000011111010011111100 L&
+b1111111111111111100111011111110000101110001110101101101101111100 M!
+b1101010010000111000111 M#
+b11001101011001000100000 M$
+b111110101101001111110000 M%
+b111110101010011010011010 M&
+b11111111100100110011000000100110 N!
+b111110100101110100111100 N#
+b1101011100011110011001 N$
+b10101000100000001100010 N%
+b11111111111001001111110110010001 N&
+b1111111111111111100100110011000000100110000001001100111101101111 O!
+b101010011110111010111100101101001110010010011000100 O"
+b11111111000001011010001011000100 O#
+b10010000000001101010000 O$
+b10100101000110010011111 O%
+b11111111111001011000111000001011 O&
+1P!
+b101010011110111010111100101 P"
+b10001110101110101010100 P$
+b10100101000110010011111110000010010000111100000 P%
+b1111111111111111111001011000111000001011110001101000111100111010 P&
+b10010000111001010110000010 Q!
+b1111111111111111111011101000010011010101001000000001000101101000 Q"
+b11111111000001011010111111111110 Q$
+b11111111000001011000101010101100 Q%
+b111110101000100010001000 Q&
+b10010000111001010110000010 R!
+b11111111111011101000010011010101 R"
+b110011000001001111100 R#
+b11111111111001010001011101101111 R$
+b11111111101010001001110101000010 R%
+b10101111010110011100 R&
+b110001101100100011 S
+b1101011110111110000100010111100100000100111010 S"
+b100000101111000001011101 S#
+b110100100111110000110 S$
+b10101010111111001111010 S%
+b10101011100110110010 S&
+b10110001111100101101 T
+b1101011110111110000100 T"
+b11111111011011101001010000011110 T#
+b110100100111110000110011111010010000100100010 T$
+b10101010111111001111010010110010011110001011000 T%
+b10101011100110110010101001010101101011100000 T&
+b10011111111010110110110 U
+b111110101010011010011010 U"
+b1010101000101001010111000 U#
+b111110101101001111110000 U$
+b111110101010011010011010 U%
+b111110101000101111100010 U&
+b10100010011001000100000 V
+b101001000000010110110100001010111001001011000000100 V!
+b111110101010011010011010 V"
+b111110100110001000110011 V#
+b1010101100110110110110 V$
+b10011110010100010110000 V%
+b11111111111001010001110010101101 V&
+b10100110001000011011001 W
+b101001000000010110110100001 W!
+b10010001011011101100110001 W#
+b1010011111000001010011 W$
+b10011011000000100111111 W%
+b11111111111001011010111101001111 W&
+b10100010011001000100000 X
+b1111111111111111111011110010000001111010110010111010101001001000 X!
+b111110100110001000110011 X#
+b1010011111000001010011011010011101110010100000 X$
+b10011011000000100111111111000001001100111100000 X%
+b1111111111111111111001011010111101001111110001110011111110111010 X&
+b110001101100100011 Y
+b11111111111011110010000001111010 Y!
+b11111111111110100011100110001111 Y"
+b10000001011101000111 Y#
+b11111111000001011000101010101100 Y$
+b111110101000100010001000 Y%
+b11111111000001011010001011000100 Y&
+b110001101100100011000000000000000000000000 Z
+b1101001111110101000111001100111000001111110110 Z!
+b101000001001000110100100 Z"
+b10000001011101000111111010001000011110000000 Z#
+b11111111101110010110111010100000 Z$
+b10101101011011111010101 Z%
+b11111111111010000111010101100000 Z&
+b1101001111110101000111 [!
+b11111111100001101111101001110100 ["
+b11011011011011101010010 [#
+b10001010000101001001111 [$
+b10101001101110111000101 [%
+b101110000010111110011 [&
+b111110100101000000000010 \!
+b1010111101011101001011011 \"
+b11011011011011101010010001110100100011111010110 \#
+b10001010000101001001111010110001001001110000000 \$
+b10101001101110111000101101111001101000100101000 \%
+b101110000010111110011001000001001110110000000 \&
+b11111111000001011010111111111110 ]!
+b111110101000100010001000 ]"
+b11110111001100111100000 ]#
+b111110101010011010011010 ]$
+b111110101000101111100010 ]%
+b111110100110001000110011 ]&
+b10100110001000011011001 ^
+b10010010100100110101100011 ^"
+b11110111001100111100000000001010010010001100110 ^#
+b111110110001001001100 ^$
+b10100010110111101110001 ^%
+b11111111111001110110101000100011 ^&
+b10100110001000011011001 _
+b111110101000100010001000 _"
+b111101011101001101010 _$
+b10011111011001101010011 _%
+b11111111111001111111010000110111 _&
+b11111111101011111110011011100111 `
+b1001110110110100111011 `!
+b11111111111111100010101100010100 `"
+b10010001011011101100110001 `#
+b111101011101001101010110101100110100110111000 `$
+b10011111011001101010011110000001011110011000010 `%
+b1111111111111111111001111111010000110111111010011000101011111001 `&
+b1000101000011101000001101 a
+b100001001010101000000000 a!
+b1111111111111111111111100010101100010100110001000001111111100000 a"
+b10010001011011101100110001 a#
+b111110101000100010001000 a$
+b11111111000001011010001011000100 a%
+b11111111000001010010010111110001 a&
+b0 b
+b11111111100011101001110001101000 b!
+b100001101000101100101001 b"
+b111010010100011000100 b$
+b11111111101000010101000101111111 b%
+b1000011010111011101010 b&
+b110101111001111101101110100011101011111110001 c
+b1011101110111001001100110 c!
+b100001101000101100101001101100001101010111111000 c"
+b111001000100101011100 c$
+b10111001001100011100101 c%
+b11111111110111101111111001111110 c&
+b110101111001111101101 d
+b111110101101001111110000 d!
+b11001101101110011001011 d"
+b111001000100101011100100011011100100000100000 d$
+b10111001001100011100101100011111100001100111100 d%
+b1111111111111111110111101111111001111110100011110111110001001010 d&
+b1111111111111111111101111001000100100001011111000000100011011011 e
+b10010100110111110100010101 e!
+b11001101101110011001011101110010010110100100100 e"
+b101001010011110101100110101010010101001111101100001 e#
+b111110101000101111100010 e$
+b111110100110001000110011 e%
+1e&
+b11111111111101111001000100100001 f
+b111110101101001111110000 f!
+0f"
+b101001010011110101100110101 f#
+b1011000110000001011101 f$
+b10111110000000101001110 f%
+b10100010010100101010110 f&
+b10110011010000011111111111111010000010100000101 g
+b11001000000101000111 g!
+b10010010100100110101100011 g"
+b1111111111111111111011110000000001101010010000101001111111101000 g#
+b1010110110111001011010 g$
+b10111001110101110110111 g%
+b10100010010100101010110 g&
+b10110011010000011111111 h
+b11001000000101000111111011100010110101100000 h!
+b10010010100100110101100011 h"
+b11111111111011110000000001101010 h#
+b1010110110111001011010010100011001000100011010 h$
+b10111001110101110110111100110010001111010001010 h%
+b10100010011001000100000 i
+b11011110010100101100000 i!
+b1101010010111110001000101001110111001111001011 i#
+b11111111000001011010001011000100 i$
+b11111111000001010010010111110001 i%
+b10100010011001000100000 j
+b11011110010100101100000011010101100110000000000 j!
+b1101010010111110001000 j#
+b11111111111011101111011010010111 j$
+b11111111100111001110110100001001 j%
+b11000000110000000001000 k!
+b111110100110001000110011 k#
+b100001010100101100100 k$
+b11000010001010011101001 k%
+b110011011101100101111000110001010100011100100 k&
+b11000000110000000001000000011001001001111001000 l!
+b101001111101100011001100000101000001011010001001001 l"
+b111110100110001000110011 l#
+b100001010100101100100111100110101100110011100 l$
+b11000010001010011101001001010100111001001111001 l%
+b110011011101100101111 l&
+b1100110100110001100 m
+b101001111101100011001100000 m"
+b111110100110001000110011 m$
+0m%
+b1111111111111111111101111111001011111011100001010010000101101001 m&
+b11111111111101110101010101110100 n
+b10010100110111110100010101 n!
+b1111111111111111111011101011101111000010011010011010101100000000 n"
+b100010000011111111101 n$
+b100011100110011100111 n%
+b11111111111101111111001011111011 n&
+b1001100100001000111101100 o
+b10010100110111110100010101 o!
+b11111111111011101011101111000010 o"
+b11111111111100001111100110110011 o#
+b100001010100001010101 o$
+b100011100110011100111 o%
+b10101111001001011111000001101001001010101011110 o&
+b110101101000000111001110 p
+b1101011001101010000101010011100101110001010001 p"
+b11111111100110010110100001001100 p#
+b100001010100001010101100001010111000101100111 p$
+b10101111001001011111000 p&
+b1001110000111101101111000 q
+b1101011001101010000101 q"
+b11110100101111101001001 q#
+b11111111000001010010010111110001 q$
+b10011111000010111110011 q&
+b110101101000000111001110 r
+b111110101000100010001000 r"
+b11111110011011100111111001101111 r#
+b11111111111010110001111010100000 r$
+b11111111101100000111101000001101 r&
+b1100110100110001100 s
+b101011010010010111010101100101110111000001110111001 s!
+b111110101000100010001000 s"
+b11111111000001010010010111110001 s#
+b101000111010111100000 s$
+b10011110011011010101011101111100001110001 s%
+b1100110100110001100000000000000000000000000 t
+b101011010010010111010101100 t!
+b11111101101010111100000100000000 t#
+b101000111010111100000111001001111010010100000 t$
+b10011110011011010 t%
+b1111111111111111111011100011000000101000111001001011110001100000 u!
+b11111111000001010010010111110001 u#
+0u$
+b1111111111111111111111111001110011011100110011111100010010110110 u%
+b1001010010001100010101100 u&
+b11111111111011100011000000101000 v!
+b11001110110110000100101 v"
+b11111111111110110011110000010000 v#
+b10010000000001101010000 v$
+b11111111111111111001110011011100 v%
+b11100000010001100001010011 v&
+b1101100111000110000111001100101101000101010111 w!
+b11111100110100111000001 w"
+b1111111111111111111110110011110000010000100001110010110001100000 w#
+b10010000000001101010000 w$
+b100110011010011110010010111111011110110111011 w%
+b11111111111000001100101100100000 w&
+b1001110000111101101111000 x
+b1101100111000110000111 x!
+b11111111011110111001111000101011 x"
+b11111111101010100000100100101010 x#
+b100110011010011110010 x%
+b11111111111000100111001100011111 x&
+b1001110000111101101111000 y
+b111110101101001111110000 y!
+b1010011110111010111011011 y"
+b1111111111111111101010100000100100101010100010000011100100101000 y#
+b100101101000111001110 y%
+b11110001001110011001000 y&
+b111110101101001111110000 z!
+b111110101000101111100010 z"
+b11111111100101111111110101010111 z#
+b100101101000111001110 z%
+b10100101101001000100111 z&
+b10010010101011010010000100 {"
+b1111111111111111100101111111110101010111111101110110000011000101 {#
+b101000100000111011101000010101111100100000000 {$
+b10100101101001000100111001001101001010001110000 {&
+b111110101000101111100010 |"
+1|#
+b101000100000111011101 |$
+b10000011111001011101100 |&
+b1011111010110110100110000000011001000100001000000 }
+b1110110011010110010111 }!
+b1000001100110101110111 }"
+b10010101000011111100000000 }#
+b1111111111111111111110011010100101101110100001101111110001101011 }$
+b1010010111100111001111 }%
+b10000011111001011101100100100110101010111001010 }&
+b1011111010110110100110000 ~
+b11111111100111101011011000001100 ~!
+b1000001100110101110111110000011011111010100000 ~"
+b10010101000011111100000000 ~#
+b11111111111110011010100101101110 ~$
+b111011111001001110000 ~%
+b10011011000110100101 ~&

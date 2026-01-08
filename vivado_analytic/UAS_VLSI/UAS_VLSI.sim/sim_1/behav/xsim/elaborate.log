@@ -1,0 +1,125 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Apps/Vivado/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_level_behav xil_defaultlib.tb_top_level xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/w_mem.v" Line 4. Module w_mem doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/b_mem.v" Line 4. Module b_mem doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/generator.v" Line 7. Module generator_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_o.v" Line 7. Module neuron_o doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_o.v" Line 7. Module neuron_o doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_o.v" Line 7. Module neuron_o doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_a.v" Line 7. Module neuron_a doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_a.v" Line 7. Module neuron_a doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_a.v" Line 7. Module neuron_a doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_a.v" Line 7. Module neuron_a doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_a.v" Line 7. Module neuron_a doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_a.v" Line 7. Module neuron_a doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_a.v" Line 7. Module neuron_a doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_a.v" Line 7. Module neuron_a doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_a.v" Line 7. Module neuron_a doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/discriminator.v" Line 7. Module discriminator_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v" Line 7. Module neuron_b_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v" Line 7. Module neuron_b_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v" Line 7. Module neuron_b_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v" Line 4. Module tanh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_c.v" Line 7. Module neuron_c doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v" Line 4. Module mult_Q(FBITS=24) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/sigmoid.v" Line 4. Module sigmoid doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.w_mem
+Compiling module xil_defaultlib.b_mem
+Compiling module xil_defaultlib.mult_Q(FBITS=24)
+Compiling module xil_defaultlib.tanh
+Compiling module xil_defaultlib.neuron_o
+Compiling module xil_defaultlib.neuron_a
+Compiling module xil_defaultlib.generator_default
+Compiling module xil_defaultlib.neuron_b_default
+Compiling module xil_defaultlib.sigmoid
+Compiling module xil_defaultlib.neuron_c
+Compiling module xil_defaultlib.discriminator_default
+Compiling module xil_defaultlib.top_level
+Compiling module xil_defaultlib.tb_top_level
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_level_behav
