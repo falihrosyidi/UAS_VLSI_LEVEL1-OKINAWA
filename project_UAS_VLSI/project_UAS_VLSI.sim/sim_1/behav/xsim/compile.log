@@ -1,0 +1,20 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/b_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module b_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/discriminator.v" into library xil_defaultlib
+ERROR: [VRFC 10-3195] cannot open include file 'Util/register.v' [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v:5]
+INFO: [VRFC 10-311] analyzing module tanh
+ERROR: [VRFC 10-8530] module 'tanh' is ignored due to previous errors [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/tanh.v:7]
+INFO: [VRFC 10-311] analyzing module mult_Q
+ERROR: [VRFC 10-8530] module 'mult_Q' is ignored due to previous errors [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/mult_Q.v:4]
+INFO: [VRFC 10-311] analyzing module register
+ERROR: [VRFC 10-8530] module 'register' is ignored due to previous errors [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/register.v:4]
+INFO: [VRFC 10-311] analyzing module neuron_b
+WARNING: [VRFC 10-2938] 'out' is already implicitly declared on line 77 [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v:79]
+ERROR: [VRFC 10-8530] module 'neuron_b' is ignored due to previous errors [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_b.v:8]
+ERROR: [VRFC 10-3195] cannot open include file 'Util/register.v' [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/sigmoid.v:5]
+INFO: [VRFC 10-311] analyzing module sigmoid
+ERROR: [VRFC 10-8530] module 'sigmoid' is ignored due to previous errors [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/Util/sigmoid.v:7]
+INFO: [VRFC 10-311] analyzing module neuron_c
+ERROR: [VRFC 10-8530] module 'neuron_c' is ignored due to previous errors [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/neuron_c.v:7]
+INFO: [VRFC 10-311] analyzing module discriminator
+ERROR: [VRFC 10-8530] module 'discriminator' is ignored due to previous errors [D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/Model/src/discriminator.v:7]

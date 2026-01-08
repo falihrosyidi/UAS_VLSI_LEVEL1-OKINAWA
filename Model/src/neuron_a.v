@@ -22,66 +22,65 @@ module neuron_a #(
     output signed [WIDTH-1:0] y
 );
     // LOCAL SIGNAL
-    wire signed [WIDTH-1:0] out_In [0:2];
+    wire signed [WIDTH-1:0] out_mult [0:2];
     wire signed [WIDTH-1:0] out_Reg[0:4];
     wire signed [WIDTH-1:0] pre_activation, out;
 
-    // Out @ INPUT
     // Perkalian 0: a_1 * w_1
     mult_Q #(.WIDTH(32), .FBITS(24)) mult_0 (
     .a(a_1), 
     .b(w_1), 
-    .y(out_In[0])  
+    .y(out_mult[0])  
     );
 
     // Perkalian 1: a_2 * w_2
     mult_Q #(.WIDTH(32), .FBITS(24)) mult_1 (
     .a(a_2), 
     .b(w_2), 
-    .y(out_In[1])
+    .y(out_mult[1])
     );
 
     // Perkalian 2: a_3 * w_3
     mult_Q #(.WIDTH(32), .FBITS(24)) mult_2 (
     .a(a_3), 
     .b(w_3), 
-    .y(out_In[2])
+    .y(out_mult[2])
     );
 
     //Register Perkalian 0 
     register #(.WIDTH(32))reg_1(
-     .clk(clk),
-     .en(en),
-     .rst(rst),
-     .in(out_In[0]),
-     .out(out_Reg[0])
+    .clk(clk),
+    .en(en),
+    .rst(rst),
+    .in(out_mult[0]),
+    .out(out_Reg[0])
     );
 
     //Register Perkalian 1 
     register #(.WIDTH(32))reg_2(
-     .clk(clk),
-     .en(en),
-     .rst(rst),
-     .in(out_In[1]),
-     .out(out_Reg[1])
+    .clk(clk),
+    .en(en),
+    .rst(rst),
+    .in(out_mult[1]),
+    .out(out_Reg[1])
     );
 
     //Register Perkalian 2 
     register #(.WIDTH(32))reg_3(
-     .clk(clk),
-     .en(en),
-     .rst(rst),
-     .in(out_In[2]),
-     .out(out_Reg[2])
+    .clk(clk),
+    .en(en),
+    .rst(rst),
+    .in(out_mult[2]),
+    .out(out_Reg[2])
     );
 
     //Register Bias 
     register #(.WIDTH(32))reg_4(
-     .clk(clk),
-     .en(en),
-     .rst(rst),
-     .in(b),
-     .out(out_Reg[3])
+    .clk(clk),
+    .en(en),
+    .rst(rst),
+    .in(b),
+    .out(out_Reg[3])
     );
 
     // ADD ALL
@@ -89,15 +88,18 @@ module neuron_a #(
 
      //Register Hasil Total Penjumlahan 
     register #(.WIDTH(32))reg_5(
-     .clk(clk),
-     .en(en),
-     .rst(rst),
-     .in(pre_activation),
-     .out(out_Reg[4])
+    .clk(clk),
+    .en(en),
+    .rst(rst),
+    .in(pre_activation),
+    .out(out_Reg[4])
     );
 
     // TANH <= ACTIVATE FUNCTION
     tanh activate_func (
+        .clk(clk),
+        .en(en),
+        .rst(rst),
         .a(out_Reg[4]),
         .y(out)
     );

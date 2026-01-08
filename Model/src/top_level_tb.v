@@ -11,6 +11,8 @@ module tb_top_level;
     // Inputs
     reg choice;
     reg signed [WIDTH-1:0] in_1, in_2;
+    reg clk;
+    reg rst;
 
     // Outputs
     wire signed [WIDTH-1:0] out_discriminator;
@@ -18,20 +20,23 @@ module tb_top_level;
     wire signed [WIDTH-1:0] pixel_2x1, pixel_2x2, pixel_2x3;
     wire signed [WIDTH-1:0] pixel_3x1, pixel_3x2, pixel_3x3;
 
+    // Clock Generator
+    localparam CLK_PERIOD = 10;
+    always #(CLK_PERIOD/2) clk=~clk;
+
     // Instansiasi Device Under Test (DUT)
     top_level #(
         .WIDTH(WIDTH)
     ) dut (
-        .choice(choice),
-        .in_1(in_1), 
-        .in_2(in_2),
+        .clk(clk), .rst(rst),
+        .choice(choice), .in_1(in_1), .in_2(in_2),
         .out_discriminator(out_discriminator),
         .pixel_1x1(pixel_1x1), .pixel_1x2(pixel_1x2), .pixel_1x3(pixel_1x3),
         .pixel_2x1(pixel_2x1), .pixel_2x2(pixel_2x2), .pixel_2x3(pixel_2x3),
         .pixel_3x1(pixel_3x1), .pixel_3x2(pixel_3x2), .pixel_3x3(pixel_3x3)
     );
 
-    // Konfigurasi Dump File [cite: 15]
+    // Konfigurasi Dump File
     initial begin
         $dumpfile("tb_top_level.vcd");
         $dumpvars(0, tb_top_level);
@@ -42,26 +47,44 @@ module tb_top_level;
         $display("Memulai Simulasi...");
         $display("Time | Choice | In1 | In2 | Out Disc");
         $monitor("%4t | %b | %h | %h | %h", $time, choice, in_1, in_2, out_discriminator);
+        
+        // DEFAULT
+        clk = 0;
+        rst = 1;
+        in_1 = Q_ZERO;
+        in_2 = Q_ZERO;
+        choice = 0;
+
+        // INITIAL VALUE
+        @(posedge clk);
+        rst <= 0;
 
         // --- Skenario 1: in_1 = 0, in_2 = 1 ---
-        in_1 = Q_ZERO;
-        in_2 = Q_ONE;
+        $display("--- CASE 1: 0 and 1 : CIRCLE-CROSS ---");
+        in_1 <= Q_ZERO;
+        in_2 <= Q_ONE;
 
-        choice = 0; // Choice 0
-        #10;
+        choice <= 0; // Choice 0
+        @(posedge clk);
         
-        choice = 1; // Choice 1
-        #10;
+        choice <= 1; // Choice 1
+        @(posedge clk);
 
         // --- Skenario 2: in_1 = 1, in_2 = 0 ---
-        in_1 = Q_ONE;
-        in_2 = Q_ZERO;
+        $display("--- CASE 2: 0 and 1 : CIRCLE-CROSS ---");
+        in_1 <= Q_ONE;
+        in_2 <= Q_ZERO;
 
-        choice = 0; // Choice 0
-        #10;
+        choice <= 0; // Choice 0
+        @(posedge clk);
 
-        choice = 1; // Choice 1
-        #10;
+        choice <= 1; // Choice 1
+        @(posedge clk);
+
+        repeat (20) @(posedge clk);
+        repeat (2) @(posedge clk);
+        rst <= 1;
+        repeat (2) @(posedge clk);
 
         $display("Simulasi Selesai.");
         $finish;
