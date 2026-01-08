@@ -1,7 +1,8 @@
 `ifndef SIGMOID
 `define SIGMOID
 
-`include "register.v"
+// `include "register.v" // Use when only run this module
+`include "Util/register.v" // Use to able run the neuron module
 
 module sigmoid #(
     parameter WIDTH = 32,
