@@ -10,6 +10,10 @@ module discriminator #(
     parameter N_NEURON_L2 = 3,
     parameter N_NEURON_L3 = 1
 ) (
+    // Control Signal
+    input  clk, rst,
+
+    // Data Signal
     input signed [WIDTH-1:0] a_1,
     input signed [WIDTH-1:0] a_2,
     input signed [WIDTH-1:0] a_3,
@@ -33,6 +37,7 @@ module discriminator #(
     generate
         for (i=0; i<N_NEURON_L2; i=i+1) begin
             neuron_b NEURON_L2 (
+                .clk(clk), .en(1'b1), .rst(rst),
                 .a_1(a_1), .a_2(a_2), .a_3(a_3), .a_4(a_4), .a_5(a_5), .a_6(a_6), .a_7(a_7), .a_8(a_8), .a_9(a_9),
                 .w_1(w_L2[(N_INPUT*i+1)*WIDTH-1 : N_INPUT*i*WIDTH]), 
                 .w_2(w_L2[(N_INPUT*i+2)*WIDTH-1 : (N_INPUT*i+1)*WIDTH]),
@@ -54,6 +59,7 @@ module discriminator #(
     wire signed [WIDTH-1:0] out_L3;
 
     neuron_c NEURON_L3 (
+        .clk(clk), .en(1'b1), .rst(rst),
         .a_1(out_L2[0]), .a_2(out_L2[1]), .a_3(out_L2[2]),
         .w_1(w_L3[31: 0]),
         .w_2(w_L3[63:32]),                

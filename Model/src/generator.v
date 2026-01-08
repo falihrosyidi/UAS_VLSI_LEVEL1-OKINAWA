@@ -10,6 +10,10 @@ module generator #(
     parameter N_NEURON_L2 = 3,
     parameter N_NEURON_L3 = 9
 ) (
+    // Control Signal
+    input  clk, rst,
+
+    // Data Signal
     input signed [WIDTH-1:0] a_1,
     input signed [WIDTH-1:0] a_2,
     input signed [N_INPUT*N_NEURON_L2*WIDTH-1:0] w_L2,
@@ -34,6 +38,7 @@ module generator #(
     generate
         for (i=0; i<N_NEURON_L2; i=i+1) begin
             neuron_o NEURON_L2 (
+                .clk(clk), .en(1'b1), .rst(rst),
                 .a_1(a_1), .a_2(a_2),
                 .w_1(w_L2[(N_INPUT*i+1)*WIDTH-1 : N_INPUT*i*WIDTH]), 
                 .w_2(w_L2[(N_INPUT*i+2)*WIDTH-1 : (N_INPUT*i+1)*WIDTH]),
@@ -51,6 +56,7 @@ module generator #(
     generate
         for (j=0; j<N_NEURON_L3; j=j+1) begin
             neuron_a NEURON_L3 (
+                .clk(clk), .en(1'b1), .rst(rst),
                 .a_1(out_L2[0]), .a_2(out_L2[1]), .a_3(out_L2[2]),
                 .w_1(w_L3[(N_NEURON_L2*j+1)*WIDTH-1 : N_NEURON_L2*j*WIDTH]),
                 .w_2(w_L3[(N_NEURON_L2*j+2)*WIDTH-1 : (N_NEURON_L2*j+1)*WIDTH]),                

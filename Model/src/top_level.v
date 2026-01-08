@@ -6,6 +6,10 @@
 module top_level #(
     parameter WIDTH = 32
 ) (
+    // Control Signal
+    input  clk, rst,
+
+    // Data Signal
     input choice,
     input signed [WIDTH-1:0] in_1, in_2,
     output signed [WIDTH-1:0] out_discriminator,
@@ -53,6 +57,7 @@ module top_level #(
     wire signed [WIDTH-1:0] y_3x2;
     wire signed [WIDTH-1:0] y_3x3;
     generator GENERATOR (
+        .clk(clk), .rst(rst),
         .a_1(in_1), .a_2(in_2), 
         .w_L2(wg2), .w_L3(wg3), .b_L2(bg2), .b_L3(bg3),
         .y_1x1(y_1x1), .y_1x2(y_1x2), .y_1x3(y_1x3),
@@ -62,6 +67,7 @@ module top_level #(
 
     wire signed [WIDTH-1:0] out_disc;
     discriminator DISCRIMINATOR (
+        .clk(clk), .rst(rst),
         .a_1(y_1x1), .a_2(y_1x2), .a_3(y_1x3),
         .a_4(y_2x1), .a_5(y_2x2), .a_6(y_2x3),
         .a_7(y_3x1), .a_8(y_3x2), .a_9(y_3x3),
