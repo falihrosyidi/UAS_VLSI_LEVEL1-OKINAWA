@@ -48,7 +48,7 @@ module tanh #(
     // PIPELINE
     wire signed sign_reg;
     wire [1:0] sel_p_reg;
-    wire signed [WIDTH-1:0] a_pos_sq_reg, a_pos_reg, p1_reg, p2_reg, p3_reg;
+    wire signed [WIDTH-1:0] a_pos_sq_reg, a_pos_reg;
 
     register #(.WIDTH(1)) reg_sign (
         .clk(clk), .en(en), .rst(rst),
@@ -102,7 +102,6 @@ module tanh #(
             end
         endcase
     end
-
     
     // term1 = p1 * a_pos_sq
     wire signed [63:0] term1_full = p1 * a_pos_sq_reg;
