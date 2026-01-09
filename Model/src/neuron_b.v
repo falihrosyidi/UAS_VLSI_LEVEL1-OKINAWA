@@ -51,18 +51,10 @@ module neuron_b #(
             );
         end
     endgenerate
-
-    // PIPELINE BIAS
-    wire signed [WIDTH-1:0] b_reg;
-    
-    register #(.WIDTH(WIDTH)) reg_bias (
-        .clk(clk), .en(en), .rst(rst),
-        .in(b), .out(b_reg)
-    ); 
     
     assign total_sum =  m_reg[1] + m_reg[2] + m_reg[3] +
                         m_reg[4] + m_reg[5] + m_reg[6] +
-                        m_reg[7] + m_reg[8] + m_reg[9] + b_reg;
+                        m_reg[7] + m_reg[8] + m_reg[9] + b;
 
     // PIPELINE
     wire signed [WIDTH-1:0] total_sum_reg;

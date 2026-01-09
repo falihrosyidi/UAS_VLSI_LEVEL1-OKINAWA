@@ -3,6 +3,7 @@
 
 `include "Util/sigmoid.v"
 `include "Util/mult_Q.v"
+`include "Util/register.v"
 
 module neuron_c #(
     parameter WIDTH = 32
@@ -40,13 +41,7 @@ module neuron_c #(
     );
 
     // PIPELINE
-    wire signed [WIDTH-1:0] b_reg;
     wire signed [WIDTH-1:0] out_mult_reg [1:3];
-
-    register #(.WIDTH(WIDTH)) reg_bias (
-        .clk(clk), .en(en), .rst(rst),
-        .in(b), .out(b_reg)
-    );
 
     genvar i;
     generate
@@ -60,7 +55,7 @@ module neuron_c #(
     endgenerate
 
     // ADD ALL
-    assign pre_activation = out_mult_reg[1] + out_mult_reg[2] + out_mult_reg[3] + b_reg;
+    assign pre_activation = out_mult_reg[1] + out_mult_reg[2] + out_mult_reg[3] + b;
 
     // PIPELINE
     wire signed [WIDTH-1:0] pre_activation_reg;

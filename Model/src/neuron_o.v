@@ -21,7 +21,7 @@ module neuron_o #(
 );
     // LOCAL SIGNAL
     wire signed [WIDTH-1:0] out_In [0:1];
-    wire signed [WIDTH-1:0] out_Reg[0:3];
+    wire signed [WIDTH-1:0] out_Reg[0:2];
     wire signed [WIDTH-1:0] pre_activation, out;
 
     // Out @ INPUT
@@ -58,25 +58,16 @@ module neuron_o #(
      .out(out_Reg[1])
     );
 
-    //Register Bias 
+    // ADD ALL
+    assign pre_activation = out_Reg[0] + out_Reg[1] + b;
+
+    //Register Hasil Total Penjumlahan 
     register #(.WIDTH(32))reg_3(
      .clk(clk),
      .en(en),
      .rst(rst),
-     .in(b),
-     .out(out_Reg[2])
-    );
-
-    // ADD ALL
-    assign pre_activation = out_Reg[0] + out_Reg[1] + out_Reg[2];
-
-    //Register Hasil Total Penjumlahan 
-    register #(.WIDTH(32))reg_4(
-     .clk(clk),
-     .en(en),
-     .rst(rst),
      .in(pre_activation),
-     .out(out_Reg[3])
+     .out(out_Reg[2])
     );
 
     // TANH <= ACTIVATE FUNCTION
@@ -84,7 +75,7 @@ module neuron_o #(
         .clk(clk),
         .en(en),
         .rst(rst),
-        .a(out_Reg[3]),
+        .a(out_Reg[2]),
         .y(out)
     );
 
