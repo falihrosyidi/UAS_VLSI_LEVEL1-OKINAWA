@@ -8,7 +8,7 @@ module b_mem #(
     parameter N_D_L2 = 3,
     parameter N_D_L3 = 1
 ) (
-    input choice,
+    input [3:0] choice,
     output [N_G_L2*WIDTH-1:0] bg2,
     output [N_G_L3*WIDTH-1:0] bg3,
     output [N_D_L2*WIDTH-1:0] bd2,
@@ -92,10 +92,10 @@ module b_mem #(
     // ========================================================
     // LOGIKA PEMILIH (MULTIPLEXER)
     // ========================================================
-    assign bg2 = choice ? bg2_1 : bg2_0;
-    assign bg3 = choice ? bg3_1 : bg3_0;
-    assign bd2 = choice ? bd2_1 : bd2_0;
-    assign bd3 = choice ? bd3_1 : bd3_0;
+    assign bg2 = choice[0] ? bg2_1 : bg2_0;
+    assign bg3 = choice[1] ? bg3_1 : bg3_0;
+    assign bd2 = choice[2] ? bd2_1 : bd2_0;
+    assign bd3 = choice[3] ? bd3_1 : bd3_0;
 
 endmodule
 

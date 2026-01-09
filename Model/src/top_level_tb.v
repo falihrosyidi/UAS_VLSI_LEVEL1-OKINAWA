@@ -56,18 +56,18 @@ module tb_top_level;
         choice = 0;
 
         // INITIAL VALUE
-        @(posedge clk);
-        // rst <= 0;
+        repeat (2) @(posedge clk);
+        rst <= 0;
 
         // --- Skenario 1: in_1 = 0, in_2 = 1 ---
         $display("--- CASE 1: 0 and 1 : CIRCLE-CROSS ---");
         in_1 <= Q_ZERO;
         in_2 <= Q_ONE;
-
-        choice <= 0; // Choice 0
-        @(posedge clk);
         
         choice <= 1; // Choice 1
+        @(posedge clk);
+
+        choice <= 0; // Choice 0
         @(posedge clk);
 
         // --- Skenario 2: in_1 = 1, in_2 = 0 ---
@@ -75,10 +75,10 @@ module tb_top_level;
         in_1 <= Q_ONE;
         in_2 <= Q_ZERO;
 
-        choice <= 0; // Choice 0
+        choice <= 1; // Choice 1
         @(posedge clk);
 
-        choice <= 1; // Choice 1
+        choice <= 0; // Choice 0
         @(posedge clk);
 
         repeat (20) @(posedge clk);
@@ -86,7 +86,7 @@ module tb_top_level;
         rst <= 0; 
         repeat (2) @(posedge clk);
         rst <= 1;
-        repeat (20) @(posedge clk);
+        repeat (2) @(posedge clk);
 
         $display("Simulasi Selesai.");
         $finish;

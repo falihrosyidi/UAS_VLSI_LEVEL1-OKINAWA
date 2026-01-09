@@ -9,7 +9,7 @@ module w_mem #(
     parameter N_D_L2 = 3,
     parameter N_D_L3 = 1
 ) (
-    input choice,
+    input [3:0] choice,
     output [N_INPUT*N_G_L2*WIDTH-1:0] wg2,
     output [N_G_L2*N_G_L3*WIDTH-1:0] wg3,
     output [N_G_L3*N_D_L2*WIDTH-1:0] wd2,
@@ -105,10 +105,10 @@ module w_mem #(
     // ========================================================
     // FINAL OUTPUT SELECTION (MUX)
     // ========================================================
-    assign wg2 = choice ? wg2_1 : wg2_0;
-    assign wg3 = choice ? wg3_1 : wg3_0;
-    assign wd2 = choice ? wd2_1 : wd2_0;
-    assign wd3 = choice ? wd3_1 : wd3_0;
+    assign wg2 = choice[0] ? wg2_1 : wg2_0;
+    assign wg3 = choice[1] ? wg3_1 : wg3_0;
+    assign wd2 = choice[2] ? wd2_1 : wd2_0;
+    assign wd3 = choice[3] ? wd3_1 : wd3_0;
 
 endmodule
 
