@@ -67,7 +67,7 @@ module sigmoid #(
     // register #(.WIDTH(WIDTH)) reg_term1 (.clk(clk), .en(en), .rst(rst), .in(term1), .out(term1_reg));
     // register #(.WIDTH(WIDTH)) reg_term2 (.clk(clk), .en(en), .rst(rst), .in(term2), .out(term2_reg));
     
-    // 6. Pipeline Stage 4 - Accumulate
+    // 6. Accumulate
     localparam [WIDTH-1:0] ONE = 32'h01000000;
     localparam [WIDTH-1:0] ZERO = 32'h00000000;
     
