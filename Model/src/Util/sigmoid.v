@@ -25,17 +25,20 @@ module sigmoid #(
             p2 = 32'h00000000;  // 0
             p3 = 32'h01000000;  // 1.0 (untuk f(|x|))
         end else if (a_pos >= TH_35) begin // 3.5 <= a_pos < 6.0
-            p1 = 32'hFFFF2E17;  // -0.0046090
-            p2 = 32'h000DBB00;  // 0.053606
-            p3 = 32'h00D74205;  // 0.840844
+            // -0.004609, 0.053606, 0.840844
+            p1 = 32'hFFFED1F2;  // -0.004609
+            p2 = 32'h000DB91F;  // 0.053606
+            p3 = 32'h00D7418D;  // 0.840844
         end else if (a_pos >= TH_15) begin // 1.5 <= a_pos < 3.5
-            p1 = 32'hFFFB337E;  // -0.029988
-            p2 = 32'h003956F5;  // 0.223978
-            p3 = 32'h008D388E;  // 0.551643
+            // -0.029988, 0.223978, 0.551643
+            p1 = 32'hFFF852B5;  // -0.029988
+            p2 = 32'h0039569F;  // 0.223978
+            p3 = 32'h008D387A;  // 0.551643
         end else begin                     // 0.0 <= a_pos < 1.5
-            p1 = 32'hFFFA1546;  // -0.036623
-            p2 = 32'h0044E3D8;  // 0.269097
-            p3 = 32'h007F71A3;  // 0.497822 ≈ 0.5
+            // -0.036623, 0.269097, 0.497822
+            p1 = 32'hFFF69FE0;  // -0.036623
+            p2 = 32'h0044E38A;  // 0.269097
+            p3 = 32'h007F7143;  // 0.497822
         end
     end
     
@@ -62,10 +65,6 @@ module sigmoid #(
     
     wire signed [WIDTH-1:0] term1 = term1_full[FL+WIDTH-1:FL];
     wire signed [WIDTH-1:0] term2 = term2_full[FL+WIDTH-1:FL];
-    
-    // wire signed [WIDTH-1:0] term1_reg, term2_reg;
-    // register #(.WIDTH(WIDTH)) reg_term1 (.clk(clk), .en(en), .rst(rst), .in(term1), .out(term1_reg));
-    // register #(.WIDTH(WIDTH)) reg_term2 (.clk(clk), .en(en), .rst(rst), .in(term2), .out(term2_reg));
     
     // 6. Accumulate
     localparam [WIDTH-1:0] ONE = 32'h01000000;
