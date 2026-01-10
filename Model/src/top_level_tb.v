@@ -15,6 +15,7 @@ module tb_top_level;
     reg rst;
 
     // Outputs
+    wire gen_finish, disc_finish;
     wire signed [WIDTH-1:0] out_discriminator;
     wire signed [WIDTH-1:0] pixel_1x1, pixel_1x2, pixel_1x3;
     wire signed [WIDTH-1:0] pixel_2x1, pixel_2x2, pixel_2x3;
@@ -30,6 +31,7 @@ module tb_top_level;
     ) dut (
         .clk(clk), .rst(rst),
         .choice(choice), .in_1(in_1), .in_2(in_2),
+        .gen_finish(gen_finish), .disc_finish(disc_finish),
         .out_discriminator(out_discriminator),
         .pixel_1x1(pixel_1x1), .pixel_1x2(pixel_1x2), .pixel_1x3(pixel_1x3),
         .pixel_2x1(pixel_2x1), .pixel_2x2(pixel_2x2), .pixel_2x3(pixel_2x3),
