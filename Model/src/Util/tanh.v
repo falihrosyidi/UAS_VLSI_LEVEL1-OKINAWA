@@ -47,7 +47,8 @@ module tanh #(
 
     // PIPELINE
     wire signed sign_reg;
-    wire [1:0] sel_p_reg;
+    wire [3:0] sel_p_in;
+    wire [3:0] sel_p_reg;
     wire signed [WIDTH-1:0] a_pos_sq_reg, a_pos_reg;
 
     register #(.WIDTH(1)) reg_sign (
@@ -55,9 +56,10 @@ module tanh #(
         .in(sign), .out(sign_reg)
     );
 
-    register #(.WIDTH(2)) reg_sel_p (
+    assign sel_p_in = {sel_p_reg[1:0], sel_p};
+    register #(.WIDTH(4)) reg_sel_p12 (
         .clk(clk), .en(en), .rst(rst),
-        .in(sel_p), .out(sel_p_reg)
+        .in(sel_p_in), .out(sel_p_reg)
     );
 
     register #(.WIDTH(WIDTH)) reg_a_pos_sq (
@@ -71,34 +73,29 @@ module tanh #(
     );
 
     always @(*) begin
-        case (sel_p_reg)
+        case (sel_p_reg[1:0])
             2'b00  : begin
                 p1 = 32'h00000000;  // 0
                 p2 = 32'h00000000;  // 0
-                p3 = 32'h01000000;  // 1.0
             end
             2'b01  : begin
                 // -0.012845, 0.091424, 0.836701
                 p1 = 32'hFFFCB548;  // -0.012845
                 p2 = 32'h001767BB;  // 0.091424
-                p3 = 32'h00D63241;  // 0.836701
             end
             2'b10  : begin
                 // -0.168637, 0.699828, 0.234964
                 p1 = 32'hFFD4D35C;  // -0.168637
                 p2 = 32'h00B327E0;  // 0.699828
-                p3 = 32'h003C26AA;  // 0.234964
             end
             2'b11  : begin
                 // -0.330005, 1.101576, -0.006996
                 p1 = 32'hFFAB84CB;  // -0.330005
                 p2 = 32'h011A00E2;  // 1.101576
-                p3 = 32'hFFFE3583;  // -0.006996
             end
             default: begin
                 p1 = 32'h00000000;  // 0
                 p2 = 32'h00000000;  // 0
-                p3 = 32'h01000000;  // 1.0
             end
         endcase
     end
@@ -110,9 +107,45 @@ module tanh #(
     // term2 = p2 * a_pos
     wire signed [63:0] term2_full = p2 * a_pos_reg;
     wire signed [WIDTH-1:0] term2 = term2_full[FL+WIDTH-1:FL];
-    
+
+    // PIPELINE 2
+    wire signed [WIDTH-1:0] term1_reg, term2_reg;
+
+    register #(.WIDTH(WIDTH)) reg_term1 (
+        .clk(clk), .en(en), .rst(rst),
+        .in(term1), .out(term1_reg)
+    );
+
+    register #(.WIDTH(WIDTH)) reg_term2 (
+        .clk(clk), .en(en), .rst(rst),
+        .in(term2), .out(term2_reg)
+    );
+
+    always @(*) begin
+        case (sel_p_reg[3:2])
+            2'b00  : begin
+                p3 = 32'h01000000;  // 1.0
+            end
+            2'b01  : begin
+                // -0.012845, 0.091424, 0.836701
+                p3 = 32'h00D63241;  // 0.836701
+            end
+            2'b10  : begin
+                // -0.168637, 0.699828, 0.234964
+                p3 = 32'h003C26AA;  // 0.234964
+            end
+            2'b11  : begin
+                // -0.330005, 1.101576, -0.006996
+                p3 = 32'hFFFE3583;  // -0.006996
+            end
+            default: begin
+                p3 = 32'h01000000;  // 1.0
+            end
+        endcase
+    end
+
     // y_abs = term1 + term2 + p3
-    wire signed [WIDTH-1:0] y_abs = term1 + term2 + p3;
+    wire signed [WIDTH-1:0] y_abs = term1_reg + term2_reg + p3;
     
     // 5. PERBAIKAN: Kembalikan tanda dengan benar
     wire signed [WIDTH-1:0] y_signed;

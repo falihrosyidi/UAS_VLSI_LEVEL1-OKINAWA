@@ -30,7 +30,7 @@ module top_level #(
     localparam N_D_L2 = 3;
     localparam N_D_L3 = 1;
     localparam LAYER = 4;
-    localparam STAGE_L = 4;
+    localparam STAGE_L = 5;
 
     // CSR Choice
     wire [LAYER*STAGE_L-1:0] csr_in;
