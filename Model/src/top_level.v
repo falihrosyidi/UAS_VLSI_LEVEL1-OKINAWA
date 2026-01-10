@@ -14,13 +14,13 @@ module top_level #(
     input choice,
     input signed [WIDTH-1:0] in_1, in_2,
     output signed [WIDTH-1:0] out_discriminator,
-//    output signed [WIDTH-1:0] pixel_1x1,
-//    output signed [WIDTH-1:0] pixel_1x2,
-//    output signed [WIDTH-1:0] pixel_1x3,
-//    output signed [WIDTH-1:0] pixel_2x1,
-//    output signed [WIDTH-1:0] pixel_2x2,
-//    output signed [WIDTH-1:0] pixel_2x3,
-//    output signed [WIDTH-1:0] pixel_3x1,
+    output signed [WIDTH-1:0] pixel_1x1,
+    output signed [WIDTH-1:0] pixel_1x2,
+    output signed [WIDTH-1:0] pixel_1x3,
+    output signed [WIDTH-1:0] pixel_2x1,
+    output signed [WIDTH-1:0] pixel_2x2,
+    output signed [WIDTH-1:0] pixel_2x3,
+    output signed [WIDTH-1:0] pixel_3x1,
     output signed [WIDTH-1:0] pixel_3x2,
     output signed [WIDTH-1:0] pixel_3x3
 );
@@ -30,7 +30,7 @@ module top_level #(
     localparam N_D_L2 = 3;
     localparam N_D_L3 = 1;
     localparam LAYER = 4;
-    localparam STAGE_L = 5;
+    localparam STAGE_L = 4;
 
     // CSR Choice
     wire [LAYER*STAGE_L-1:0] csr_in;
@@ -57,7 +57,7 @@ module top_level #(
     );
 
     wire [3:0] choice_b =  {csr_reg[3*STAGE_L+1], csr_reg[2*STAGE_L+1],
-                            csr_reg[1*STAGE_L+1], csr_reg[0*STAGE_L]};
+                            csr_reg[1*STAGE_L+1], csr_reg[0*STAGE_L+1]};
     wire [N_G_L2*WIDTH-1:0] bg2;
     wire [N_G_L3*WIDTH-1:0] bg3;
     wire [N_D_L2*WIDTH-1:0] bd2;

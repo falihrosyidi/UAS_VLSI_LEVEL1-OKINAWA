@@ -1,17 +1,26 @@
-
-*** Running vivado
-    with args -log neuron_b.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuron_b.tcl
-
-
-
-****** Vivado v2025.2 (64-bit)
-  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
-  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
-  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Thu Jan  8 18:45:06 2026
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Jan  8 18:45:06 2026
+# Process ID         : 18164
+# Current directory  : D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.runs/synth_1
+# Command line       : vivado.exe -log neuron_b.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuron_b.tcl
+# Log file           : D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.runs/synth_1/neuron_b.vds
+# Journal file       : D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-D5AIFNJ
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i7-8665U CPU @ 1.90GHz
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 34165 MB
+# Swap memory        : 5100 MB
+# Total Virtual      : 39265 MB
+# Available Virtual  : 18156 MB
+#-----------------------------------------------------------
 source neuron_b.tcl -notrace
 create_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 531.180 ; gain = 219.375
 Command: read_checkpoint -auto_incremental -incremental D:/Falih/VLSI/UAS_VLSI_LEVEL1-OKINAWA/project_UAS_VLSI/project_UAS_VLSI.srcs/utils_1/imports/synth_1/top_level.dcp
