@@ -9,6 +9,7 @@ module top_level #(
 ) (
     // Control Signal
     input  clk, rst,
+    output gen_finish, disc_finish,
 
     // Data Signal
     input choice,
@@ -111,8 +112,23 @@ module top_level #(
         .w_L2(wd2), .w_L3(wd3), .b_L2(bd2), .b_L3(bd3),
         .y(out_disc)
     );
+    
+    // COUNTER
+    wire en_ctr;
+    reg [4:0] counter_reg;
+    assign en_ctr = (counter_reg < 5'd21);
+
+    always @(posedge clk) begin
+        if (rst) begin
+            counter_reg <= 5'd0;
+        end else if (en_ctr) begin
+            counter_reg <= counter_reg + 1'b1;
+        end
+    end
 
     // OUTPUT
+    assign gen_finish = (counter_reg > (STAGE_L*2));
+    assign disc_finish = (counter_reg > (STAGE_L*LAYER));
     assign out_discriminator = out_disc;
     assign pixel_1x1 = y_1x1;
     assign pixel_1x2 = y_1x2;
