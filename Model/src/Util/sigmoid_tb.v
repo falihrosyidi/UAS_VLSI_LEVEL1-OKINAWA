@@ -1,73 +1,97 @@
 `timescale 1ns / 1ps
 `include "sigmoid.v"
 
+
 module sigmoid_tb();
 
-    reg  signed [31:0] x;
-    wire signed [31:0] y;
+    // Parameters
+    parameter WIDTH = 32;
+    parameter FL = 24;
+
+    // Signals
+    reg clk;
+    reg en;
+    reg rst;
+    reg signed [WIDTH-1:0] x; // Kita hubungkan ke port 'a' di modul
+    wire signed [WIDTH-1:0] y;
 
     // Instansiasi Unit Under Test (UUT)
-    sigmoid uut (
-        .x(x),
+    sigmoid #(
+        .WIDTH(WIDTH),
+        .FL(FL)
+    ) uut (
+        .clk(clk),
+        .en(en),
+        .rst(rst),
+        .a(x), // Port 'a' dihubungkan ke reg 'x'
         .y(y)
     );
 
-    // Fungsi pembantu untuk menampilkan nilai dalam format desimal (aproksimasi)
-    // Karena 2^24 = 16777216
+    // Clock Generator (100 MHz)
+    initial clk = 0;
+    always #5 clk = ~clk;
+
+    // Fungsi pembantu untuk menampilkan nilai Q8.24
     task display_q8_24;
         input signed [31:0] val;
         real r_val;
         begin
-            r_val = $itor(val) / 16777216.0;
+            r_val = $itor(val) / 16777216.0; // 2^24
             $write("%f (Hex: %h)", r_val, val);
         end
     endtask
 
+    // Task untuk memberikan input dan menunggu pipeline (3-4 cycle)
+    task test_value;
+        input signed [31:0] val_in;
+        begin
+            x = val_in;
+            @(posedge clk);
+            // Menunggu 3 cycle agar data sampai ke output register
+            repeat(3) @(posedge clk);
+            $write("In: "); display_q8_24(val_in);
+            $write(" | Out: "); display_q8_24(y);
+            $display("");
+        end
+    endtask
+
     initial begin
-        $display("------------------------------------------------------------");
-        $display("Testing Sigmoid PWL Q8.24 Implementation");
-        $display("------------------------------------------------------------");
+        // Setup VCD
+        $dumpfile("sigmoid_sim.vcd");
+        $dumpvars(0, sigmoid_tb);
 
-        // Test Case 1: x = 0 (Expected y = 0.5)
-        x = 32'h00000000; 
-        #10;
-        $write("In: 0.00 | Out: "); display_q8_24(y); $display("");
-
-        // Test Case 2: x = 0.5 (Segmen 1, abs_x < 1)
-        // 0.5 * 2^24 = 8388608 = 32'h00800000
-        x = 32'h00800000; 
-        #10;
-        $write("In: 0.50 | Out: "); display_q8_24(y); $display(" (Exp: 0.625)");
-
-        // Test Case 3: x = 2.0 (Segmen 2, 1 < abs_x < 2.375)
-        // 2.0 * 2^24 = 33554432 = 32'h02000000
-        x = 32'h02000000; 
-        #10;
-        $write("In: 2.00 | Out: "); display_q8_24(y); $display(" (Exp: 0.875)");
-
-        // Test Case 4: x = 4.0 (Segmen 3, 2.375 < abs_x < 5)
-        // 4.0 * 2^24 = 67108864 = 32'h04000000
-        x = 32'h04000000; 
-        #10;
-        $write("In: 4.00 | Out: "); display_q8_24(y); $display(" (Exp: 0.96875)");
-
-        // Test Case 5: x = 6.0 (Saturasi, abs_x > 5)
-        x = 32'h06000000; 
-        #10;
-        $write("In: 6.00 | Out: "); display_q8_24(y); $display(" (Exp: 1.0)");
-
-        // Test Case 6: x = -1.0 (Simetri, Expected y = 1 - sigmoid(1))
-        // Sigmoid(1) v1 = 0.25(1) + 0.5 = 0.75. Maka y = 1 - 0.75 = 0.25
-        x = -32'h01000000; 
-        #10;
-        $write("In:-1.00 | Out: "); display_q8_24(y); $display(" (Exp: 0.25)");
-
-        // Test Case 7: x = -4.0 (Simetri)
-        x = -32'h04000000; 
-        #10;
-        $write("In:-4.00 | Out: "); display_q8_24(y); $display("");
+        // Initialize
+        rst = 1;
+        en = 0;
+        x = 0;
 
         $display("------------------------------------------------------------");
+        $display("Testing Pipelined Sigmoid Quadratic Implementation");
+        $display("------------------------------------------------------------");
+
+        #20;
+        rst = 0;
+        en = 1;
+        @(posedge clk);
+
+        // Test Case 1: x = -5
+        test_value(32'hfb000000);
+
+        // Test Case 2: x = -2.5 (Q24: 00800000)
+        test_value(32'hfd800000);
+
+        // Test Case 3: x = 0 (Q24: 02000000)
+        test_value(32'h00000000);
+
+        // Test Case 4: x = 2.5 (Q24: 04000000)
+        test_value(32'h02800000);
+
+        // Test Case 5: x = 5 (Saturasi 1.0)
+        test_value(32'h05000000);
+
+
+        $display("------------------------------------------------------------");
+        $display("Simulasi Selesai. Cek file sigmoid_sim.vcd");
         $finish;
     end
 
