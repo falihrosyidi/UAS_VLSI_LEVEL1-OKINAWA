@@ -1,7 +1,7 @@
 `ifndef TANH
 `define TANH
 
-// `include "register.v" // Use when only run this module
+//`include "register.v" // Use when only run this module
 `include "Util/register.v" // Use to able run the neuron module
 
 module tanh #(
@@ -78,13 +78,13 @@ module tanh #(
             end
             2'b01  : begin
                 // -0.012845, 0.091424, 0.836701
-                p1 = 32'hFFFCB548;  // -0.012845
-                p2 = 32'h001767BB;  // 0.091424
+                p1 = 32'hFFFCB631;  // -0.012845
+                p2 = 32'h00176790;  // 0.091424
             end
             2'b10  : begin
                 // -0.168637, 0.699828, 0.234964
-                p1 = 32'hFFD4D35C;  // -0.168637
-                p2 = 32'h00B327E0;  // 0.699828
+                p1 = 32'hFFD4D435;  // -0.168637
+                p2 = 32'h00B327EE;  // 0.699828
             end
             2'b11  : begin
                 // -0.330005, 1.101576, -0.006996
@@ -138,11 +138,11 @@ module tanh #(
             end
             2'b01  : begin
                 // -0.012845, 0.091424, 0.836701
-                p3 = 32'h00D63241;  // 0.836701
+                p3 = 32'h00D63209;  // 0.836701
             end
             2'b10  : begin
                 // -0.168637, 0.699828, 0.234964
-                p3 = 32'h003C26AA;  // 0.234964
+                p3 = 32'h003C269A;  // 0.234964
             end
             2'b11  : begin
                 // -0.330005, 1.101576, -0.006996
