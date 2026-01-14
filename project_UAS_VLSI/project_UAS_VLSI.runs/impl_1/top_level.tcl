@@ -104,8 +104,13 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param power.BramSDPPropagationFix 1
   set_param general.usePosixSpawnForFork 1
   set_param chipscope.maxJobs 2
+  set_param physdb.placeDBImplUsesPlaceStorage 0
+  set_param power.enableUnconnectedCarry8PinPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableLutRouteBelPower 1
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xczu7ev-ffvc1156-2-e

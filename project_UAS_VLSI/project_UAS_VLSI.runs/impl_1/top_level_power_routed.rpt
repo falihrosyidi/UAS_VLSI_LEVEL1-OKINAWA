@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date             : Fri Jan  9 17:23:43 2026
+| Date             : Mon Jan 12 15:16:15 2026
 | Host             : DESKTOP-D5AIFNJ running 64-bit major release  (build 9200)
 | Command          : report_power -file top_level_power_routed.rpt -pb top_level_power_summary_routed.pb -rpx top_level_power_routed.rpx
 | Design           : top_level
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.203        |
+| Total On-Chip Power (W)  | 1.151        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.609        |
+| Dynamic (W)              | 0.557        |
 | Device Static (W)        | 0.595        |
 | Effective TJA (C/W)      | 1.0          |
-| Max Ambient (C)          | 98.8         |
-| Junction Temperature (C) | 26.2         |
+| Max Ambient (C)          | 98.9         |
+| Junction Temperature (C) | 26.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.014 |        3 |       --- |             --- |
-| CLB Logic               |     0.081 |    12804 |       --- |             --- |
-|   LUT as Logic          |     0.072 |     7422 |    230400 |            3.22 |
-|   CARRY8                |     0.006 |      731 |     28800 |            2.54 |
-|   Register              |     0.003 |     2719 |    460800 |            0.59 |
+| Clocks                  |     0.015 |        3 |       --- |             --- |
+| CLB Logic               |     0.083 |    12868 |       --- |             --- |
+|   LUT as Logic          |     0.074 |     7476 |    230400 |            3.24 |
+|   CARRY8                |     0.006 |      740 |     28800 |            2.57 |
+|   Register              |     0.003 |     2691 |    460800 |            0.58 |
 |   LUT as Shift Register |    <0.001 |        3 |    101760 |           <0.01 |
-|   Others                |     0.000 |      466 |       --- |             --- |
-| Signals                 |     0.131 |    24869 |       --- |             --- |
-| DSPs                    |     0.280 |      380 |      1728 |           21.99 |
-| I/O                     |     0.102 |      163 |       360 |           45.28 |
+|   Others                |     0.000 |      479 |       --- |             --- |
+| Signals                 |     0.132 |    25277 |       --- |             --- |
+| DSPs                    |     0.266 |      380 |      1728 |           21.99 |
+| I/O                     |     0.060 |      101 |       360 |           28.06 |
 | Static Power            |     0.595 |          |           |                 |
-| Total                   |     1.203 |          |           |                 |
+| Total                   |     1.151 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,14 +73,14 @@ Table of Contents
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source           | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint           |       0.850 |     0.734 |       0.596 |      0.139 |       NA    | Unspecified | NA         |
-| Vccint_io        |       0.850 |     0.074 |       0.004 |      0.070 |       NA    | Unspecified | NA         |
+| Vccint           |       0.850 |     0.722 |       0.584 |      0.138 |       NA    | Unspecified | NA         |
+| Vccint_io        |       0.850 |     0.073 |       0.003 |      0.070 |       NA    | Unspecified | NA         |
 | Vccbram          |       0.850 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
 | Vccaux           |       1.800 |     0.148 |       0.000 |      0.148 |       NA    | Unspecified | NA         |
-| Vccaux_io        |       1.800 |     0.079 |       0.024 |      0.055 |       NA    | Unspecified | NA         |
+| Vccaux_io        |       1.800 |     0.066 |       0.011 |      0.055 |       NA    | Unspecified | NA         |
 | Vcco33           |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25           |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18           |       1.800 |     0.031 |       0.031 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18           |       1.800 |     0.021 |       0.021 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15           |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135          |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12           |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -161,130 +161,129 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| top_level                   |     0.609 |
+| top_level                   |     0.557 |
 |   CSR_choice                |     0.002 |
-|   DISCRIMINATOR             |     0.188 |
-|     NEURON_L3               |     0.025 |
-|       activate_func         |     0.010 |
+|   DISCRIMINATOR             |     0.189 |
+|     NEURON_L3               |     0.029 |
+|       activate_func         |     0.013 |
+|       genblk1[2].reg_mult   |     0.001 |
 |       mult_0                |     0.003 |
 |       mult_1                |     0.003 |
 |       mult_2                |     0.003 |
 |       reg_pre_activation    |     0.002 |
-|     genblk1[0].NEURON_L2    |     0.055 |
-|       activate_func         |     0.011 |
-|       genblk1[1].multiplier |     0.003 |
-|       genblk1[2].multiplier |     0.004 |
-|       genblk1[2].reg_mult   |     0.001 |
-|       genblk1[3].multiplier |     0.003 |
-|       genblk1[4].multiplier |     0.003 |
-|       genblk1[5].multiplier |     0.004 |
-|       genblk1[6].multiplier |     0.004 |
-|       genblk1[7].multiplier |     0.003 |
-|       genblk1[8].multiplier |     0.004 |
-|       genblk1[9].multiplier |     0.004 |
-|       reg_total_sum         |     0.002 |
-|     genblk1[1].NEURON_L2    |     0.054 |
-|       activate_func         |     0.011 |
+|     genblk1[0].NEURON_L2    |     0.054 |
+|       activate_func         |     0.010 |
 |       genblk1[1].multiplier |     0.003 |
 |       genblk1[2].multiplier |     0.004 |
 |       genblk1[2].reg_mult   |     0.001 |
 |       genblk1[3].multiplier |     0.004 |
 |       genblk1[4].multiplier |     0.004 |
 |       genblk1[5].multiplier |     0.003 |
-|       genblk1[6].multiplier |     0.004 |
-|       genblk1[7].multiplier |     0.003 |
-|       genblk1[8].multiplier |     0.004 |
-|       genblk1[9].multiplier |     0.004 |
-|       reg_total_sum         |     0.002 |
-|     genblk1[2].NEURON_L2    |     0.055 |
-|       activate_func         |     0.010 |
-|       genblk1[1].multiplier |     0.003 |
-|       genblk1[2].multiplier |     0.003 |
-|       genblk1[2].reg_mult   |     0.001 |
-|       genblk1[3].multiplier |     0.004 |
-|       genblk1[4].multiplier |     0.003 |
-|       genblk1[5].multiplier |     0.004 |
-|       genblk1[6].multiplier |     0.004 |
-|       genblk1[7].multiplier |     0.003 |
+|       genblk1[6].multiplier |     0.003 |
+|       genblk1[7].multiplier |     0.004 |
 |       genblk1[8].multiplier |     0.004 |
 |       genblk1[9].multiplier |     0.003 |
 |       reg_total_sum         |     0.002 |
-|   GENERATOR                 |     0.315 |
+|     genblk1[1].NEURON_L2    |     0.054 |
+|       activate_func         |     0.009 |
+|       genblk1[1].multiplier |     0.004 |
+|       genblk1[2].multiplier |     0.004 |
+|       genblk1[2].reg_mult   |     0.001 |
+|       genblk1[3].multiplier |     0.004 |
+|       genblk1[4].multiplier |     0.004 |
+|       genblk1[5].multiplier |     0.003 |
+|       genblk1[6].multiplier |     0.003 |
+|       genblk1[7].multiplier |     0.004 |
+|       genblk1[8].multiplier |     0.004 |
+|       genblk1[9].multiplier |     0.004 |
+|       reg_total_sum         |     0.001 |
+|     genblk1[2].NEURON_L2    |     0.053 |
+|       activate_func         |     0.009 |
+|       genblk1[1].multiplier |     0.004 |
+|       genblk1[2].multiplier |     0.004 |
+|       genblk1[2].reg_mult   |     0.001 |
+|       genblk1[3].multiplier |     0.004 |
+|       genblk1[4].multiplier |     0.004 |
+|       genblk1[5].multiplier |     0.004 |
+|       genblk1[6].multiplier |     0.003 |
+|       genblk1[7].multiplier |     0.004 |
+|       genblk1[8].multiplier |     0.004 |
+|       genblk1[9].multiplier |     0.004 |
+|       reg_total_sum         |     0.001 |
+|   GENERATOR                 |     0.303 |
 |     genblk1[0].NEURON_L2    |     0.022 |
 |       activate_func         |     0.015 |
 |       mult_0                |     0.002 |
 |       mult_1                |     0.002 |
-|       reg_4                 |     0.002 |
-|     genblk1[1].NEURON_L2    |     0.023 |
-|       activate_func         |     0.016 |
-|       mult_0                |     0.002 |
-|       mult_1                |     0.002 |
-|       reg_4                 |     0.002 |
-|     genblk1[2].NEURON_L2    |     0.022 |
+|       reg_3                 |     0.001 |
+|     genblk1[1].NEURON_L2    |     0.022 |
 |       activate_func         |     0.015 |
 |       mult_0                |     0.002 |
 |       mult_1                |     0.002 |
-|       reg_4                 |     0.002 |
+|       reg_3                 |     0.001 |
+|     genblk1[2].NEURON_L2    |     0.021 |
+|       activate_func         |     0.015 |
+|       mult_0                |     0.002 |
+|       mult_1                |     0.002 |
+|       reg_3                 |     0.001 |
 |     genblk2[0].NEURON_L3    |     0.027 |
-|       activate_func         |     0.012 |
-|       mult_0                |     0.004 |
-|       mult_1                |     0.004 |
-|       mult_2                |     0.004 |
-|       reg_2                 |     0.001 |
-|       reg_5                 |     0.002 |
-|     genblk2[1].NEURON_L3    |     0.027 |
-|       activate_func         |     0.012 |
-|       mult_0                |     0.004 |
-|       mult_1                |     0.003 |
-|       mult_2                |     0.004 |
-|       reg_2                 |     0.001 |
-|       reg_5                 |     0.002 |
-|     genblk2[2].NEURON_L3    |     0.028 |
-|       activate_func         |     0.012 |
-|       mult_0                |     0.004 |
-|       mult_1                |     0.003 |
-|       mult_2                |     0.004 |
-|       reg_5                 |     0.002 |
-|     genblk2[3].NEURON_L3    |     0.027 |
-|       activate_func         |     0.012 |
-|       mult_0                |     0.004 |
-|       mult_1                |     0.003 |
-|       mult_2                |     0.004 |
-|       reg_2                 |     0.001 |
-|       reg_5                 |     0.002 |
-|     genblk2[4].NEURON_L3    |     0.027 |
-|       activate_func         |     0.012 |
-|       mult_0                |     0.004 |
-|       mult_1                |     0.003 |
-|       mult_2                |     0.004 |
-|       reg_2                 |     0.001 |
-|       reg_5                 |     0.002 |
-|     genblk2[5].NEURON_L3    |     0.027 |
 |       activate_func         |     0.011 |
 |       mult_0                |     0.004 |
-|       mult_1                |     0.003 |
+|       mult_1                |     0.004 |
 |       mult_2                |     0.004 |
-|       reg_2                 |     0.001 |
-|       reg_5                 |     0.002 |
-|     genblk2[6].NEURON_L3    |     0.028 |
-|       activate_func         |     0.012 |
+|       reg_4                 |     0.001 |
+|     genblk2[1].NEURON_L3    |     0.027 |
+|       activate_func         |     0.011 |
 |       mult_0                |     0.004 |
 |       mult_1                |     0.004 |
 |       mult_2                |     0.004 |
 |       reg_2                 |     0.001 |
-|       reg_5                 |     0.002 |
-|     genblk2[7].NEURON_L3    |     0.028 |
-|       activate_func         |     0.012 |
+|       reg_4                 |     0.001 |
+|     genblk2[2].NEURON_L3    |     0.026 |
+|       activate_func         |     0.010 |
 |       mult_0                |     0.004 |
-|       mult_1                |     0.003 |
+|       mult_1                |     0.004 |
+|       mult_2                |     0.004 |
+|       reg_2                 |     0.002 |
+|       reg_4                 |     0.001 |
+|     genblk2[3].NEURON_L3    |     0.026 |
+|       activate_func         |     0.011 |
+|       mult_0                |     0.004 |
+|       mult_1                |     0.004 |
+|       mult_2                |     0.004 |
+|       reg_2                 |     0.001 |
+|       reg_4                 |     0.001 |
+|     genblk2[4].NEURON_L3    |     0.027 |
+|       activate_func         |     0.010 |
+|       mult_0                |     0.004 |
+|       mult_1                |     0.004 |
 |       mult_2                |     0.003 |
-|       reg_5                 |     0.002 |
-|     genblk2[8].NEURON_L3    |     0.029 |
-|       activate_func         |     0.013 |
+|       reg_2                 |     0.001 |
+|       reg_4                 |     0.001 |
+|     genblk2[5].NEURON_L3    |     0.026 |
+|       activate_func         |     0.010 |
 |       mult_0                |     0.004 |
 |       mult_1                |     0.004 |
 |       mult_2                |     0.004 |
-|       reg_5                 |     0.002 |
+|       reg_4                 |     0.001 |
+|     genblk2[6].NEURON_L3    |     0.026 |
+|       activate_func         |     0.010 |
+|       mult_0                |     0.004 |
+|       mult_1                |     0.004 |
+|       mult_2                |     0.004 |
+|       reg_4                 |     0.001 |
+|     genblk2[7].NEURON_L3    |     0.026 |
+|       activate_func         |     0.011 |
+|       mult_0                |     0.004 |
+|       mult_1                |     0.004 |
+|       mult_2                |     0.003 |
+|       reg_4                 |     0.001 |
+|     genblk2[8].NEURON_L3    |     0.027 |
+|       activate_func         |     0.012 |
+|       mult_0                |     0.004 |
+|       mult_1                |     0.004 |
+|       mult_2                |     0.004 |
+|       reg_4                 |     0.001 |
 +-----------------------------+-----------+
 
 

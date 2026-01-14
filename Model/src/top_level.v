@@ -14,16 +14,16 @@ module top_level #(
     // Data Signal
     input choice,
     input signed [WIDTH-1:0] in_1, in_2,
-    output signed [WIDTH-1:0] out_discriminator,
-    output signed [WIDTH-1:0] pixel_1x1,
-    output signed [WIDTH-1:0] pixel_1x2,
-    output signed [WIDTH-1:0] pixel_1x3,
-    output signed [WIDTH-1:0] pixel_2x1,
-    output signed [WIDTH-1:0] pixel_2x2,
-    output signed [WIDTH-1:0] pixel_2x3,
-    output signed [WIDTH-1:0] pixel_3x1,
-    output signed [WIDTH-1:0] pixel_3x2,
-    output signed [WIDTH-1:0] pixel_3x3
+    output signed [WIDTH-1:0] out_discriminator
+//    output signed [WIDTH-1:0] pixel_1x1,
+//    output signed [WIDTH-1:0] pixel_1x2,
+//    output signed [WIDTH-1:0] pixel_1x3,
+//    output signed [WIDTH-1:0] pixel_2x1,
+//    output signed [WIDTH-1:0] pixel_2x2,
+//    output signed [WIDTH-1:0] pixel_2x3,
+//    output signed [WIDTH-1:0] pixel_3x1,
+//    output signed [WIDTH-1:0] pixel_3x2,
+//    output signed [WIDTH-1:0] pixel_3x3
 );
     localparam N_INPUT = 2;
     localparam N_G_L2 = 3;
